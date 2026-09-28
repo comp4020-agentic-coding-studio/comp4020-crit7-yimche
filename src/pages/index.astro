@@ -1,8 +1,34 @@
 ---
-import { listMessages } from "../lib/db";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { type CarParkWithLatest, listCarParks } from "../lib/db";
 import "../styles.css";
 
-const messages = listMessages();
+const parks = listCarParks();
+
+// One place decides how a report reads, so the server render and the live
+// client update agree. `null` is a real state — nobody has reported yet.
+const LEVEL_TEXT: Record<string, string> = {
+  plenty: "Plenty of spaces",
+  some: "Filling up",
+  full: "Full",
+};
+function availText(park: CarParkWithLatest): string {
+  return park.latest ? LEVEL_TEXT[park.latest.level] : "No reports yet";
+}
+function availClass(park: CarParkWithLatest): string {
+  return park.latest ? `avail avail-${park.latest.level}` : "avail avail-none";
+}
+
+// The map reads only what it needs from each row, as JSON embedded in the page.
+const mapData = parks.map((p) => ({
+  id: p.id,
+  name: p.name,
+  category: p.category,
+  lat: p.lat,
+  lng: p.lng,
+  level: p.latest?.level ?? null,
+}));
 ---
 
 <!doctype html>
@@ -10,43 +36,191 @@ const messages = listMessages();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COMP4020 prototype</title>
+    <title>ANU campus parking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
   </head>
   <body>
-    <nav aria-label="site">
-      <a href="/">Guestbook</a>
-      <a href="/readme/">About</a>
-    </nav>
+    <SiteHeader />
     <main>
-      <h1>Guestbook</h1>
-      <p>
-        A minimal full-stack starter: messages live in SQLite on the machine's
-        volume (state survives a reload and a redeploy), and new messages
-        appear in every open tab over a server-sent-events stream — open this
-        page twice and sign it in one. Replace all of this with your own
-        prototype.
+      <h1>ANU campus parking</h1>
+      <p class="lede">
+        Every parking area on the Acton campus in one place: where it is, when
+        it's enforced, what it costs, and which permit it wants. Can't tell
+        which car park still has room? Anyone can report how full one is, and
+        the map and the list update live for everyone.
       </p>
-      <form method="post" action="/api/messages">
-        <label for="body">Leave a message</label>
-        <input id="body" name="body" required maxlength="500" />
-        <button>Sign</button>
-      </form>
-      <ul id="messages">
-        {messages.map((message) => <li>{message.body}</li>)}
+
+      <div
+        id="map"
+        role="application"
+        aria-label="Map of ANU campus parking areas"
+      >
+      </div>
+      <noscript>
+        <p class="notice">
+          The interactive map needs JavaScript. The full directory below works
+          without it.
+        </p>
+      </noscript>
+
+      <h2 class="section">Parking areas</h2>
+      <ul class="parks">
+        {
+          parks.map((park) => (
+            <li class="park" id={`park-${park.id}`} data-park-id={park.id}>
+              <div class="park-head">
+                <h3>{park.name}</h3>
+                <span class="category">{park.category}</span>
+              </div>
+              <p
+                class={availClass(park)}
+                id={`avail-${park.id}`}
+                aria-live="polite"
+              >
+                <span class="avail-label">Availability:</span> {availText(park)}
+              </p>
+              <dl class="facts">
+                <dt>Hours</dt>
+                <dd>{park.hours}</dd>
+                <dt>Rate</dt>
+                <dd>{park.rate}</dd>
+                <dt>Permit</dt>
+                <dd>{park.permit}</dd>
+                <dt>Fees &amp; eligibility</dt>
+                <dd>{park.fees}</dd>
+                {park.capacity && (
+                  <>
+                    <dt>Approx. capacity</dt>
+                    <dd>{park.capacity} spaces</dd>
+                  </>
+                )}
+                {park.notes && (
+                  <>
+                    <dt>Good to know</dt>
+                    <dd>{park.notes}</dd>
+                  </>
+                )}
+              </dl>
+              <form class="report" method="post" action="/api/reports">
+                <input type="hidden" name="carParkId" value={park.id} />
+                <label for={`level-${park.id}`}>Report how full it is</label>
+                <select id={`level-${park.id}`} name="level" required>
+                  <option value="plenty">Plenty of spaces</option>
+                  <option value="some">Filling up</option>
+                  <option value="full">Full</option>
+                </select>
+                <button>Report</button>
+              </form>
+            </li>
+          ))
+        }
       </ul>
+
+      <p class="footnote">
+        Rates follow ANU's published 2026 parking fees. Car-park names,
+        capacities and map positions are illustrative placeholders for this
+        prototype; see the note below before relying on any of it.
+      </p>
     </main>
+    <SiteFooter />
+
+    <script
+      type="application/json"
+      id="parks-data"
+      is:inline
+      set:html={JSON.stringify(mapData)}></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      is:inline></script>
     <script>
-      // The live half of the demo: subscribe to the SSE stream and prepend
-      // messages as they arrive. The form itself needs none of this — its
-      // POST + redirect re-renders the submitting tab from SQLite; this
-      // stream is how every other tab finds out.
-      const list = document.querySelector("#messages");
+      // The client half. Leaflet paints OpenStreetMap tiles and one marker per
+      // car park; the SSE stream then keeps both the markers and the list cards
+      // current as reports arrive from any tab. If Leaflet or the network is
+      // unavailable, the server-rendered directory above still stands on its own.
+      const LEVEL_TEXT: Record<string, string> = {
+        plenty: "Plenty of spaces",
+        some: "Filling up",
+        full: "Full",
+      };
+
+      type ParkData = {
+        id: number;
+        name: string;
+        category: string;
+        lat: number;
+        lng: number;
+        level: string | null;
+      };
+
+      // Leaflet is loaded from the CDN, so it's a runtime global rather than a
+      // typed import; keep it loosely typed here.
+      // deno-lint-ignore no-explicit-any
+      const L = (window as unknown as { L?: any }).L;
+      const dataEl = document.getElementById("parks-data");
+      const parks: ParkData[] = dataEl ? JSON.parse(dataEl.textContent ?? "[]") : [];
+      const markers = new Map<number, any>();
+
+      function popupHtml(park: ParkData): string {
+        const avail = park.level ? LEVEL_TEXT[park.level] : "No reports yet";
+        return `<strong>${park.name}</strong><br>${park.category}<br>${avail}<br><a href="#park-${park.id}">Details &amp; report</a>`;
+      }
+
+      if (L && document.getElementById("map") && parks.length > 0) {
+        const map = L.map("map");
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        const bounds = L.latLngBounds([]);
+        for (const park of parks) {
+          const marker = L.marker([park.lat, park.lng]).addTo(map);
+          marker.bindPopup(popupHtml(park));
+          markers.set(park.id, marker);
+          bounds.extend([park.lat, park.lng]);
+        }
+        map.fitBounds(bounds, { padding: [30, 30] });
+
+        // Keep marker popups in step with the live list.
+        window.addEventListener("park-updated", (event) => {
+          const detail = (event as CustomEvent<ParkData>).detail;
+          const marker = markers.get(detail.id);
+          if (marker) marker.setPopupContent(popupHtml(detail));
+        });
+      }
+
+      // The live channel: a report from any tab lands here and updates the
+      // matching card's badge (and, via the event above, its map marker).
       const source = new EventSource("/api/events");
       source.addEventListener("message", (event) => {
-        const message = JSON.parse(event.data);
-        const item = document.createElement("li");
-        item.textContent = message.body;
-        list?.prepend(item);
+        const report = JSON.parse(event.data) as {
+          carParkId: number;
+          level: string;
+        };
+        const badge = document.getElementById(`avail-${report.carParkId}`);
+        if (badge) {
+          badge.className = `avail avail-${report.level}`;
+          badge.innerHTML = `<span class="avail-label">Availability:</span> ${LEVEL_TEXT[report.level]}`;
+        }
+        const park = parks.find((p) => p.id === report.carParkId);
+        if (park) {
+          park.level = report.level;
+          window.dispatchEvent(new CustomEvent("park-updated", { detail: park }));
+        }
       });
     </script>
   </body>

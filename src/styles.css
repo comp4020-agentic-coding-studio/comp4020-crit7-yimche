@@ -1,40 +1,393 @@
-body {
-  margin: 0;
-  padding: 2rem;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
+/* ANU-inspired theme. The brand is black and white with ANU gold (#BE830E)
+   used sparingly as a highlight, never as a large fill (the guideline is that
+   gold covers no more than an eighth of the page). So: black chrome, white
+   content, gold rules and accents. This is a student prototype styled after
+   ANU, not an official ANU site. */
+:root {
+  --anu-gold: #be830e;
+  --anu-gold-dark: #8a5e0a; /* readable gold for text/links on white */
+  --anu-gold-tint: #f5edde;
+  --black: #000000;
+  --ink: #1a1a1a;
+  --muted: #555b64;
+  --line: #d7d2c6;
+  --bg: #f4f2ee;
+  --card: #ffffff;
+  --plenty: #1b7f4b;
+  --plenty-bg: #e4f4ea;
+  --some: #8a5e0a;
+  --some-bg: #faf0d8;
+  --full: #b3261e;
+  --full-bg: #fbe4e2;
+  --none: #555b64;
+  --none-bg: #ececec;
+  --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
 }
 
-main {
-  max-width: 40rem;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* ---- Site chrome ------------------------------------------------------- */
+
+.site-header {
+  background: var(--black);
+  color: #fff;
+}
+
+.utility {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.utility .tag {
+  max-width: 64rem;
   margin: 0 auto;
+  padding: 0.35rem 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--anu-gold);
+  font-weight: 600;
+}
+
+.bar {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.crest {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--anu-gold);
+}
+
+.site-header .crest {
+  font-size: 1.7rem;
+}
+
+.wordmark .product {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+  border-bottom-color: var(--anu-gold);
+}
+
+.gold-rule {
+  height: 4px;
+  background: var(--anu-gold);
+}
+
+/* ---- Main content ------------------------------------------------------ */
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+}
+
+.lede {
+  font-size: 1.1rem;
+  max-width: 46rem;
+  color: #33383f;
 }
 
 a {
-  color: #0b5fff;
+  color: var(--anu-gold-dark);
+  text-underline-offset: 2px;
 }
 
-form {
+h2.section {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  font-weight: 800;
+  border-bottom: 3px solid var(--anu-gold);
+}
+
+#map {
+  height: 420px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #e8e5dd;
+}
+
+.notice {
+  padding: 0.75rem 1rem;
+  background: var(--anu-gold-tint);
+  border-left: 4px solid var(--anu-gold);
+  border-radius: 2px;
+}
+
+/* ---- Parking cards ----------------------------------------------------- */
+
+ul.parks {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.park {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--black);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  scroll-margin-top: 1rem;
+}
+
+.park-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  justify-content: space-between;
+}
+
+.park-head h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--anu-gold-tint);
+  border: 1px solid var(--anu-gold);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.avail {
+  display: inline-block;
+  margin: 0.6rem 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.avail-label {
+  font-weight: 500;
+  color: inherit;
+}
+
+.avail-plenty {
+  color: var(--plenty);
+  background: var(--plenty-bg);
+}
+.avail-some {
+  color: var(--some);
+  background: var(--some-bg);
+}
+.avail-full {
+  color: var(--full);
+  background: var(--full-bg);
+}
+.avail-none {
+  color: var(--none);
+  background: var(--none-bg);
+}
+
+dl.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+dl.facts dt {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+dl.facts dd {
+  margin: 0;
+}
+
+/* ---- Report form ------------------------------------------------------- */
+
+form.report {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  margin-block: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
 }
 
-input {
-  flex: 1;
-  min-width: 12rem;
-  padding: 0.4rem 0.6rem;
+form.report label {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+select,
+button {
   font: inherit;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #bdb7a9;
+  border-radius: 4px;
+  background: #fff;
 }
 
 button {
-  padding: 0.4rem 1rem;
-  font: inherit;
+  cursor: pointer;
+  font-weight: 700;
+  background: var(--anu-gold);
+  color: var(--black);
+  border-color: var(--anu-gold);
 }
 
-#messages {
-  padding-inline-start: 1.2rem;
+button:hover,
+button:focus {
+  background: #a97209;
+  border-color: #a97209;
+}
+
+:focus-visible {
+  outline: 3px solid var(--anu-gold-dark);
+  outline-offset: 2px;
+}
+
+.footnote {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---- Prose (the /readme/ page) ---------------------------------------- */
+
+.prose {
+  max-width: 46rem;
+}
+
+.prose h1 {
+  border-bottom: 3px solid var(--anu-gold);
+  padding-bottom: 0.4rem;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  font-weight: 800;
+}
+
+.prose code {
+  background: var(--anu-gold-tint);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background: #1a1a1a;
+  color: #f4f2ee;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* ---- Footer ------------------------------------------------------------ */
+
+.site-footer {
+  background: var(--black);
+  color: #d7d2c6;
+  border-top: 4px solid var(--anu-gold);
+}
+
+.footer-inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
+}
+
+.footer-brand {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.footer-note {
+  max-width: 48rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--anu-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 30rem) {
+  dl.facts {
+    grid-template-columns: 1fr;
+    gap: 0.1rem 0;
+  }
+  dl.facts dd {
+    margin-bottom: 0.4rem;
+  }
+  .site-header nav {
+    gap: 1rem;
+  }
 }

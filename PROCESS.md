@@ -1,54 +1,67 @@
-# Process overview
+# Process
 
-<!-- TEMPLATE: this file is a shape to fill in, not a form. Replace everything
-     in it with your own overview, and delete this comment — `pnpm
-     check:evidence` will remind you if it's still here. -->
+## Overview
 
-Written by you, for a reader: how you got from the brief to the harness and
-agentic workflow behind this submission. Markers read this file and follow its
-citations; they don't trawl the repo for evidence you didn't point at.
+The brief was "build the ANU system you wish existed." I chose campus parking: a
+driver currently has to reconcile signage, a fees PDF and a payment app, and
+still can't tell which car park has room. The app collapses that into one page,
+a directory backed by an OpenStreetMap map, with a live "how full is it?" report
+flow on top so the map is worth looking at.
 
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and its
-[word counts](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#word-counts)
-cover every deliverable.
+I built it on the shipped stack (Astro SSR, Drizzle, SQLite, Fly.io) and against
+the crit's fixed spec: it deploys to `*.fly.dev`, models a real slice end to
+end, and the core flow persists across a reload.
 
-## What I built
+## How the work went
 
-A sentence or two. `README.md` is where the account of what the app is and what
-good means here lives; this file is how you got there.
+1. **Read before building.** I read the starter's own files (`fly.toml`,
+   `Dockerfile`, `astro.config.mjs`, `src/lib/*`, the shipped `spec/*`) and the
+   crit 7 brief and spec on the course site, so the app was designed to the
+   platform rather than retrofitted to it. Key constraints I carried out of that
+   read: single machine (so the SSE event bus is safe), migrations apply at
+   boot, and the invariants only cover routes named in `spec/routes.ts`.
+2. **Modelled the data first.** Two tables in `src/lib/schema.ts`: `car_parks`
+   (the reference facts) and `reports` (the live state, with a foreign key back
+   to a car park). I regenerated the migration from a clean slate because the
+   app had never deployed, so there was no live volume to preserve.
+3. **Seeded honestly.** The rate scheme in `src/lib/parking-data.ts` is grounded
+   in ANU's published 2026 parking fees, cited in that file. The car-park names,
+   capacities and coordinates are illustrative placeholders, and I labelled them
+   as such in the seed, the README and the app's footnote rather than dress them
+   up as surveyed data.
+4. **Wired the flow end to end.** A plain HTML form POSTs a report, which
+   persists to SQLite (303 redirect back to the card, so it works with no JS)
+   and broadcasts over the existing SSE bus to update every other tab and the
+   map marker.
+5. **Retired the starter.** The guestbook message table, its API route and
+   `spec/guestbook.test.ts` describe the starter, so they went when I replaced
+   it, as the spec says they should.
+6. **Wrote contract tests.** `spec/parking.test.ts` asserts the running app:
+   the directory carries each area's facts and the grounded figures, a report
+   survives a reload, an invalid level is dropped, and a report is broadcast
+   over SSE.
 
-## How I got here
+## Directing, grounding and correcting
 
-The account of the process: how the work actually went, and how you knew the
-result was right. Tell it in whatever order makes it clear. A weekly prototype
-needs a paragraph or two; an assignment needs more.
+- **Directed:** I made the scope call that a pure browse-only directory would
+  not exercise the crit's persistence contract, and chose live availability
+  reports as the slice that both fixes a real frustration and demonstrates
+  schemas, SQLite and migrations.
+- **Grounded:** I pulled the 2026 rate scheme from the ANU services site rather
+  than invent numbers, and I recorded exactly which parts of the data are
+  grounded and which are placeholder, so no reader mistakes one for the other.
+- **Corrected:** the first typecheck failed because the client script referenced
+  Leaflet's types, but Leaflet loads from a CDN and is not a typed dependency;
+  I retyped the browser globals loosely and added the explicit `is:inline`
+  directive the compiler asked for. I also normalised a coordinate that had been
+  written as an expression rather than a literal.
 
-Cite the record as you go, as links whose text is the commit hash or range and
-whose target is this repo's commit or compare URL, so a reader clicks straight
-to the evidence:
+## Commit record
 
-- one commit: [`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d)
-- a range:
-  [`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
+The work grew in logical commits, cited here (each link's text is the commit
+SHA, which `pnpm check:evidence` resolves against this repo):
 
-To pair a prompt with the commit it produced, quote the prompt (curated, not a
-full transcript) next to the citation:
-
-> the prompt, verbatim
-
-Screenshots are welcome where one carries the point better than a sentence does.
-Commit the file to this repo and link it with a **relative** path, which is what
-makes it render on GitHub: `![alt text](docs/before.png)`. Images don't count
-towards the word count and don't replace the citation.
-
-## Before you ship
-
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
-
-Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
-image is visible the moment this file is rendered on GitHub.
+- Data layer (schema, seed, migration): [`8f0bccd`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit7-yimche/commit/8f0bccd)
+- Report API and SSE stream: [`54b5d55`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit7-yimche/commit/54b5d55)
+- ANU-styled UI (map, directory, report forms, chrome): [`3e7d467`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit7-yimche/commit/3e7d467)
+- Spec tests, retiring the guestbook test: [`f9cf8c8`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit7-yimche/commit/f9cf8c8)

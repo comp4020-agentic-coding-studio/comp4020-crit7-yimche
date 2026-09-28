@@ -1,18 +1,65 @@
-# Your prototype
+# ANU campus parking
 
-<!-- TEMPLATE: this file is yours, and the deployed app publishes it in full at
-     /readme/ --- a visitor reads it before they touch the app, and so does the
-     marker. Replace everything in it, this comment included. -->
+A full-stack finder for parking on the ANU Acton campus. It answers the two
+questions the current arrangement makes you juggle across signage, a PDF and an
+app: *where can I park and what will it cost me?*, and *which car park actually
+has room right now?*
 
-What this is, in a paragraph: the thing, and what it's for.
+Every parking area is listed with its hours, rate, the permit it wants and the
+fees and eligibility behind that permit, and each one is a pin on an
+OpenStreetMap map. On top of the reference data sits one live flow: anyone can
+report how full a car park is, the report is saved, and every open tab (and the
+map) updates in real time. Open the site in two tabs and report a park in one to
+see it.
 
 ## What good looks like here
 
-Say what good means for this app: what you decided, what you read or looked at
-while deciding, and what you chose not to build. The rules that decision
-produced live in `CLAUDE.md` and the checks that protect it live in `spec/`;
-this is the argument they came from, so say which parts of good are enforced and
-which are judgement calls.
+Good here is a driver trusting the page enough to leave the house on it. That
+rests on three decisions:
 
-Images go in `public/` and are linked relatively --- `![alt](public/before.png)`
---- which renders on GitHub and at `/readme/` alike.
+1. **The directory is the source of truth, and it needs no JavaScript.** The
+   map and the live updates are progressive enhancement. If Leaflet or the
+   network is unavailable, the server-rendered list still carries every fact,
+   and the report form still works through a plain POST and redirect. This is
+   also what keeps the accessibility floor green.
+2. **State lives in the schema, and the core flow persists.** Car parks and
+   reports are SQLite tables defined in `src/lib/schema.ts`; the facts are
+   seeded from `src/lib/parking-data.ts` on first boot. A report is written to
+   the volume, so it survives a reload and a redeploy, and broadcast over SSE to
+   other clients. That is the crit's persistence contract, and
+   `spec/parking.test.ts` holds it.
+3. **The data is honest about what it is.** The rate scheme follows ANU's
+   [published 2026 parking fees](https://services.anu.edu.au/campus-environment/transport-parking/parking-fees):
+   staff surface permits at $7.78/day, staff parking stations at $9.59/day,
+   non-resident student surface at $3.88/day, resident student at $4.90/day, and
+   free parking for accessible-permit and motorbike users, with pay and
+   time-limited zones enforced 8am–5pm Mon–Fri and free after 5pm and on
+   weekends. The individual **car-park names, capacities and map coordinates are
+   illustrative placeholders**, not a survey; the app says so in its footnote.
+   Before this could be relied on, each entry would need checking against the
+   official signage and permit-zone map.
+
+### What's enforced vs. judged
+
+`spec/invariants.test.ts` (shipped) enforces the accessibility floor and the
+structural basics on every route in `spec/routes.ts`. `spec/parking.test.ts`
+(mine) enforces the contracts above: the directory carries each area's facts and
+the grounded rate figures, a report survives a reload, and a report is broadcast
+over SSE. What a person still judges at the crit: whether the data is *right*,
+whether the map reads well, and whether the live flow feels useful rather than
+gimmicky.
+
+### What I chose not to build
+
+No accounts, no permit purchase or payment, no per-user favourites, no routing
+or space-level (bay-by-bay) tracking. The slice is deliberately "read the facts,
+report the state," which is the part that actually frustrates a driver and the
+part that exercises schemas, SQLite and migrations.
+
+## Running it
+
+```sh
+mise install && pnpm install
+pnpm dev     # local dev server under the base path
+pnpm check   # typecheck + build + tests against the running app
+```

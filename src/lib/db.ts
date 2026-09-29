@@ -1,7 +1,7 @@
 import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import Database from "better-sqlite3";
-import { desc, eq } from "drizzle-orm";
+import { desc, eq, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import { migrate } from "drizzle-orm/better-sqlite3/migrator";
 import { CAR_PARKS } from "./parking-data";
@@ -25,11 +25,13 @@ export const db = drizzle(client);
 // commit the migration it writes to drizzle/.
 migrate(db, { migrationsFolder: "./drizzle" });
 
-// Seed the reference data once, idempotently. The car-park facts live in
-// source (parking-data.ts) and are inserted on first boot; matching on the
-// unique slug means a redeploy against an already-seeded volume is a no-op,
-// and adding a new car park to the seed picks it up on the next boot without
-// disturbing the live reports that point at the existing rows.
+// Seed the reference data on every boot, idempotently. The car-park facts live
+// in source (parking-data.ts) and are the ground truth; the slug is their
+// stable identity. A new car park in the seed is inserted; an existing one has
+// its facts (name, position, rate, permit, notes, capacity) re-synced from
+// source, so correcting a coordinate or a rate here reaches an already-seeded
+// volume on the next boot. The row id never changes, so the live reports that
+// point at a car park stay attached across the update.
 function seed(): void {
   const insert = db
     .insert(carParks)
@@ -48,7 +50,21 @@ function seed(): void {
         capacity: p.capacity ?? null,
       })),
     )
-    .onConflictDoNothing({ target: carParks.slug });
+    .onConflictDoUpdate({
+      target: carParks.slug,
+      set: {
+        name: sql`excluded.name`,
+        category: sql`excluded.category`,
+        lat: sql`excluded.lat`,
+        lng: sql`excluded.lng`,
+        hours: sql`excluded.hours`,
+        rate: sql`excluded.rate`,
+        permit: sql`excluded.permit`,
+        fees: sql`excluded.fees`,
+        notes: sql`excluded.notes`,
+        capacity: sql`excluded.capacity`,
+      },
+    });
   insert.run();
 }
 seed();

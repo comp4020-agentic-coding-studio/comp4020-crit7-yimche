@@ -34,10 +34,14 @@ rests on three decisions:
    non-resident student surface at $3.88/day, resident student at $4.90/day, and
    free parking for accessible-permit and motorbike users, with pay and
    time-limited zones enforced 8am–5pm Mon–Fri and free after 5pm and on
-   weekends. The individual **car-park names, capacities and map coordinates are
-   illustrative placeholders**, not a survey; the app says so in its footnote.
-   Before this could be relied on, each entry would need checking against the
-   official signage and permit-zone map.
+   weekends. Every entry's **coordinates, and any capacity shown, come from
+   OpenStreetMap** (© OpenStreetMap contributors): each pin is the centre of a
+   real mapped parking feature, the same data the map draws. What is **still
+   interpretive, not a survey**, is which permit category (staff, student,
+   resident, visitor) applies to each lot; that is read off OSM's access tags
+   and the nearby hall or building, then matched to the ANU fee scheme. The app
+   says so in its footnote. Before this could be relied on, each lot's permit
+   zone would need checking against the official permit-zone map.
 
 ### What's enforced vs. judged
 

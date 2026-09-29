@@ -5,12 +5,14 @@ questions the current arrangement makes you juggle across signage, a PDF and an
 app: *where can I park and what will it cost me?*, and *which car park actually
 has room right now?*
 
-Every parking area is listed with its hours, rate, the permit it wants and the
-fees and eligibility behind that permit, and each one is a pin on an
-OpenStreetMap map. On top of the reference data sits one live flow: anyone can
-report how full a car park is, the report is saved, and every open tab (and the
-map) updates in real time. Open the site in two tabs and report a park in one to
-see it.
+Every parking area OpenStreetMap records on campus is listed with its hours,
+rate, the permit it wants and the fees and eligibility behind that permit, and
+each one is a pin on an OpenStreetMap map. The list is searchable and filterable
+by category, and the map shows exactly the set the list does: narrow the list and
+the pins narrow with it. On top of the reference data sits one live flow: anyone
+can report how full a car park is, the report is saved, and every open tab (and
+the map) updates in real time. Open the site in two tabs and report a park in one
+to see it.
 
 ## What good looks like here
 
@@ -34,12 +36,16 @@ rests on three decisions:
    non-resident student surface at $3.88/day, resident student at $4.90/day, and
    free parking for accessible-permit and motorbike users, with pay and
    time-limited zones enforced 8am–5pm Mon–Fri and free after 5pm and on
-   weekends. Every entry's **coordinates, and any capacity shown, come from
-   OpenStreetMap** (© OpenStreetMap contributors): each pin is the centre of a
-   real mapped parking feature, the same data the map draws. What is **still
-   interpretive, not a survey**, is which permit category (staff, student,
-   resident, visitor) applies to each lot; that is read off OSM's access tags
-   and the nearby hall or building, then matched to the ANU fee scheme. The app
+   weekends. The whole directory is **generated from OpenStreetMap** (©
+   OpenStreetMap contributors) by `scripts/gen-parking.mjs`: every entry is a
+   distinct mapped parking feature, its coordinates are the feature's centre (the
+   same data the map draws), and any capacity or accessible-bay count shown is
+   what OSM records. What is **still interpretive, not a survey**, is each lot's
+   category, rate and permit; those are derived from its OSM access/fee/type tags
+   mapped onto the ANU fee scheme (e.g. `access=private` → resident/private,
+   `access=permit` → permit zone, public + `fee=yes` → visitor pay, otherwise the
+   campus staff/student surface default), and unnamed lots are labelled by the
+   nearest mapped landmark. The app
    says so in its footnote. Before this could be relied on, each lot's permit
    zone would need checking against the official permit-zone map.
 

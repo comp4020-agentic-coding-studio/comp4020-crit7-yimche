@@ -75,10 +75,20 @@ const mapData = parks.map((p) => ({
       </noscript>
 
       <h2 class="section">Parking areas</h2>
+      {/* The filter bar is built by the client script as a progressive
+          enhancement, so no-JS users never see controls that can't work; the
+          full directory below is always rendered. */}
+      <div id="filters" hidden></div>
       <ul class="parks">
         {
           parks.map((park) => (
-            <li class="park" id={`park-${park.id}`} data-park-id={park.id}>
+            <li
+              class="park"
+              id={`park-${park.id}`}
+              data-park-id={park.id}
+              data-category={park.category}
+              data-search={`${park.name} ${park.category} ${park.hours} ${park.rate} ${park.permit} ${park.fees} ${park.notes ?? ""}`.toLowerCase()}
+            >
               <div class="park-head">
                 <h3>{park.name}</h3>
                 <span class="category">{park.category}</span>
@@ -179,22 +189,21 @@ const mapData = parks.map((p) => ({
         return `<strong>${park.name}</strong><br>${park.category}<br>${avail}<br><a href="#park-${park.id}">Details &amp; report</a>`;
       }
 
+      // deno-lint-ignore no-explicit-any
+      let map: any = null;
       if (L && document.getElementById("map") && parks.length > 0) {
-        const map = L.map("map");
+        map = L.map("map");
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
           maxZoom: 19,
           attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(map);
 
-        const bounds = L.latLngBounds([]);
         for (const park of parks) {
           const marker = L.marker([park.lat, park.lng]).addTo(map);
           marker.bindPopup(popupHtml(park));
           markers.set(park.id, marker);
-          bounds.extend([park.lat, park.lng]);
         }
-        map.fitBounds(bounds, { padding: [30, 30] });
 
         // Keep marker popups in step with the live list.
         window.addEventListener("park-updated", (event) => {
@@ -202,6 +211,92 @@ const mapData = parks.map((p) => ({
           const marker = markers.get(detail.id);
           if (marker) marker.setPopupContent(popupHtml(detail));
         });
+      }
+
+      // ---- Search & filter -------------------------------------------------
+      // A progressive enhancement over the server-rendered directory: hide the
+      // cards that don't match, and drop their markers from the map to match, so
+      // the list and the map always show the same set. Built entirely here so a
+      // no-JS visitor never sees a control that can't work.
+      const cards = Array.from(
+        document.querySelectorAll<HTMLLIElement>("li.park"),
+      );
+      const filters = document.getElementById("filters");
+      if (filters && cards.length > 0) {
+        const categories = Array.from(
+          new Set(cards.map((c) => c.dataset.category ?? "")),
+        )
+          .filter(Boolean)
+          .sort();
+
+        filters.innerHTML = `
+          <div class="filter-field">
+            <label for="filter-search">Search parking</label>
+            <input id="filter-search" type="search" autocomplete="off"
+              placeholder="name, hall, permit, rate…" />
+          </div>
+          <div class="filter-field">
+            <label for="filter-category">Category</label>
+            <select id="filter-category">
+              <option value="">All categories</option>
+              ${categories
+                .map((c) => `<option value="${c}">${c}</option>`)
+                .join("")}
+            </select>
+          </div>
+          <p id="filter-count" class="filter-count" aria-live="polite"></p>`;
+        filters.hidden = false;
+
+        const searchEl = document.getElementById(
+          "filter-search",
+        ) as HTMLInputElement;
+        const categoryEl = document.getElementById(
+          "filter-category",
+        ) as HTMLSelectElement;
+        const countEl = document.getElementById("filter-count") as HTMLElement;
+
+        function applyFilter(): void {
+          const q = searchEl.value.trim().toLowerCase();
+          const cat = categoryEl.value;
+          let shown = 0;
+          // deno-lint-ignore no-explicit-any
+          const visibleBounds = L ? L.latLngBounds([]) : null;
+
+          for (const card of cards) {
+            const okCat = !cat || card.dataset.category === cat;
+            const okText = !q || (card.dataset.search ?? "").includes(q);
+            const visible = okCat && okText;
+            card.hidden = !visible;
+
+            const id = Number(card.dataset.parkId);
+            const marker = markers.get(id);
+            if (marker && map) {
+              if (visible) {
+                marker.addTo(map);
+                visibleBounds?.extend(marker.getLatLng());
+              } else {
+                map.removeLayer(marker);
+              }
+            }
+            if (visible) shown++;
+          }
+
+          if (map && visibleBounds && visibleBounds.isValid()) {
+            map.fitBounds(visibleBounds, { padding: [30, 30], maxZoom: 18 });
+          }
+          countEl.textContent =
+            shown === cards.length
+              ? `Showing all ${cards.length} parking areas`
+              : `Showing ${shown} of ${cards.length} parking areas`;
+        }
+
+        searchEl.addEventListener("input", applyFilter);
+        categoryEl.addEventListener("change", applyFilter);
+        applyFilter();
+      } else if (map) {
+        // No filter bar (e.g. no cards found): still frame all markers.
+        const bounds = L.latLngBounds(parks.map((p) => [p.lat, p.lng]));
+        if (bounds.isValid()) map.fitBounds(bounds, { padding: [30, 30] });
       }
 
       // The live channel: a report from any tab lands here and updates the

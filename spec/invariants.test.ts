@@ -85,6 +85,9 @@ for (const route of ROUTES) {
           `${id}: ${help} (${nodes.map((node) => node.target.join(" ")).join("; ")})`,
       );
       expect(violations).toEqual([]);
-    });
+      // axe walks the whole server-rendered directory, now every mapped lot on
+      // campus. That is a large DOM for jsdom, so this one rule needs more than
+      // the 5s default; the check itself is unchanged.
+    }, 30_000);
   });
 }

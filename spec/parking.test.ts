@@ -38,10 +38,31 @@ describe("parking directory", () => {
   });
 
   it("lists parking areas of each kind", () => {
-    expect(html).toContain("West Precinct Parking Station");
-    expect(html).toContain("Fellows Oval Surface (student)");
-    expect(html).toContain("Accessible Bays (campus-wide)");
-    expect(html).toContain("Motorbike &amp; Scooter Bays");
+    for (const category of [
+      "Visitor pay parking",
+      "Staff parking station",
+      "Staff / student surface",
+      "Resident / private",
+      "Permit parking",
+      "Motorbike parking",
+    ]) {
+      expect(html).toContain(category);
+    }
+  });
+
+  it("renders the whole OpenStreetMap parking set", () => {
+    // Every mapped lot becomes a card; guard against a regression that drops
+    // back to a handful of hand-written entries.
+    const count = (html.match(/data-park-id="\d+"/g) ?? []).length;
+    expect(count).toBeGreaterThan(100);
+  });
+
+  it("exposes the data the client filter runs on", () => {
+    // The search/filter is a client enhancement, but the data it needs must be
+    // server-rendered: a filter mount point, and a category per card.
+    expect(html).toContain('id="filters"');
+    expect(html).toContain("data-category=");
+    expect(html).toContain("data-search=");
   });
 
   it("shows every fact a driver needs", () => {

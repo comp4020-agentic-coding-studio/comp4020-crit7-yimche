@@ -1,0 +1,3970 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-29T04:30:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 585124530,
+  "lat": -35.2812140,
+  "lon": 149.1247240,
+  "tags": {
+    "addr:housenumber": "5",
+    "addr:street": "Farrell Place",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "name": "Cafe Alibi",
+    "opening_hours": "Mo-Fr 07:00-14:00",
+    "outdoor_seating": "yes",
+    "website": "https://cafealibi.com.au/"
+  }
+},
+{
+  "type": "node",
+  "id": 978010476,
+  "lat": -35.2785521,
+  "lon": 149.1238486,
+  "tags": {
+    "amenity": "cafe",
+    "name": "As You Like It",
+    "opening_hours": "Mo-Fr 07:00-16:30"
+  }
+},
+{
+  "type": "node",
+  "id": 978015409,
+  "lat": -35.2814139,
+  "lon": 149.1219657,
+  "tags": {
+    "addr:housenumber": "105",
+    "addr:street": "Ellery Crescent",
+    "amenity": "cafe",
+    "name": "Savoir French",
+    "opening_hours": "Mo-Fr 08:00-15:30",
+    "outdoor_seating": "yes",
+    "website": "https://savoirfrench.com.au/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 978021390,
+  "lat": -35.2808663,
+  "lon": 149.1221398,
+  "tags": {
+    "amenity": "library",
+    "name": "School of Art Library"
+  }
+},
+{
+  "type": "node",
+  "id": 978025917,
+  "lat": -35.2806476,
+  "lon": 149.1233534,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Biginelli Espresso"
+  }
+},
+{
+  "type": "node",
+  "id": 978060176,
+  "lat": -35.2761892,
+  "lon": 149.1209513,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Tasa Coffee House"
+  }
+},
+{
+  "type": "node",
+  "id": 1517045685,
+  "lat": -35.2831569,
+  "lon": 149.1213146,
+  "tags": {
+    "amenity": "cafe",
+    "name": "NFSA Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1623585013,
+  "lat": -35.2790615,
+  "lon": 149.1243093,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Stonewall Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 1717669654,
+  "lat": -35.2839896,
+  "lon": 149.1152166,
+  "tags": {
+    "building": "yes",
+    "name": "Research School of Earth Sciences"
+  }
+},
+{
+  "type": "node",
+  "id": 2176924511,
+  "lat": -35.2852857,
+  "lon": 149.1232826,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "brand": "Wilson Parking",
+    "brand:wikidata": "Q28448427",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Wilson Parking",
+    "operator": "Wilson Parking",
+    "operator:type": "private",
+    "operator:wikidata": "Q28448427",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 2296798402,
+  "lat": -35.2847640,
+  "lon": 149.1249709,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2023-10-25",
+    "name": "Mocan & Green Grout"
+  }
+},
+{
+  "type": "node",
+  "id": 2296811773,
+  "lat": -35.2852090,
+  "lon": 149.1231827,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Palace Electric"
+  }
+},
+{
+  "type": "node",
+  "id": 2681958484,
+  "lat": -35.2739783,
+  "lon": 149.1235770,
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "name": "North Oval Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "node",
+  "id": 4159927699,
+  "lat": -35.2736912,
+  "lon": 149.1208724,
+  "tags": {
+    "amenity": "university",
+    "name": "ANU College"
+  }
+},
+{
+  "type": "node",
+  "id": 4370839009,
+  "lat": -35.2728921,
+  "lon": 149.1126472,
+  "tags": {
+    "amenity": "library",
+    "check_date": "2023-10-21",
+    "name": "Black Mountain Library",
+    "source": "LPI Base Map Aug 2016"
+  }
+},
+{
+  "type": "node",
+  "id": 5921587174,
+  "lat": -35.2828776,
+  "lon": 149.1196803,
+  "tags": {
+    "amenity": "cafe",
+    "check_date": "2026-04-11",
+    "name": "The Gods Cafe, Hedley Bull",
+    "opening_hours": "Mo-Fr 08:00-16:00",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6147339489,
+  "lat": -35.2866048,
+  "lon": 149.1162443,
+  "tags": {
+    "amenity": "parking",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Acton Underhill parking",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 6302669090,
+  "lat": -35.2778955,
+  "lon": 149.1207370,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Chatime",
+    "brand:en": "Chatime",
+    "brand:wikidata": "Q16829306",
+    "brand:wikipedia": "en:Chatime",
+    "brand:zh": "日出茶太",
+    "cuisine": "bubble_tea",
+    "name": "Chatime",
+    "name:en": "Chatime",
+    "name:zh": "日出茶太",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6302682192,
+  "lat": -35.2774411,
+  "lon": 149.1204779,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Rex Espresso",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6317612744,
+  "lat": -35.2774461,
+  "lon": 149.1210466,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Coffee Lab",
+    "brand:wikidata": "Q109568497",
+    "cuisine": "coffee_shop",
+    "name": "Coffee Lab",
+    "opening_hours": "Mo-Fr 07:00-18:00; Sa,Su 07:30-16:30",
+    "takeaway": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6392155033,
+  "lat": -35.2778298,
+  "lon": 149.1170095,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Little Pickle"
+  }
+},
+{
+  "type": "node",
+  "id": 6936132519,
+  "lat": -35.2764230,
+  "lon": 149.1218780,
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "capacity": "300",
+    "fee": "yes",
+    "layer": "-1",
+    "name": "Kambri Car Park",
+    "operator": "CARe",
+    "parking": "underground",
+    "payment:cash": "yes",
+    "payment:coins": "yes",
+    "payment:credit_cards": "yes",
+    "payment:notes": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6991430547,
+  "lat": -35.2845169,
+  "lon": 149.1166971,
+  "tags": {
+    "amenity": "cafe",
+    "name": "The Licensed Grocer on Balmain"
+  }
+},
+{
+  "type": "node",
+  "id": 7792893018,
+  "lat": -35.2848602,
+  "lon": 149.1229570,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Makeshift",
+    "operator": "Redbrick Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 9166247677,
+  "lat": -35.2822540,
+  "lon": 149.1245760,
+  "tags": {
+    "addr:street": "Gordon Street",
+    "amenity": "cafe",
+    "check_date": "2026-04-12",
+    "name": "Interlude Espresso Bar",
+    "opening_hours": "Mo-Fr 07:00-15:00",
+    "phone": "+61 2 6174 0748"
+  }
+},
+{
+  "type": "node",
+  "id": 10292532114,
+  "lat": -35.2866396,
+  "lon": 149.1162381,
+  "tags": {
+    "amenity": "parking",
+    "layer": "-1",
+    "name": "Acton Underhill parking",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 10899696266,
+  "lat": -35.2750221,
+  "lon": 149.1182385,
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "ANU Makerspace @ Building 38",
+    "website": "https://makerspace.anu.edu.au/"
+  }
+},
+{
+  "type": "node",
+  "id": 12625434563,
+  "lat": -35.2847726,
+  "lon": 149.1240589,
+  "tags": {
+    "addr:housenumber": "15",
+    "addr:street": "Edinburgh Ave",
+    "addr:unit": "2",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "drink:coffee": "yes",
+    "food": "yes",
+    "indoor_seating": "yes",
+    "name": "Li'l Brew Expresso Bar",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13694455478,
+  "lat": -35.2777915,
+  "lon": 149.1203267,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "african",
+    "disused:shop": "cafe",
+    "name": "Ambi's Chai",
+    "opening_hours": "Mo-Th 08:00-14:00; Fr-Sa 08:00-14:00, 18:00-21:00",
+    "phone": "+61 406 994 992"
+  }
+},
+{
+  "type": "node",
+  "id": 13785659073,
+  "lat": -35.2827883,
+  "lon": 149.1196736,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Hexagon Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 14072461701,
+  "lat": -35.2810052,
+  "lon": 149.1191235,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;sand",
+    "name": "Three Sides Cafe",
+    "opening_hours": "Mo-Fr 08:00-14:00",
+    "phone": "+61 405 485 269"
+  }
+},
+{
+  "type": "way",
+  "id": 4648009,
+  "center": {
+    "lat": -35.2795058,
+    "lon": 149.1218649
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "building": "parking",
+    "building:levels": "5",
+    "fee": "yes",
+    "name": "Baldessin Car Park",
+    "parking": "multi-storey",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 4704963,
+  "center": {
+    "lat": -35.2789525,
+    "lon": 149.1195316
+  },
+  "tags": {
+    "leisure": "pitch",
+    "name": "Fellows Oval",
+    "source:sport": "LPI Imagery May 2018",
+    "sport": "cricket;soccer;multi",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 4704964,
+  "center": {
+    "lat": -35.2809581,
+    "lon": 149.1161171
+  },
+  "tags": {
+    "leisure": "pitch",
+    "name": "South Oval",
+    "source:sport": "LPI Imagery May 2018",
+    "sport": "cricket;multi;australian_football"
+  }
+},
+{
+  "type": "way",
+  "id": 4814155,
+  "center": {
+    "lat": -35.2839718,
+    "lon": 149.1130194
+  },
+  "tags": {
+    "building": "block",
+    "name": "Oliphant Building - 60",
+    "source": "Nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 4814156,
+  "center": {
+    "lat": -35.2834103,
+    "lon": 149.1129871
+  },
+  "tags": {
+    "building": "block",
+    "name": "John Carver Building - 58C",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 4822520,
+  "center": {
+    "lat": -35.2731931,
+    "lon": 149.1239888
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "name": "ANU North Oval",
+    "source": "yahoo",
+    "source:sport": "LPI Imagery May 2018",
+    "sport": "cricket;multi",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 4851970,
+  "center": {
+    "lat": -35.2776646,
+    "lon": 149.1222166
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Haydon-Allen Building"
+  }
+},
+{
+  "type": "way",
+  "id": 4851973,
+  "center": {
+    "lat": -35.2778591,
+    "lon": 149.1232315
+  },
+  "tags": {
+    "addr:housenumber": "24",
+    "addr:street": "Kingsley Place",
+    "building": "university",
+    "building:levels": "3",
+    "name": "Copland Building"
+  }
+},
+{
+  "type": "way",
+  "id": 4852027,
+  "center": {
+    "lat": -35.2773169,
+    "lon": 149.1230053
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Crisp Building - 26"
+  }
+},
+{
+  "type": "way",
+  "id": 4970449,
+  "center": {
+    "lat": -35.2836901,
+    "lon": 149.1226512
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "height": "8.69",
+    "heritage": "2",
+    "heritage:operator": "nhla",
+    "heritage:website": "https://www.dcceew.gov.au/parks-heritage/heritage/places/national/academy-of-science",
+    "name": "Shine Dome",
+    "ref:nhla": "105741",
+    "roof:height": "7.88",
+    "roof:levels": "0",
+    "roof:shape": "dome",
+    "source": "yahoo",
+    "wikidata": "Q27493197"
+  }
+},
+{
+  "type": "way",
+  "id": 5001918,
+  "center": {
+    "lat": -35.2780091,
+    "lon": 149.1204226
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "4",
+    "internet_access": "yes",
+    "name": "JB Chifley Building",
+    "note": "not sure how to tag opening hours (24/7 for students) 9-5 for general public",
+    "source": "yahoo",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 5032691,
+  "center": {
+    "lat": -35.2836623,
+    "lon": 149.1127447
+  },
+  "tags": {
+    "building": "block",
+    "layer": "1",
+    "name": "Cockroft Building - 58",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 5032692,
+  "center": {
+    "lat": -35.2827800,
+    "lon": 149.1126850
+  },
+  "tags": {
+    "building": "block",
+    "name": "Nuclear Physics Building",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 5032696,
+  "center": {
+    "lat": -35.2832715,
+    "lon": 149.1123756
+  },
+  "tags": {
+    "building": "block",
+    "name": "Building 58A",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 5411174,
+  "center": {
+    "lat": -35.2833197,
+    "lon": 149.1136282
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "layer": "1",
+    "name": "Leonard Huxley Building - 56",
+    "roof:levels": "0",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 23115127,
+  "center": {
+    "lat": -35.2784128,
+    "lon": 149.1253538
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "building": "parking",
+    "building:levels": "7",
+    "fee": "yes",
+    "name": "City West CarPark",
+    "parking": "multi-storey",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 28399998,
+  "center": {
+    "lat": -35.2756057,
+    "lon": 149.1237925
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "4",
+    "layer": "1",
+    "name": "Toad Hall",
+    "roof:levels": "0",
+    "source": "Nearmap",
+    "wikidata": "Q7811362"
+  }
+},
+{
+  "type": "way",
+  "id": 37526698,
+  "center": {
+    "lat": -35.2767877,
+    "lon": 149.1231776
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "College of Business and Economics - 26C",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 37526705,
+  "center": {
+    "lat": -35.2763132,
+    "lon": 149.1210396
+  },
+  "tags": {
+    "building": "sports_centre",
+    "building:levels": "2",
+    "leisure": "sports_centre",
+    "name": "Sport and Recreation Centre - 18",
+    "sport": "multi"
+  }
+},
+{
+  "type": "way",
+  "id": 37526711,
+  "center": {
+    "lat": -35.2758319,
+    "lon": 149.1214231
+  },
+  "tags": {
+    "building": "sports_centre",
+    "building:levels": "3",
+    "leisure": "sports_centre",
+    "name": "Sports Union Extension - 19",
+    "source": "Yahoo",
+    "sport": "multi"
+  }
+},
+{
+  "type": "way",
+  "id": 37526763,
+  "center": {
+    "lat": -35.2761332,
+    "lon": 149.1198984
+  },
+  "tags": {
+    "addr:housenumber": "32",
+    "addr:street": "North Road",
+    "building": "university",
+    "building:levels": "2",
+    "name": "Engineering Building - 32"
+  }
+},
+{
+  "type": "way",
+  "id": 37526770,
+  "center": {
+    "lat": -35.2756605,
+    "lon": 149.1200602
+  },
+  "tags": {
+    "addr:housenumber": "31",
+    "addr:street": "North Road",
+    "building": "university",
+    "building:levels": "3",
+    "height": "12 m",
+    "name": "Ian Ross Building - 31",
+    "source": "Yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 37526777,
+  "center": {
+    "lat": -35.2750610,
+    "lon": 149.1179146
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Psychology - 39"
+  }
+},
+{
+  "type": "way",
+  "id": 37526793,
+  "center": {
+    "lat": -35.2756726,
+    "lon": 149.1171813
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Science Central Building",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 37526802,
+  "center": {
+    "lat": -35.2765969,
+    "lon": 149.1160365
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Gould Building",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 37526819,
+  "center": {
+    "lat": -35.2771757,
+    "lon": 149.1181491
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "Hancock Library East Wing"
+  }
+},
+{
+  "type": "way",
+  "id": 37526820,
+  "center": {
+    "lat": -35.2778122,
+    "lon": 149.1181605
+  },
+  "tags": {
+    "building": "university",
+    "name": "FSES Field Services"
+  }
+},
+{
+  "type": "way",
+  "id": 38476224,
+  "center": {
+    "lat": -35.2785907,
+    "lon": 149.1145381
+  },
+  "tags": {
+    "addr:housenumber": "50",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Ursula Hall",
+    "old_name": "Ursula College",
+    "roof:levels": "0",
+    "smoking": "no",
+    "source": "Personal",
+    "type": "multipolygon",
+    "wikidata": "Q7901238"
+  }
+},
+{
+  "type": "way",
+  "id": 38476226,
+  "center": {
+    "lat": -35.2759914,
+    "lon": 149.1147895
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "D",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 38476227,
+  "center": {
+    "lat": -35.2762424,
+    "lon": 149.1152096
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "C",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 38476228,
+  "center": {
+    "lat": -35.2764038,
+    "lon": 149.1145176
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "2",
+    "name": "Burton & Garran Hall - 49"
+  }
+},
+{
+  "type": "way",
+  "id": 38476229,
+  "center": {
+    "lat": -35.2767420,
+    "lon": 149.1141320
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "B",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 38476230,
+  "center": {
+    "lat": -35.2769884,
+    "lon": 149.1145528
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "A",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 38476251,
+  "center": {
+    "lat": -35.2735470,
+    "lon": 149.1208549
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Fulton Muir Building - 95"
+  }
+},
+{
+  "type": "way",
+  "id": 38476260,
+  "center": {
+    "lat": -35.2747680,
+    "lon": 149.1182041
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Physics Building - 38",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 41655761,
+  "center": {
+    "lat": -35.2773569,
+    "lon": 149.1235980
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Copland Lecture Theater",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 47302765,
+  "center": {
+    "lat": -35.2762527,
+    "lon": 149.1235439
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Drill Hall Gallery - 29",
+    "roof:levels": "0",
+    "source": "Yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 50625036,
+  "center": {
+    "lat": -35.2817064,
+    "lon": 149.1249012
+  },
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:street": "London Circuit",
+    "building": "office",
+    "building:levels": "6",
+    "name": "NICTA Building",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632428,
+  "center": {
+    "lat": -35.2750281,
+    "lon": 149.1185727
+  },
+  "tags": {
+    "addr:housenumber": "38A",
+    "addr:street": "Science Road",
+    "building": "university",
+    "building:levels": "2",
+    "loc_name": "Physics North",
+    "name": "Physics Link Building",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 50632490,
+  "center": {
+    "lat": -35.2784270,
+    "lon": 149.1238147
+  },
+  "tags": {
+    "addr:housenumber": "15",
+    "addr:street": "Childers Street",
+    "amenity": "theatre",
+    "building": "government",
+    "name": "The Street Theatere",
+    "operator": "The Stagemaster Inc.",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632503,
+  "center": {
+    "lat": -35.2775458,
+    "lon": 149.1246292
+  },
+  "tags": {
+    "addr:housenumber": "25",
+    "addr:street": "25",
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "6",
+    "name": "UniLodge - Davey Lodge",
+    "website": "https://www.unilodge.com.au/student-accommodation-canberra/anu-davey-lodge"
+  }
+},
+{
+  "type": "way",
+  "id": 50632518,
+  "center": {
+    "lat": -35.2766860,
+    "lon": 149.1252962
+  },
+  "tags": {
+    "addr:housenumber": "35",
+    "addr:street": "Childers Street",
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "6",
+    "name": "UniLodge - Kinloch Lodge - X002",
+    "website": "https://www.unilodge.com.au/student-accommodation-canberra/anu-kinloch-lodge"
+  }
+},
+{
+  "type": "way",
+  "id": 50632542,
+  "center": {
+    "lat": -35.2771164,
+    "lon": 149.1222778
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "P.AP. Moran Building - 26B",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632638,
+  "center": {
+    "lat": -35.2774880,
+    "lon": 149.1162485
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "SRES Geography Building",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632667,
+  "center": {
+    "lat": -35.2770641,
+    "lon": 149.1168636
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "description": "Part of Research School of Biology",
+    "name": "Linnaeus Building",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632679,
+  "center": {
+    "lat": -35.2790987,
+    "lon": 149.1223925
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Beryl Rawson Building",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632683,
+  "center": {
+    "lat": -35.2781557,
+    "lon": 149.1214261
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "A.D. Hope Building",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632686,
+  "center": {
+    "lat": -35.2786744,
+    "lon": 149.1215338
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Melville Hall",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632726,
+  "center": {
+    "lat": -35.2808948,
+    "lon": 149.1222121
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "School of Art",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632761,
+  "center": {
+    "lat": -35.2806928,
+    "lon": 149.1236186
+  },
+  "tags": {
+    "amenity": "college",
+    "building": "university",
+    "building:levels": "4",
+    "education": "university",
+    "name": "ANU School of Music",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap",
+    "wikidata": "Q4525076"
+  }
+},
+{
+  "type": "way",
+  "id": 50632768,
+  "center": {
+    "lat": -35.2802205,
+    "lon": 149.1239331
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Peter Karmel Building",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632772,
+  "center": {
+    "lat": -35.2815693,
+    "lon": 149.1223832
+  },
+  "tags": {
+    "addr:housenumber": "3",
+    "addr:street": "Repertory Lane",
+    "amenity": "theatre",
+    "building": "university",
+    "building:levels": "2",
+    "check_date": "2024-05-23",
+    "name": "Theatre 3",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50632789,
+  "center": {
+    "lat": -35.2812962,
+    "lon": 149.1215560
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "School of Art",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633567,
+  "center": {
+    "lat": -35.2773946,
+    "lon": 149.1238531
+  },
+  "tags": {
+    "building": "university",
+    "name": "H W Arndt Building",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633569,
+  "center": {
+    "lat": -35.2802761,
+    "lon": 149.1198270
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Chancelry Building",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633570,
+  "center": {
+    "lat": -35.2800216,
+    "lon": 149.1198652
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Human Resources Division",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633571,
+  "center": {
+    "lat": -35.2797725,
+    "lon": 149.1199732
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Chancelry Building",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633572,
+  "center": {
+    "lat": -35.2795057,
+    "lon": 149.1201267
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Chancelry",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633573,
+  "center": {
+    "lat": -35.2795485,
+    "lon": 149.1208494
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centre for Arab and Islamic Studies",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50633575,
+  "center": {
+    "lat": -35.2802703,
+    "lon": 149.1202849
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "Chancelry Building",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 50637068,
+  "center": {
+    "lat": -35.2842875,
+    "lon": 149.1245556
+  },
+  "tags": {
+    "addr:housenumber": "23",
+    "addr:street": "Marcus Clarke Street",
+    "building": "office",
+    "building:levels": "8",
+    "name": "NewActon East",
+    "roof:levels": "0",
+    "source": "http://newacton.com.au/live"
+  }
+},
+{
+  "type": "way",
+  "id": 52333689,
+  "center": {
+    "lat": -35.2769513,
+    "lon": 149.1177863
+  },
+  "tags": {
+    "addr:housenumber": "43",
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "4",
+    "name": "Hancock Library West Wing",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52333714,
+  "center": {
+    "lat": -35.2780379,
+    "lon": 149.1160172
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Forestry Building",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52333809,
+  "center": {
+    "lat": -35.2780416,
+    "lon": 149.1171306
+  },
+  "tags": {
+    "building": "school",
+    "building:levels": "3",
+    "description": "Research School of Biology",
+    "name": "RN Robertson Building",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 52333979,
+  "center": {
+    "lat": -35.2806729,
+    "lon": 149.1183309
+  },
+  "tags": {
+    "addr:housenumber": "7",
+    "building": "university",
+    "building:levels": "4",
+    "name": "ANU College of Law - Building 7",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52333993,
+  "center": {
+    "lat": -35.2803471,
+    "lon": 149.1185955
+  },
+  "tags": {
+    "addr:housenumber": "6",
+    "building": "university",
+    "building:levels": "3",
+    "layer": "-1",
+    "name": "ANU College of Law - Building 6",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52334110,
+  "center": {
+    "lat": -35.2827379,
+    "lon": 149.1192949
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "H.C.Coombs Extension - 8",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52334119,
+  "center": {
+    "lat": -35.2824593,
+    "lon": 149.1196324
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "H.C.Coombs Lecture Theatre - 8A",
+    "roof:levels": "0",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52334120,
+  "center": {
+    "lat": -35.2829783,
+    "lon": 149.1197805
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Hedly Bull - 130",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 52334273,
+  "center": {
+    "lat": -35.2821797,
+    "lon": 149.1181681
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "1",
+    "name": "R.G. Menzies Library",
+    "roof:levels": "0",
+    "source": "nearmap",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 52334449,
+  "center": {
+    "lat": -35.2828057,
+    "lon": 149.1142392
+  },
+  "tags": {
+    "building": "university",
+    "name": "ANU Medical School",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 56632091,
+  "center": {
+    "lat": -35.2724623,
+    "lon": 149.1133744
+  },
+  "tags": {
+    "building": "office",
+    "name": "Pye Laboratories",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 57785952,
+  "center": {
+    "lat": -35.2714732,
+    "lon": 149.1110653
+  },
+  "tags": {
+    "building": "office",
+    "name": "Christian Lab"
+  }
+},
+{
+  "type": "way",
+  "id": 57786196,
+  "center": {
+    "lat": -35.2727280,
+    "lon": 149.1157938
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Sir Otto Frankel Building"
+  }
+},
+{
+  "type": "way",
+  "id": 69727094,
+  "center": {
+    "lat": -35.2743056,
+    "lon": 149.1194127
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Birch Building - 35",
+    "roof:levels": "0",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 69727235,
+  "center": {
+    "lat": -35.2788602,
+    "lon": 149.1125222
+  },
+  "tags": {
+    "building": "parking",
+    "building:levels": "4",
+    "name": "Dickson Parking Building"
+  }
+},
+{
+  "type": "way",
+  "id": 69727862,
+  "center": {
+    "lat": -35.2764004,
+    "lon": 149.1245688
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "UniLodge Warrumbul Lodge - X003",
+    "roof:levels": "0",
+    "website": "https://www.unilodge.com.au/student-accommodation-canberra/anu-warrumbul-lodge"
+  }
+},
+{
+  "type": "way",
+  "id": 76699183,
+  "center": {
+    "lat": -35.2755657,
+    "lon": 149.1218060
+  },
+  "tags": {
+    "building": "sports_centre",
+    "building:levels": "2",
+    "leisure": "sports_centre",
+    "name": "Sports Union Extension - 19a",
+    "source": "nearmap",
+    "sport": "multi"
+  }
+},
+{
+  "type": "way",
+  "id": 76706909,
+  "center": {
+    "lat": -35.2806141,
+    "lon": 149.1180461
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Scholars House - 3L",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 84076674,
+  "center": {
+    "lat": -35.2809924,
+    "lon": 149.1186043
+  },
+  "tags": {
+    "building": "construction",
+    "building:levels": "3",
+    "name": "ANU College of Law - Building 5",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "way",
+  "id": 84076929,
+  "center": {
+    "lat": -35.2764554,
+    "lon": 149.1206247
+  },
+  "tags": {
+    "amenity": "doctors",
+    "building": "office",
+    "building:levels": "2",
+    "healthcare": "doctor",
+    "name": "University Health Service and Counselling Centre",
+    "source": "nearmap",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 116933585,
+  "center": {
+    "lat": -35.2802019,
+    "lon": 149.1122168
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "A Block",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 116933586,
+  "center": {
+    "lat": -35.2804311,
+    "lon": 149.1124558
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "1",
+    "name": "Griffin Wing",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 116933590,
+  "center": {
+    "lat": -35.2800033,
+    "lon": 149.1123399
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "B Block",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 144533070,
+  "center": {
+    "lat": -35.2758208,
+    "lon": 149.1175245
+  },
+  "tags": {
+    "addr:housenumber": "138",
+    "building": "university",
+    "building:levels": "3",
+    "layer": "1",
+    "name": "Peter Baume Building"
+  }
+},
+{
+  "type": "way",
+  "id": 157058318,
+  "center": {
+    "lat": -35.2849569,
+    "lon": 149.1228711
+  },
+  "tags": {
+    "addr:housenumber": "25",
+    "addr:street": "Edinburgh Avenue",
+    "building": "yes",
+    "building:levels": "13",
+    "layer": "1",
+    "name": "Ovolo Nishi",
+    "old_name": "NewActon Nishi",
+    "phone": "+61 2 6287 6287",
+    "roof:levels": "0",
+    "tourism": "hotel",
+    "website": "https://ovolohotels.com/ovolo/nishi/"
+  }
+},
+{
+  "type": "way",
+  "id": 157060271,
+  "center": {
+    "lat": -35.2850148,
+    "lon": 149.1247717
+  },
+  "tags": {
+    "addr:housenumber": "21",
+    "addr:street": "Marcus Clarke Street",
+    "building": "residential",
+    "building:levels": "18",
+    "name": "NewActon South",
+    "roof:levels": "0",
+    "source": "http://newacton.com.au/live"
+  }
+},
+{
+  "type": "way",
+  "id": 159116145,
+  "center": {
+    "lat": -35.2800988,
+    "lon": 149.1133644
+  },
+  "tags": {
+    "addr:housenumber": "52",
+    "addr:postcode": "2601",
+    "addr:state": "ACT",
+    "addr:street": "Daley Road",
+    "addr:suburb": "Acton",
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "Burgmann College",
+    "roof:levels": "0",
+    "smoking": "isolated",
+    "website": "https://burgmann.anu.edu.au/",
+    "wikidata": "Q4998662"
+  }
+},
+{
+  "type": "way",
+  "id": 159116146,
+  "center": {
+    "lat": -35.2781332,
+    "lon": 149.1133314
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "7",
+    "name": "Ursula Hall Laurus Wing",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159644995,
+  "center": {
+    "lat": -35.2843620,
+    "lon": 149.1154146
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "OHB-A",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159644998,
+  "center": {
+    "lat": -35.2844093,
+    "lon": 149.1145095
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "2",
+    "name": "Jaeger 4",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159645002,
+  "center": {
+    "lat": -35.2837545,
+    "lon": 149.1142403
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Jaeger 6",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159645006,
+  "center": {
+    "lat": -35.2845827,
+    "lon": 149.1144595
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Jaeger 5"
+  }
+},
+{
+  "type": "way",
+  "id": 159645007,
+  "center": {
+    "lat": -35.2844434,
+    "lon": 149.1166716
+  },
+  "tags": {
+    "building": "retail",
+    "building:levels": "1",
+    "name": "Licensed Grocer on Balmain - 64B",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "way",
+  "id": 159645016,
+  "center": {
+    "lat": -35.2838955,
+    "lon": 149.1147932
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "3",
+    "name": "Jaeger 2",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159645021,
+  "center": {
+    "lat": -35.2836595,
+    "lon": 149.1146762
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "2",
+    "name": "Jaeger 7",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159645024,
+  "center": {
+    "lat": -35.2842013,
+    "lon": 149.1149650
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Jaeger 3",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159645027,
+  "center": {
+    "lat": -35.2840958,
+    "lon": 149.1152665
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Jaeger 8",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 159649959,
+  "center": {
+    "lat": -35.2832098,
+    "lon": 149.1152911
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Research School of Populaton Health",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 162174577,
+  "center": {
+    "lat": -35.2855680,
+    "lon": 149.1152884
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Vice-Chancellor's Residence - 80"
+  }
+},
+{
+  "type": "way",
+  "id": 165915329,
+  "center": {
+    "lat": -35.2848698,
+    "lon": 149.1177649
+  },
+  "tags": {
+    "addr:housenumber": "28",
+    "addr:street": "Balmain Crescent",
+    "building": "university",
+    "building:levels": "1",
+    "name": "Alumni Relations & Philanthropy - 71",
+    "note": "Endowment & Business Services, Academy of the Social Sciences in Australia",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 165915331,
+  "center": {
+    "lat": -35.2848410,
+    "lon": 149.1182662
+  },
+  "tags": {
+    "addr:housenumber": "30",
+    "addr:street": "Balmain Crescent",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Winston Churchill Memorial Trust - 93",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 165915335,
+  "center": {
+    "lat": -35.2843972,
+    "lon": 149.1162949
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "2",
+    "name": "Building 64A"
+  }
+},
+{
+  "type": "way",
+  "id": 165915339,
+  "center": {
+    "lat": -35.2832599,
+    "lon": 149.1190711
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "1",
+    "layer": "1",
+    "name": "Building 1A"
+  }
+},
+{
+  "type": "way",
+  "id": 165916136,
+  "center": {
+    "lat": -35.2862691,
+    "lon": 149.1172467
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 68",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 165916139,
+  "center": {
+    "lat": -35.2843505,
+    "lon": 149.1211782
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sir Roland Wilson Building"
+  }
+},
+{
+  "type": "way",
+  "id": 168926048,
+  "center": {
+    "lat": -35.2743446,
+    "lon": 149.1204684
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Brian Anderson Building - 115",
+    "roof:levels": "0",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 168926088,
+  "center": {
+    "lat": -35.2753009,
+    "lon": 149.1205564
+  },
+  "tags": {
+    "acronym": "CSIT",
+    "addr:housenumber": "108",
+    "building": "university",
+    "building:levels": "3",
+    "height": "15",
+    "name": "Skaidrite Darius Building - 108",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 168930592,
+  "center": {
+    "lat": -35.2744922,
+    "lon": 149.1199793
+  },
+  "tags": {
+    "addr:housenumber": "35",
+    "building": "university",
+    "building:levels": "3",
+    "name": "Craig Building - 35a",
+    "roof:levels": "0",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 186077352,
+  "center": {
+    "lat": -35.2753383,
+    "lon": 149.1183254
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "DNF Dunbar Physics Lecture Theatre - 39A"
+  }
+},
+{
+  "type": "way",
+  "id": 186077353,
+  "center": {
+    "lat": -35.2774439,
+    "lon": 149.1153479
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Wes Whitten Building - 133",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 186077354,
+  "center": {
+    "lat": -35.2744299,
+    "lon": 149.1177761
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "layer": "1",
+    "name": "Gravity Wave Building - 36B",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 207397104,
+  "center": {
+    "lat": -35.2880071,
+    "lon": 149.1163171
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Old Canberra House",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 207406165,
+  "center": {
+    "lat": -35.2849075,
+    "lon": 149.1172734
+  },
+  "tags": {
+    "addr:housenumber": "20",
+    "addr:street": "Balmain Crescent",
+    "amenity": "kindergarten",
+    "building": "university",
+    "education": "kindergarten",
+    "name": "Acton Early Childhood Centre - 1B",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 207406166,
+  "center": {
+    "lat": -35.2854670,
+    "lon": 149.1161831
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "NCEPH - 65",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 212505040,
+  "center": {
+    "lat": -35.2846746,
+    "lon": 149.1238566
+  },
+  "tags": {
+    "addr:housenumber": "14",
+    "addr:street": "Kendall Lane",
+    "building": "hotel",
+    "building:levels": "2",
+    "name": "NewActon Pavilion",
+    "roof:levels": "0",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 212505041,
+  "center": {
+    "lat": -35.2832269,
+    "lon": 149.1237863
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "2",
+    "name": "Ian Potter House",
+    "roof:levels": "0",
+    "source": "bing",
+    "wikidata": "Q67139221"
+  }
+},
+{
+  "type": "way",
+  "id": 212508122,
+  "center": {
+    "lat": -35.2776077,
+    "lon": 149.1224545
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Haydon-Allen Lecture Theatre",
+    "source": "yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 215140863,
+  "center": {
+    "lat": -35.2780386,
+    "lon": 149.1153617
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Frank Fenner Building",
+    "roof:levels": "0",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 215140864,
+  "center": {
+    "lat": -35.2775453,
+    "lon": 149.1177615
+  },
+  "tags": {
+    "building": "university",
+    "name": "Central Plant Building",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 220570406,
+  "center": {
+    "lat": -35.2846323,
+    "lon": 149.1238088
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "New Acton",
+    "website": "https://newacton.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 220570407,
+  "center": {
+    "lat": -35.2851431,
+    "lon": 149.1237681
+  },
+  "tags": {
+    "amenity": "arts_centre",
+    "building": "government",
+    "name": "Nishi Gallery"
+  }
+},
+{
+  "type": "way",
+  "id": 232848539,
+  "center": {
+    "lat": -35.2827980,
+    "lon": 149.1249324
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "The Metropolitan"
+  }
+},
+{
+  "type": "way",
+  "id": 236145672,
+  "center": {
+    "lat": -35.2816113,
+    "lon": 149.1144563
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "4",
+    "name": "National Computational Infrastructure - 143",
+    "source": "LPI NSW Imagery, local knowledge",
+    "was:note": "not yet on bing imagery. but there is a rectangle building here",
+    "website": "https://nci.org.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 242307767,
+  "center": {
+    "lat": -35.2877333,
+    "lon": 149.1164933
+  },
+  "tags": {
+    "leisure": "pitch",
+    "name": "Old Canberra House Tennis Court",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 242308028,
+  "center": {
+    "lat": -35.2873017,
+    "lon": 149.1165481
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Gardener's Cottage"
+  }
+},
+{
+  "type": "way",
+  "id": 242308029,
+  "center": {
+    "lat": -35.2872209,
+    "lon": 149.1162805
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "W.E.H. Stanner Building"
+  }
+},
+{
+  "type": "way",
+  "id": 242327674,
+  "center": {
+    "lat": -35.2872930,
+    "lon": 149.1167034
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Chauffeur's Cottage"
+  }
+},
+{
+  "type": "way",
+  "id": 242328918,
+  "center": {
+    "lat": -35.2872936,
+    "lon": 149.1161273
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "W.E.H. Stanner Building",
+    "source": "Survey"
+  }
+},
+{
+  "type": "way",
+  "id": 256154254,
+  "center": {
+    "lat": -35.2840175,
+    "lon": 149.1164162
+  },
+  "tags": {
+    "building": "industrial",
+    "building:levels": "1",
+    "name": "Building 97"
+  }
+},
+{
+  "type": "way",
+  "id": 256154255,
+  "center": {
+    "lat": -35.2857222,
+    "lon": 149.1164857
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 66",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 256154256,
+  "center": {
+    "lat": -35.2860737,
+    "lon": 149.1165790
+  },
+  "tags": {
+    "addr:housenumber": "16",
+    "addr:street": "Balmain Lane",
+    "building": "kindergarten",
+    "building:levels": "1",
+    "name": "Building 67",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 256154257,
+  "center": {
+    "lat": -35.2863897,
+    "lon": 149.1166480
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 67A",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 256154258,
+  "center": {
+    "lat": -35.2864912,
+    "lon": 149.1171026
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 67C",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 256154259,
+  "center": {
+    "lat": -35.2865194,
+    "lon": 149.1168259
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 67B",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 256154260,
+  "center": {
+    "lat": -35.2850463,
+    "lon": 149.1165391
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 72",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 262532589,
+  "center": {
+    "lat": -35.2723393,
+    "lon": 149.1192436
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "Boldrewood Park",
+    "source:name": "sign"
+  }
+},
+{
+  "type": "way",
+  "id": 263915856,
+  "center": {
+    "lat": -35.2800520,
+    "lon": 149.1215893
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Baldessin Precinct Building (BPB)"
+  }
+},
+{
+  "type": "way",
+  "id": 263915858,
+  "center": {
+    "lat": -35.2760370,
+    "lon": 149.1179244
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "layer": "1",
+    "name": "Research School of Chemistry"
+  }
+},
+{
+  "type": "way",
+  "id": 263915859,
+  "center": {
+    "lat": -35.2764617,
+    "lon": 149.1183507
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Research School of Chemistry"
+  }
+},
+{
+  "type": "way",
+  "id": 263915860,
+  "center": {
+    "lat": -35.2763647,
+    "lon": 149.1174151
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Science Teaching Building"
+  }
+},
+{
+  "type": "way",
+  "id": 263915861,
+  "center": {
+    "lat": -35.2851948,
+    "lon": 149.1177932
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 71T",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 263915862,
+  "center": {
+    "lat": -35.2856282,
+    "lon": 149.1176457
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 70",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 263915863,
+  "center": {
+    "lat": -35.2853844,
+    "lon": 149.1177233
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 101",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 279984863,
+  "center": {
+    "lat": -35.2813206,
+    "lon": 149.1182096
+  },
+  "tags": {
+    "alt_name": "ANU",
+    "amenity": "university",
+    "education": "university",
+    "name": "Australian National University",
+    "name:ru": "Австралийский национальный университет",
+    "name:vi": "Đại học Quốc gia Úc",
+    "name:zh": "澳大利亚国立大学",
+    "website": "https://www.anu.edu.au",
+    "wikidata": "Q127990"
+  }
+},
+{
+  "type": "way",
+  "id": 297172763,
+  "center": {
+    "lat": -35.2778015,
+    "lon": 149.1095889
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "cuisine": "breakfast;coffee_shop",
+    "delivery": "no",
+    "diet:vegetarian": "yes",
+    "internet_access": "no",
+    "name": "Pollen Cafe",
+    "opening_hours": "09:00-15:30",
+    "outdoor_seating": "yes",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:coins": "yes",
+    "payment:contactless": "yes",
+    "payment:diners_club": "yes",
+    "payment:mastercard": "yes",
+    "payment:notes": "yes",
+    "payment:visa": "yes",
+    "payment:visa_debit": "yes",
+    "phone": "+61 2 6247 7321",
+    "smoking": "no",
+    "takeaway": "no",
+    "website": "https://www.pollencafe.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 297686755,
+  "center": {
+    "lat": -35.2789131,
+    "lon": 149.1090056
+  },
+  "tags": {
+    "building": "yes",
+    "information": "office",
+    "name": "Visitor's Centre",
+    "tourism": "information"
+  }
+},
+{
+  "type": "way",
+  "id": 312171152,
+  "center": {
+    "lat": -35.2876412,
+    "lon": 149.1157929
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "JG Crawford Building",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 313320812,
+  "center": {
+    "lat": -35.2822661,
+    "lon": 149.1123661
+  },
+  "tags": {
+    "addr:street": "Boathouse Lane",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "ANU Boat Club shed - 82"
+  }
+},
+{
+  "type": "way",
+  "id": 418891960,
+  "center": {
+    "lat": -35.2806093,
+    "lon": 149.1174663
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Australian Centre for China in the World - 188",
+    "name:en": "Australian Centre for China in the World - 188",
+    "name:zh": "中华全球研究中心",
+    "roof:levels": "0",
+    "website": "https://ciw.anu.edu.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 418891961,
+  "center": {
+    "lat": -35.2803718,
+    "lon": 149.1176987
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "The Lotus Hall - 188A",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 480673850,
+  "center": {
+    "lat": -35.2776594,
+    "lon": 149.1104468
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Crosbie Morrison Building"
+  }
+},
+{
+  "type": "way",
+  "id": 480673855,
+  "center": {
+    "lat": -35.2772839,
+    "lon": 149.1103660
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Banksia Centre"
+  }
+},
+{
+  "type": "way",
+  "id": 480673862,
+  "center": {
+    "lat": -35.2785367,
+    "lon": 149.1106417
+  },
+  "tags": {
+    "alt_name": "Franklin Building",
+    "building": "yes",
+    "name": "Jindii Eco Spa"
+  }
+},
+{
+  "type": "way",
+  "id": 499748796,
+  "center": {
+    "lat": -35.2737796,
+    "lon": 149.1172727
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "4",
+    "name": "Bruce Hall (Packard Wing) - 40A",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 545139987,
+  "center": {
+    "lat": -35.2791627,
+    "lon": 149.1230682
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Family Law Court"
+  }
+},
+{
+  "type": "way",
+  "id": 552502529,
+  "center": {
+    "lat": -35.2772636,
+    "lon": 149.1122828
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 401"
+  }
+},
+{
+  "type": "way",
+  "id": 552502530,
+  "center": {
+    "lat": -35.2748362,
+    "lon": 149.1142785
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Foundation Building"
+  }
+},
+{
+  "type": "way",
+  "id": 552766514,
+  "center": {
+    "lat": -35.2728876,
+    "lon": 149.1140826
+  },
+  "tags": {
+    "addr:housenumber": "801",
+    "building": "office",
+    "name": "Synergy Building"
+  }
+},
+{
+  "type": "way",
+  "id": 554376132,
+  "center": {
+    "lat": -35.2773493,
+    "lon": 149.1136690
+  },
+  "tags": {
+    "addr:housenumber": "150",
+    "addr:street": "Dickson Road",
+    "building": "university",
+    "building:levels": "5",
+    "name": "Wamburun Hall",
+    "name_1": "SA5"
+  }
+},
+{
+  "type": "way",
+  "id": 584501230,
+  "center": {
+    "lat": -35.2809392,
+    "lon": 149.1181441
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "construction": "yes",
+    "name": "ANU Law Link Theatre"
+  }
+},
+{
+  "type": "way",
+  "id": 588907405,
+  "center": {
+    "lat": -35.2817694,
+    "lon": 149.1179054
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 3H",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 652265947,
+  "center": {
+    "lat": -35.2842187,
+    "lon": 149.1161763
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "1",
+    "name": "Building 64-2"
+  }
+},
+{
+  "type": "way",
+  "id": 652265948,
+  "center": {
+    "lat": -35.2840888,
+    "lon": 149.1162875
+  },
+  "tags": {
+    "building": "industrial",
+    "building:levels": "1",
+    "name": "Building 64-1"
+  }
+},
+{
+  "type": "way",
+  "id": 652277600,
+  "center": {
+    "lat": -35.2850066,
+    "lon": 149.1170891
+  },
+  "tags": {
+    "addr:housenumber": "24",
+    "addr:street": "Balmain Crescent",
+    "amenity": "kindergarten",
+    "building": "university",
+    "building:levels": "1",
+    "education": "kindergarten",
+    "name": "Acton Early Childhood Centre - 1C",
+    "roof:levels": "0",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 652784457,
+  "center": {
+    "lat": -35.2819272,
+    "lon": 149.1161003
+  },
+  "tags": {
+    "building": "yes",
+    "name": "University Purchadsing and Contracts - 53"
+  }
+},
+{
+  "type": "way",
+  "id": 652800398,
+  "center": {
+    "lat": -35.2809675,
+    "lon": 149.1151987
+  },
+  "tags": {
+    "building": "pavilion",
+    "building:levels": "1",
+    "name": "South Pavilion - 88"
+  }
+},
+{
+  "type": "way",
+  "id": 652872862,
+  "center": {
+    "lat": -35.2821948,
+    "lon": 149.1131059
+  },
+  "tags": {
+    "building": "service",
+    "name": "Building 140A"
+  }
+},
+{
+  "type": "way",
+  "id": 652872867,
+  "center": {
+    "lat": -35.2819248,
+    "lon": 149.1137285
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "1",
+    "name": "Building 54E"
+  }
+},
+{
+  "type": "way",
+  "id": 653028838,
+  "center": {
+    "lat": -35.2834484,
+    "lon": 149.1132513
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "Erich Weigold Building - 58B",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 653028844,
+  "center": {
+    "lat": -35.2835114,
+    "lon": 149.1122813
+  },
+  "tags": {
+    "building": "shed",
+    "name": "Building 58F"
+  }
+},
+{
+  "type": "way",
+  "id": 653028845,
+  "center": {
+    "lat": -35.2834761,
+    "lon": 149.1120876
+  },
+  "tags": {
+    "building": "shed",
+    "building:levels": "1",
+    "name": "Building 58E"
+  }
+},
+{
+  "type": "way",
+  "id": 672271093,
+  "center": {
+    "lat": -35.2776798,
+    "lon": 149.1209581
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Di Riddell Building",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 672271095,
+  "center": {
+    "lat": -35.2762539,
+    "lon": 149.1221387
+  },
+  "tags": {
+    "building": "service",
+    "building:levels": "1",
+    "construction": "yes",
+    "name": "Building 151"
+  }
+},
+{
+  "type": "way",
+  "id": 673018079,
+  "center": {
+    "lat": -35.2774328,
+    "lon": 149.1200958
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Health and Well-Being Centre"
+  }
+},
+{
+  "type": "way",
+  "id": 673018080,
+  "center": {
+    "lat": -35.2777356,
+    "lon": 149.1196397
+  },
+  "tags": {
+    "building": "sports_centre",
+    "building:levels": "2",
+    "name": "Sports Centre and Pool"
+  }
+},
+{
+  "type": "way",
+  "id": 673545511,
+  "center": {
+    "lat": -35.2740736,
+    "lon": 149.1168307
+  },
+  "tags": {
+    "addr:housenumber": "162",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Bruce Hall",
+    "smoking": "no",
+    "wikidata": "Q18163318"
+  }
+},
+{
+  "type": "way",
+  "id": 673545512,
+  "center": {
+    "lat": -35.2750282,
+    "lon": 149.1159858
+  },
+  "tags": {
+    "addr:housenumber": "163",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Wright Hall",
+    "smoking": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 673817212,
+  "center": {
+    "lat": -35.2802917,
+    "lon": 149.1190805
+  },
+  "tags": {
+    "addr:housenumber": "6A",
+    "building": "university",
+    "building:levels": "1",
+    "name": "ANU College of Law - Building 6A - Moot Court"
+  }
+},
+{
+  "type": "way",
+  "id": 673823968,
+  "center": {
+    "lat": -35.2814776,
+    "lon": 149.1219984
+  },
+  "tags": {
+    "area": "yes",
+    "building": "no",
+    "name": "La Baguette",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 673883468,
+  "center": {
+    "lat": -35.2787560,
+    "lon": 149.1165276
+  },
+  "tags": {
+    "building": "university",
+    "name": "Acacia Greenhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 673883469,
+  "center": {
+    "lat": -35.2788324,
+    "lon": 149.1172426
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Banksia Greenhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 673883470,
+  "center": {
+    "lat": -35.2786837,
+    "lon": 149.1171177
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Controlled Environment Facility"
+  }
+},
+{
+  "type": "way",
+  "id": 673883471,
+  "center": {
+    "lat": -35.2787197,
+    "lon": 149.1179050
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Eucalyptus Greenhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 673883472,
+  "center": {
+    "lat": -35.2788465,
+    "lon": 149.1177724
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Darwinia Greenhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 673883473,
+  "center": {
+    "lat": -35.2789835,
+    "lon": 149.1176508
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Correa Greenhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 674003253,
+  "center": {
+    "lat": -35.2775870,
+    "lon": 149.1205221
+  },
+  "tags": {
+    "addr:housenumber": "155",
+    "addr:street": "University Avenue",
+    "building": "university",
+    "building:levels": "5",
+    "name": "Marie Reay Teaching Centre"
+  }
+},
+{
+  "type": "way",
+  "id": 674574898,
+  "center": {
+    "lat": -35.2768760,
+    "lon": 149.1216352
+  },
+  "tags": {
+    "addr:housenumber": "153",
+    "addr:street": "Tangney Road",
+    "building": "university",
+    "building:levels": "3",
+    "layer": "-1",
+    "location": "surface",
+    "name": "Culture Centre - 153",
+    "roof:levels": "0",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 676455585,
+  "center": {
+    "lat": -35.2715126,
+    "lon": 149.1123925
+  },
+  "tags": {
+    "addr:housenumber": "502A",
+    "addr:postcode": "2601",
+    "addr:state": "ACT",
+    "addr:suburb": "Acton",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Australian National Herbarium",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 676455590,
+  "center": {
+    "lat": -35.2727464,
+    "lon": 149.1110374
+  },
+  "tags": {
+    "addr:postcode": "2601",
+    "addr:state": "ACT",
+    "addr:street": "Clunies Ross Street",
+    "addr:suburb": "Acton",
+    "amenity": "childcare",
+    "building": "yes",
+    "building:levels": "1",
+    "email": "csirocareoffice@gmail.com",
+    "name": "CSIROCare Black Mountain",
+    "operator": "CSIRO",
+    "phone": "+61 2 6246 5657",
+    "website": "https://csirocareblackmountain.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 687265476,
+  "center": {
+    "lat": -35.2753891,
+    "lon": 149.1193144
+  },
+  "tags": {
+    "addr:housenumber": "145",
+    "building": "university",
+    "building:levels": "5",
+    "name": "Hanna Neumann Building - 145"
+  }
+},
+{
+  "type": "way",
+  "id": 697156693,
+  "center": {
+    "lat": -35.2785442,
+    "lon": 149.1166897
+  },
+  "tags": {
+    "building": "university",
+    "name": "Robertson Waste Handling Shed"
+  }
+},
+{
+  "type": "way",
+  "id": 701095657,
+  "center": {
+    "lat": -35.2745582,
+    "lon": 149.1218797
+  },
+  "tags": {
+    "amenity": "childcare",
+    "building": "yes",
+    "building:levels": "1",
+    "check_date": "2026-03-18",
+    "name": "Goodstart Early Learning - 147",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 705655553,
+  "center": {
+    "lat": -35.2810055,
+    "lon": 149.1190603
+  },
+  "tags": {
+    "addr:housenumber": "5",
+    "building": "university",
+    "building:levels": "1",
+    "name": "ANU College of Law - Building 5 Foyer"
+  }
+},
+{
+  "type": "way",
+  "id": 705655554,
+  "center": {
+    "lat": -35.2811991,
+    "lon": 149.1187446
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "2",
+    "internet_access": "wlan",
+    "layer": "-1",
+    "location": "surface",
+    "name": "ANU Law Library",
+    "operator": "ANU",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 705655555,
+  "center": {
+    "lat": -35.2810968,
+    "lon": 149.1191043
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "ANU Law Theatre"
+  }
+},
+{
+  "type": "way",
+  "id": 705655556,
+  "center": {
+    "lat": -35.2801231,
+    "lon": 149.1190622
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "ANU Fellows Road Theatres"
+  }
+},
+{
+  "type": "way",
+  "id": 717830213,
+  "center": {
+    "lat": -35.2730856,
+    "lon": 149.1229609
+  },
+  "tags": {
+    "building": "grandstand",
+    "name": "North Pavillion - 19B"
+  }
+},
+{
+  "type": "way",
+  "id": 718321221,
+  "center": {
+    "lat": -35.2785506,
+    "lon": 149.1235714
+  },
+  "tags": {
+    "amenity": "theatre",
+    "building": "office",
+    "building:levels": "2",
+    "name": "The Street Theatere"
+  }
+},
+{
+  "type": "way",
+  "id": 763602398,
+  "center": {
+    "lat": -35.2729066,
+    "lon": 149.1126840
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "CSIRO Black Mountain"
+  }
+},
+{
+  "type": "way",
+  "id": 763602409,
+  "center": {
+    "lat": -35.2709639,
+    "lon": 149.1094523
+  },
+  "tags": {
+    "building": "greenhouse",
+    "building:levels": "1",
+    "landuse": "plant_nursery",
+    "name": "Nursery"
+  }
+},
+{
+  "type": "way",
+  "id": 935637329,
+  "center": {
+    "lat": -35.2841540,
+    "lon": 149.1122186
+  },
+  "tags": {
+    "addr:housenumber": "160",
+    "addr:street": "Mills Road",
+    "building": "university",
+    "loc_name": "New Physics Building;Physics South",
+    "name": "Research School of Physics"
+  }
+},
+{
+  "type": "way",
+  "id": 935637650,
+  "center": {
+    "lat": -35.2808960,
+    "lon": 149.1105529
+  },
+  "tags": {
+    "addr:housenumber": "168",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Yukeembruk Building 168"
+  }
+},
+{
+  "type": "way",
+  "id": 935637651,
+  "center": {
+    "lat": -35.2804075,
+    "lon": 149.1110144
+  },
+  "tags": {
+    "addr:housenumber": "166",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Yukeembruk Building - 166"
+  }
+},
+{
+  "type": "way",
+  "id": 1041817045,
+  "center": {
+    "lat": -35.2810366,
+    "lon": 149.1121732
+  },
+  "tags": {
+    "addr:housenumber": "164",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Yukeembruk Building 164"
+  }
+},
+{
+  "type": "way",
+  "id": 1041817047,
+  "center": {
+    "lat": -35.2805715,
+    "lon": 149.1117812
+  },
+  "tags": {
+    "addr:housenumber": "165",
+    "addr:street": "Daley Road",
+    "building": "dormitory",
+    "building:levels": "7",
+    "name": "Yukeembruk Building 165"
+  }
+},
+{
+  "type": "way",
+  "id": 1069446192,
+  "center": {
+    "lat": -35.2838544,
+    "lon": 149.1130109
+  },
+  "tags": {
+    "building": "yes",
+    "name": "LInk Building - 58D"
+  }
+},
+{
+  "type": "way",
+  "id": 1077280720,
+  "center": {
+    "lat": -35.2798026,
+    "lon": 149.1121409
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "D Block",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 1077281782,
+  "center": {
+    "lat": -35.2763373,
+    "lon": 149.1097390
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "conservatory",
+    "name": "Ian Potter National Conservatory"
+  }
+},
+{
+  "type": "way",
+  "id": 1091731783,
+  "center": {
+    "lat": -35.2759021,
+    "lon": 149.1238524
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Building 98"
+  }
+},
+{
+  "type": "way",
+  "id": 1095441557,
+  "center": {
+    "lat": -35.2776949,
+    "lon": 149.1165403
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Bike Storage Facility"
+  }
+},
+{
+  "type": "way",
+  "id": 1190755256,
+  "center": {
+    "lat": -35.2808507,
+    "lon": 149.1113965
+  },
+  "tags": {
+    "addr:housenumber": "167",
+    "addr:street": "Daley Road",
+    "building": "retail",
+    "building:levels": "2",
+    "name": "Yukeembruk Village Hall"
+  }
+},
+{
+  "type": "way",
+  "id": 1426995558,
+  "center": {
+    "lat": -35.2718559,
+    "lon": 149.1122932
+  },
+  "tags": {
+    "addr:housenumber": "803",
+    "addr:postcode": "2601",
+    "addr:state": "ACT",
+    "addr:suburb": "Acton",
+    "building": "yes",
+    "building:levels": "4",
+    "name": "Diversity"
+  }
+},
+{
+  "type": "way",
+  "id": 1505414627,
+  "center": {
+    "lat": -35.2800509,
+    "lon": 149.1125788
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Chapel"
+  }
+},
+{
+  "type": "way",
+  "id": 1505415662,
+  "center": {
+    "lat": -35.2761482,
+    "lon": 149.1164453
+  },
+  "tags": {
+    "building": "university",
+    "name": "Banks Building"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386308,
+  "center": {
+    "lat": -35.2738949,
+    "lon": 149.1194835
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Building 35B"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386309,
+  "center": {
+    "lat": -35.2727423,
+    "lon": 149.1229327
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 19C"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386310,
+  "center": {
+    "lat": -35.2726089,
+    "lon": 149.1232007
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "Building 19D"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386311,
+  "center": {
+    "lat": -35.2725538,
+    "lon": 149.1232365
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 19E"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386312,
+  "center": {
+    "lat": -35.2725174,
+    "lon": 149.1233246
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 19F"
+  }
+},
+{
+  "type": "way",
+  "id": 1509386314,
+  "center": {
+    "lat": -35.2816735,
+    "lon": 149.1139639
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "layer": "1",
+    "name": "Building 143A"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391102,
+  "center": {
+    "lat": -35.2826728,
+    "lon": 149.1201400
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Building 9"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391108,
+  "center": {
+    "lat": -35.2854863,
+    "lon": 149.1175018
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 101B"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391109,
+  "center": {
+    "lat": -35.2854382,
+    "lon": 149.1175674
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 101A"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391110,
+  "center": {
+    "lat": -35.2851991,
+    "lon": 149.1166739
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Buildiung 72A"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391111,
+  "center": {
+    "lat": -35.2841442,
+    "lon": 149.1164312
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 64-4"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391112,
+  "center": {
+    "lat": -35.2838137,
+    "lon": 149.1159512
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Building 63A"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391113,
+  "center": {
+    "lat": -35.2835754,
+    "lon": 149.1161106
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Centre for Mental Health Research - 63"
+  }
+},
+{
+  "type": "way",
+  "id": 1509391461,
+  "center": {
+    "lat": -35.2830145,
+    "lon": 149.1118423
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Building 139C"
+  }
+},
+{
+  "type": "relation",
+  "id": 1148,
+  "center": {
+    "lat": -35.2818010,
+    "lon": 149.1202472
+  },
+  "tags": {
+    "addr:housename": "HC Coombs Building",
+    "addr:housenumber": "9",
+    "addr:street": "Fellows Road",
+    "building": "yes",
+    "building:levels": "3",
+    "check_date": "2019-11-20",
+    "name": "HC Coombs Building",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 187142,
+  "center": {
+    "lat": -35.2792620,
+    "lon": 149.1139117
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "John XXIII College",
+    "roof:levels": "0",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 2137040,
+  "center": {
+    "lat": -35.2834135,
+    "lon": 149.1165716
+  },
+  "tags": {
+    "building": "dormitory",
+    "building:levels": "3",
+    "name": "Graduate House",
+    "roof:levels": "0",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 2209433,
+  "center": {
+    "lat": -35.2838354,
+    "lon": 149.1182937
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "layer": "1",
+    "name": "University House",
+    "roof:levels": "0",
+    "type": "multipolygon",
+    "wikidata": "Q7894782"
+  }
+},
+{
+  "type": "relation",
+  "id": 2840634,
+  "center": {
+    "lat": -35.2829194,
+    "lon": 149.1211106
+  },
+  "tags": {
+    "building": "university",
+    "fee": "no",
+    "name": "National Film & Sound Archive",
+    "opening_hours": "Mo-Su 10:00-16:00",
+    "tourism": "museum",
+    "type": "multipolygon",
+    "website": "https://www.nfsa.gov.au/",
+    "wikidata": "Q2565882"
+  }
+},
+{
+  "type": "relation",
+  "id": 2840635,
+  "center": {
+    "lat": -35.2826993,
+    "lon": 149.1251842
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "8",
+    "name": "Mews East",
+    "roof:levels": "0",
+    "source": "bing",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 2840636,
+  "center": {
+    "lat": -35.2828939,
+    "lon": 149.1247012
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "8",
+    "name": "Mews West",
+    "roof:levels": "0",
+    "source": "bing",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 9081477,
+  "center": {
+    "lat": -35.2822677,
+    "lon": 149.1142538
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "layer": "1",
+    "name": "John Curtin School Medical Research",
+    "roof:levels": "0",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19148243,
+  "center": {
+    "lat": -35.2770757,
+    "lon": 149.1156601
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "D.A. Brown Building",
+    "roof:levels": "0",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20600815,
+  "center": {
+    "lat": -35.2785907,
+    "lon": 149.1145381
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Ursula Hall",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20600827,
+  "center": {
+    "lat": -35.2761482,
+    "lon": 149.1164453
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "Banks Building",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20628706,
+  "center": {
+    "lat": -35.2791139,
+    "lon": 149.1212451
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "Research School of Social Sciences",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20628860,
+  "center": {
+    "lat": -35.2841343,
+    "lon": 149.1143591
+  },
+  "tags": {
+    "building": "university;office",
+    "building:levels": "2",
+    "name": "Jaeger 1 - 61",
+    "roof:levels": "0",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20628861,
+  "center": {
+    "lat": -35.2821383,
+    "lon": 149.1166222
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "Hugh Ennor Building - 117",
+    "roof:levels": "0",
+    "source": "nearmap",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 21241393,
+  "center": {
+    "lat": -35.2767850,
+    "lon": 149.1212593
+  },
+  "tags": {
+    "addr:housenumber": "152",
+    "addr:street": "University Avenue",
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "9",
+    "layer": "1",
+    "name": "Fenner Hall - 152",
+    "roof:levels": "0",
+    "roof:shape": "flat",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

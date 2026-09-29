@@ -151,9 +151,11 @@ const mapData = parks.map((p) => ({
 
       <p class="footnote">
         Rates follow ANU's published 2026 parking fees; every map position, and
-        any capacity shown, comes from OpenStreetMap. Which permit each lot wants
-        is interpreted from OSM access tags for this prototype; see the note
-        below before relying on any of it.
+        any capacity shown, comes from OpenStreetMap. The set is clipped to the
+        campus by Clunies Ross Street, Barry Drive and Edinburgh Avenue, so lots
+        across those roads are left out. Which permit each lot wants is
+        interpreted from OSM access tags for this prototype; see the note below
+        before relying on any of it.
       </p>
     </main>
     <SiteFooter />

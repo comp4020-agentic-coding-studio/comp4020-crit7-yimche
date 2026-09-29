@@ -242,6 +242,24 @@ h2.section {
   accent-color: var(--anu-gold);
 }
 
+/* The rate and hours shown inside a marker popup: a tight two-column list so a
+   driver sees the cost and the paid times without opening the full card. */
+.popup-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1rem 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.popup-facts dt {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.popup-facts dd {
+  margin: 0;
+}
+
 /* The favourite toggle inside a map marker's popup: a compact echo of the
    card's star, styled so it doesn't inherit Leaflet's default link look. */
 .popup-fav {

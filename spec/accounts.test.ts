@@ -209,6 +209,25 @@ describe("cars, tickets and payment", () => {
     expect(isFavourited(dir2, parkId)).toBe(false);
   });
 
+  it("answers a background toggle with 204 and still records it", async () => {
+    // With JS, the star posts in the background (X-Requested-With) so the page
+    // needn't navigate; the endpoint then replies 204, but the write must land
+    // just the same. This is what lets the client flip the star without a jump.
+    const cookie = await register(uniqueEmail());
+    const parkId = await aParkId();
+
+    const res = await fetch(new URL("/api/favourites", baseUrl), {
+      method: "POST",
+      headers: { origin: baseUrl, cookie, "x-requested-with": "fetch" },
+      body: new URLSearchParams({ carParkId: parkId, on: "1" }),
+      redirect: "manual",
+    });
+    expect(res.status).toBe(204);
+
+    const dir = await get("/", cookie).then((r) => r.text());
+    expect(isFavourited(dir, parkId)).toBe(true);
+  });
+
   it("exposes favourite state so the map popup and filter can read it", async () => {
     // The popup star and the favourites-only filter are client enhancements, so
     // they can't run under fetch. What we can hold is the contract they stand on:

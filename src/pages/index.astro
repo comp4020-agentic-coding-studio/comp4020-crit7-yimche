@@ -37,6 +37,8 @@ const mapData = parks.map((p) => ({
   lng: p.lng,
   level: p.latest?.level ?? null,
   fav: favouriteIds.has(p.id),
+  rate: p.rate,
+  hours: p.hours,
 }));
 ---
 
@@ -181,7 +183,10 @@ const mapData = parks.map((p) => ({
 
       <p class="footnote">
         Rates follow ANU's published 2026 parking fees; every map position, and
-        any capacity shown, comes from OpenStreetMap. The set is clipped to the
+        any capacity shown, comes from <a
+          href="https://www.openstreetmap.org/copyright"
+          >OpenStreetMap</a
+        > (© OpenStreetMap contributors). The set is clipped to the
         campus by Clunies Ross Street, Barry Drive and Edinburgh Avenue, so lots
         across those roads are left out. Enforcement hours and permit types
         follow ANU's published parking guidance, but which permit type applies to
@@ -226,7 +231,18 @@ const mapData = parks.map((p) => ({
         lng: number;
         level: string | null;
         fav: boolean;
+        rate: string;
+        hours: string;
       };
+
+      // The popup builds HTML from strings, so anything drawn from the data is
+      // escaped first. The rate and hours text carries ampersands and the like.
+      function esc(s: string): string {
+        return s
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
 
       // Leaflet is loaded from the CDN, so it's a runtime global rather than a
       // typed import; keep it loosely typed here.
@@ -261,7 +277,11 @@ const mapData = parks.map((p) => ({
       function popupHtml(park: ParkData): string {
         const avail = park.level ? LEVEL_TEXT[park.level] : "No reports yet";
         return (
-          `<strong>${park.name}</strong><br>${park.category}<br>${avail}<br>` +
+          `<strong>${esc(park.name)}</strong><br>${esc(park.category)}<br>${avail}` +
+          `<dl class="popup-facts">` +
+          `<dt>Rate</dt><dd>${esc(park.rate)}</dd>` +
+          `<dt>Hours</dt><dd>${esc(park.hours)}</dd>` +
+          `</dl>` +
           `<a href="#park-${park.id}">Details &amp; report</a><br>` +
           favControl(park)
         );
@@ -320,6 +340,64 @@ const mapData = parks.map((p) => ({
         map.setView(bounds.getCenter(), Math.min(z + 1, 18));
         framedOnce = true;
       }
+
+      // ---- Favouriting without a jump --------------------------------------
+      // With JS, the star forms (on each card and in each marker popup) submit
+      // in the background instead of navigating, so the page never jumps to the
+      // toggled card. We then flip every copy of that park's star in place. With
+      // JS off, each form's own 303 still runs, so none of this is load-bearing.
+      function reflectFavourite(id: number, fav: boolean): void {
+        const park = parks.find((p) => p.id === id);
+        if (park) {
+          park.fav = fav;
+          const marker = markers.get(id);
+          if (marker) marker.setPopupContent(popupHtml(park));
+        }
+        const card = document.getElementById(`park-${id}`);
+        if (card) {
+          card.dataset.fav = fav ? "1" : "0";
+          const form = card.querySelector<HTMLFormElement>("form.fav");
+          const on = form?.querySelector<HTMLInputElement>('input[name="on"]');
+          const btn = form?.querySelector<HTMLButtonElement>(".fav-btn");
+          if (on) on.value = fav ? "0" : "1";
+          if (btn) {
+            btn.setAttribute("aria-pressed", fav ? "true" : "false");
+            btn.innerHTML =
+              `<span class="fav-star" aria-hidden="true">${fav ? "★" : "☆"}</span>` +
+              (fav ? "Favourited" : "Favourite");
+          }
+        }
+        // Nudge the favourites-only filter, so it drops or restores this card.
+        window.dispatchEvent(new CustomEvent("favourites-changed"));
+      }
+
+      document.addEventListener("submit", (event) => {
+        const target = event.target as HTMLElement;
+        const form = target.closest?.(
+          "form.fav, form.popup-fav",
+        ) as HTMLFormElement | null;
+        if (!form) return;
+        event.preventDefault();
+
+        const data = new FormData(form);
+        const id = Number(data.get("carParkId"));
+        const fav = String(data.get("on")) === "1";
+        const body = new URLSearchParams();
+        for (const [k, v] of data.entries()) body.append(k, String(v));
+
+        fetch(form.action, {
+          method: "POST",
+          headers: { "x-requested-with": "fetch" },
+          body,
+        })
+          .then((res) => {
+            // Only flip the star if the write actually took.
+            if (res.ok) reflectFavourite(id, fav);
+          })
+          .catch(() => {
+            // Network trouble: leave the star as it was rather than lie about it.
+          });
+      });
 
       // ---- Search & filter -------------------------------------------------
       // A progressive enhancement over the server-rendered directory: hide the
@@ -417,6 +495,9 @@ const mapData = parks.map((p) => ({
         searchEl.addEventListener("input", applyFilter);
         categoryEl.addEventListener("change", applyFilter);
         favEl?.addEventListener("change", applyFilter);
+        // A star toggled in place (card or popup) re-runs the filter, so the
+        // favourites-only view stays in step without a reload.
+        window.addEventListener("favourites-changed", applyFilter);
         applyFilter();
       } else if (map) {
         // No filter bar (e.g. no cards found): still frame all markers.

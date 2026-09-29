@@ -49,6 +49,18 @@ const mapData = parks.map((p) => ({
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+      integrity="sha256-YU3qCpj/P06tdPBJGPax0bm6Q1wltfwjsho5TR4+TYc="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+      integrity="sha256-YSWCMtmNZNwqex4CEw1nQhvFub2lmU7vcCKP+XVwwXA="
+      crossorigin=""
+    />
   </head>
   <body>
     <SiteHeader />
@@ -156,6 +168,11 @@ const mapData = parks.map((p) => ({
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
       is:inline></script>
+    <script
+      src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+      integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg="
+      crossorigin=""
+      is:inline></script>
     <script>
       // The client half. Leaflet paints OpenStreetMap tiles and one marker per
       // car park; the SSE stream then keeps both the markers and the list cards
@@ -191,6 +208,13 @@ const mapData = parks.map((p) => ({
 
       // deno-lint-ignore no-explicit-any
       let map: any = null;
+      // A cluster group so that when the map is zoomed out, car parks close
+      // together collapse into one marker badged with how many it stands for;
+      // zooming in splits them back into individual markers. Falls back to a
+      // plain layer group if the markercluster plugin didn't load, so the map
+      // still shows every lot.
+      // deno-lint-ignore no-explicit-any
+      let cluster: any = null;
       if (L && document.getElementById("map") && parks.length > 0) {
         map = L.map("map");
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -199,9 +223,15 @@ const mapData = parks.map((p) => ({
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(map);
 
+        cluster = L.markerClusterGroup
+          ? L.markerClusterGroup({ showCoverageOnHover: false })
+          : L.layerGroup();
+        cluster.addTo(map);
+
         for (const park of parks) {
-          const marker = L.marker([park.lat, park.lng]).addTo(map);
+          const marker = L.marker([park.lat, park.lng]);
           marker.bindPopup(popupHtml(park));
+          cluster.addLayer(marker);
           markers.set(park.id, marker);
         }
 
@@ -270,12 +300,12 @@ const mapData = parks.map((p) => ({
 
             const id = Number(card.dataset.parkId);
             const marker = markers.get(id);
-            if (marker && map) {
+            if (marker && cluster) {
               if (visible) {
-                marker.addTo(map);
+                cluster.addLayer(marker);
                 visibleBounds?.extend(marker.getLatLng());
               } else {
-                map.removeLayer(marker);
+                cluster.removeLayer(marker);
               }
             }
             if (visible) shown++;

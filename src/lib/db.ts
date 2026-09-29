@@ -1,7 +1,7 @@
 import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import Database from "better-sqlite3";
-import { desc, eq, sql } from "drizzle-orm";
+import { desc, eq, inArray, notInArray, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import { migrate } from "drizzle-orm/better-sqlite3/migrator";
 import { CAR_PARKS } from "./parking-data";
@@ -31,8 +31,26 @@ migrate(db, { migrationsFolder: "./drizzle" });
 // its facts (name, position, rate, permit, notes, capacity) re-synced from
 // source, so correcting a coordinate or a rate here reaches an already-seeded
 // volume on the next boot. The row id never changes, so the live reports that
-// point at a car park stay attached across the update.
+// point at a car park stay attached across the update. A car park dropped from
+// the seed (e.g. clipped as off-campus) is removed from an already-seeded
+// volume too, so the source stays the single source of truth for which lots
+// exist; its reports go with it, since a report only means something attached
+// to a lot the app still shows.
 function seed(): void {
+  const slugs = CAR_PARKS.map((p) => p.slug);
+  // Remove any car park no longer in the seed. Its reports reference its id, so
+  // they go first; then the park itself.
+  const stale = db
+    .select({ id: carParks.id })
+    .from(carParks)
+    .where(notInArray(carParks.slug, slugs))
+    .all()
+    .map((row) => row.id);
+  if (stale.length > 0) {
+    db.delete(reports).where(inArray(reports.carParkId, stale)).run();
+    db.delete(carParks).where(inArray(carParks.id, stale)).run();
+  }
+
   const insert = db
     .insert(carParks)
     .values(

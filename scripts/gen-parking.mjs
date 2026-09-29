@@ -15,6 +15,41 @@ function dist(a, b, c, d) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
+// The Acton campus boundary, as a closed ring of [lng, lat] vertices. The three
+// sides a driver would recognise are traced along the real OpenStreetMap
+// centrelines of the roads that bound the campus (© OpenStreetMap contributors,
+// extract in ./osm/boundary-roads.json, query in ./osm/boundary-roads.overpassql):
+// Clunies Ross Street on the west (way 4580944 and its continuations), Barry
+// Drive on the north (from the Clunies Ross corner east, way 262535338 et al.),
+// and Edinburgh Avenue on the south-east (way 183079037 et al.). The south side,
+// which no single road closes, follows the lake edge below every mapped campus
+// lot. Anything the OSM bounding box caught beyond these roads (CSIRO Black
+// Mountain and the Botanic Gardens west of Clunies Ross, North Oval and Toad
+// Hall north of Barry Drive, New Acton south-east of Edinburgh Avenue) is not on
+// the campus this app is for, so it is clipped out below.
+const CAMPUS_BOUNDARY = [
+  [149.11737, -35.27227], [149.11645, -35.27338], [149.11572, -35.27421], [149.11496, -35.27506],
+  [149.1143, -35.2758], [149.11334, -35.27688], [149.11277, -35.27756], [149.11179, -35.27865],
+  [149.11108, -35.27943], [149.11062, -35.27994], [149.11011, -35.28052], [149.10907, -35.2817],
+  [149.10781, -35.283], [149.10736, -35.28357],
+  [149.106, -35.2905], [149.12189, -35.2905],
+  [149.12189, -35.28589], [149.12309, -35.28426], [149.12411, -35.28375], [149.12526, -35.28332],
+  [149.12686, -35.28279], [149.12757, -35.28262],
+  [149.12692, -35.27552], [149.12587, -35.27529], [149.12367, -35.27455], [149.12273, -35.27397],
+  [149.12204, -35.2734], [149.12126, -35.27323], [149.12006, -35.27289], [149.11926, -35.2728],
+];
+
+// Standard ray-casting point-in-polygon. A lot whose centre falls outside the
+// ring is past one of the boundary roads, so it is dropped from the directory.
+function onCampus(lat, lng) {
+  let inside = false;
+  for (let i = 0, j = CAMPUS_BOUNDARY.length - 1; i < CAMPUS_BOUNDARY.length; j = i++) {
+    const [xi, yi] = CAMPUS_BOUNDARY[i], [xj, yj] = CAMPUS_BOUNDARY[j];
+    if (yi > lat !== yj > lat && lng < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
 // Dedupe: OSM maps some lots as a relation plus its member ways, or stacks a
 // node on a polygon. Keep the richest element (named > relation > way > node,
 // more tags win) and drop any other parking centre within 15m of a kept one.
@@ -98,9 +133,13 @@ function slugify(s) {
   return s.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 48);
 }
 
+// Clip to the campus: drop any lot whose centre sits past the boundary roads.
+const onCampusParks = kept.filter((e) => onCampus(e.c.lat, e.c.lon));
+console.error("clipped off-campus lots:", kept.length - onCampusParks.length, "of", kept.length);
+
 const seen = new Map();
 const out = [];
-for (const e of kept) {
+for (const e of onCampusParks) {
   const t = e.t, cls = classify(t);
   const near = t.name ? null : nearestLandmark(e.c.lat, e.c.lon);
   const typeWord =
@@ -167,6 +206,13 @@ const header = `// Seed data: the parking areas on the ANU Acton campus.
 // member ways appears once. Each entry's lat/lng is the centre of that feature,
 // the same data the map draws, so every pin sits on a real mapped lot. Capacity
 // and accessible-bay counts are shown only where OSM records them.
+//
+// CLIPPED TO THE CAMPUS. The set is bounded by the roads that ring Acton:
+// Clunies Ross Street (west), Barry Drive (north) and Edinburgh Avenue
+// (south-east). Lots the OSM extract caught across those roads (CSIRO Black
+// Mountain and the Botanic Gardens, North Oval and Toad Hall, New Acton) are
+// not on this campus and are left out. The boundary is traced from the roads'
+// own OSM geometry; see the CAMPUS_BOUNDARY note in scripts/gen-parking.mjs.
 //
 // RATES are ANU's published 2026 parking fees — staff surface $7.78/day,
 // staff parking stations $9.59/day, non-resident student $3.88/day, resident

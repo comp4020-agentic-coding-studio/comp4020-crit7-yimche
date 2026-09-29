@@ -40,7 +40,11 @@ rests on three decisions:
    OpenStreetMap contributors) by `scripts/gen-parking.mjs`: every entry is a
    distinct mapped parking feature, its coordinates are the feature's centre (the
    same data the map draws), and any capacity or accessible-bay count shown is
-   what OSM records. What is **still interpretive, not a survey**, is each lot's
+   what OSM records. The set is **clipped to the campus** by the roads that ring
+   it, Clunies Ross Street, Barry Drive and Edinburgh Avenue, so lots the extract
+   caught beyond them (CSIRO Black Mountain and the Botanic Gardens, North Oval
+   and Toad Hall, New Acton) are left out; the boundary is traced from those
+   roads' own OSM geometry. What is **still interpretive, not a survey**, is each lot's
    category, rate and permit; those are derived from its OSM access/fee/type tags
    mapped onto the ANU fee scheme (e.g. `access=private` → resident/private,
    `access=permit` → permit zone, public + `fee=yes` → visitor pay, otherwise the

@@ -1,0 +1,4536 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-29T11:12:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 4580944,
+  "bounds": {
+    "minlat": -35.2768815,
+    "minlon": 149.1133423,
+    "maxlat": -35.2748119,
+    "maxlon": 149.1151807
+  },
+  "nodes": [
+    6259516881,
+    5334332370,
+    12847820154,
+    5334332362,
+    311939462,
+    5271934340,
+    5271934345,
+    7135204291
+  ],
+  "geometry": [
+    { "lat": -35.2748119, "lon": 149.1151807 },
+    { "lat": -35.2750643, "lon": 149.1149565 },
+    { "lat": -35.2751870, "lon": 149.1148475 },
+    { "lat": -35.2753335, "lon": 149.1147173 },
+    { "lat": -35.2758011, "lon": 149.1143020 },
+    { "lat": -35.2758581, "lon": 149.1142513 },
+    { "lat": -35.2763567, "lon": 149.1138084 },
+    { "lat": -35.2768815, "lon": 149.1133423 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 4749674,
+  "bounds": {
+    "minlat": -35.2858408,
+    "minlon": 149.1219259,
+    "maxlat": -35.2857037,
+    "maxlon": 149.1219869
+  },
+  "nodes": [
+    30290988,
+    12164718436,
+    1520916831,
+    1520916794,
+    10281980426,
+    896709914
+  ],
+  "geometry": [
+    { "lat": -35.2858408, "lon": 149.1219259 },
+    { "lat": -35.2858177, "lon": 149.1219401 },
+    { "lat": -35.2857982, "lon": 149.1219499 },
+    { "lat": -35.2857639, "lon": 149.1219640 },
+    { "lat": -35.2857457, "lon": 149.1219721 },
+    { "lat": -35.2857037, "lon": 149.1219869 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 4775675,
+  "bounds": {
+    "minlat": -35.2758421,
+    "minlon": 149.1294679,
+    "maxlat": -35.2758012,
+    "maxlon": 149.1298661
+  },
+  "nodes": [
+    14983883,
+    6947428282,
+    6947428271,
+    26706312
+  ],
+  "geometry": [
+    { "lat": -35.2758421, "lon": 149.1298661 },
+    { "lat": -35.2758240, "lon": 149.1296899 },
+    { "lat": -35.2758196, "lon": 149.1296475 },
+    { "lat": -35.2758012, "lon": 149.1294679 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "|through;right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 5072533,
+  "bounds": {
+    "minlat": -35.2727825,
+    "minlon": 149.1169777,
+    "maxlat": -35.2726614,
+    "maxlon": 149.1170554
+  },
+  "nodes": [
+    6218068662,
+    6218068661
+  ],
+  "geometry": [
+    { "lat": -35.2727825, "lon": 149.1169777 },
+    { "lat": -35.2726614, "lon": 149.1170554 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 26384692,
+  "bounds": {
+    "minlat": -35.2858892,
+    "minlon": 149.1218906,
+    "maxlat": -35.2858408,
+    "maxlon": 149.1219259
+  },
+  "nodes": [
+    26798253,
+    10281980420,
+    30290988
+  ],
+  "geometry": [
+    { "lat": -35.2858892, "lon": 149.1218906 },
+    { "lat": -35.2858620, "lon": 149.1219121 },
+    { "lat": -35.2858408, "lon": 149.1219259 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 29108522,
+  "bounds": {
+    "minlat": -35.2748725,
+    "minlon": 149.1240046,
+    "maxlat": -35.2747562,
+    "maxlon": 149.1241987
+  },
+  "nodes": [
+    320192915,
+    320192910
+  ],
+  "geometry": [
+    { "lat": -35.2748725, "lon": 149.1241987 },
+    { "lat": -35.2747562, "lon": 149.1240046 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2051",
+    "highway": "primary",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 29108523,
+  "bounds": {
+    "minlat": -35.2736560,
+    "minlon": 149.1218531,
+    "maxlat": -35.2734605,
+    "maxlon": 149.1222079
+  },
+  "nodes": [
+    2681958587,
+    12633133419,
+    654048886,
+    26706315
+  ],
+  "geometry": [
+    { "lat": -35.2736560, "lon": 149.1222079 },
+    { "lat": -35.2735227, "lon": 149.1219739 },
+    { "lat": -35.2735070, "lon": 149.1219463 },
+    { "lat": -35.2734605, "lon": 149.1218531 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "5",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||||right"
+  }
+},
+{
+  "type": "way",
+  "id": 29108524,
+  "bounds": {
+    "minlat": -35.2747674,
+    "minlon": 149.1241099,
+    "maxlat": -35.2746615,
+    "maxlon": 149.1242867
+  },
+  "nodes": [
+    320192917,
+    320192916
+  ],
+  "geometry": [
+    { "lat": -35.2746615, "lon": 149.1241099 },
+    { "lat": -35.2747674, "lon": 149.1242867 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2050",
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 42706755,
+  "bounds": {
+    "minlat": -35.2713841,
+    "minlon": 149.1121863,
+    "maxlat": -35.2683885,
+    "maxlon": 149.1151522
+  },
+  "nodes": [
+    26706324,
+    26706326,
+    26706328,
+    26706330,
+    26706332,
+    26706559,
+    26706560,
+    4814718331
+  ],
+  "geometry": [
+    { "lat": -35.2713841, "lon": 149.1151522 },
+    { "lat": -35.2711461, "lon": 149.1146801 },
+    { "lat": -35.2708740, "lon": 149.1142497 },
+    { "lat": -35.2705850, "lon": 149.1138610 },
+    { "lat": -35.2702393, "lon": 149.1134861 },
+    { "lat": -35.2698083, "lon": 149.1131275 },
+    { "lat": -35.2693216, "lon": 149.1127859 },
+    { "lat": -35.2683885, "lon": 149.1121863 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 42706756,
+  "bounds": {
+    "minlat": -35.2725247,
+    "minlon": 149.1174408,
+    "maxlat": -35.2723082,
+    "maxlon": 149.1179508
+  },
+  "nodes": [
+    6218068657,
+    2681958540,
+    14166882
+  ],
+  "geometry": [
+    { "lat": -35.2723082, "lon": 149.1174408 },
+    { "lat": -35.2723573, "lon": 149.1175545 },
+    { "lat": -35.2725247, "lon": 149.1179508 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 75966453,
+  "bounds": {
+    "minlat": -35.2855480,
+    "minlon": 149.1221431,
+    "maxlat": -35.2854666,
+    "maxlon": 149.1221618
+  },
+  "nodes": [
+    896709626,
+    12164718446,
+    1520916669
+  ],
+  "geometry": [
+    { "lat": -35.2854666, "lon": 149.1221618 },
+    { "lat": -35.2855059, "lon": 149.1221534 },
+    { "lat": -35.2855480, "lon": 149.1221431 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 75966489,
+  "bounds": {
+    "minlat": -35.2836477,
+    "minlon": 149.1246848,
+    "maxlat": -35.2836191,
+    "maxlon": 149.1247597
+  },
+  "nodes": [
+    9913281267,
+    6226606201
+  ],
+  "geometry": [
+    { "lat": -35.2836191, "lon": 149.1247597 },
+    { "lat": -35.2836477, "lon": 149.1246848 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left;through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 76046851,
+  "bounds": {
+    "minlat": -35.2850645,
+    "minlon": 149.1221401,
+    "maxlat": -35.2847944,
+    "maxlon": 149.1222533
+  },
+  "nodes": [
+    26641764,
+    1520916715,
+    897349112,
+    897349114,
+    897349115,
+    26641766
+  ],
+  "geometry": [
+    { "lat": -35.2850645, "lon": 149.1221401 },
+    { "lat": -35.2850126, "lon": 149.1221590 },
+    { "lat": -35.2849412, "lon": 149.1221805 },
+    { "lat": -35.2848608, "lon": 149.1222153 },
+    { "lat": -35.2848235, "lon": 149.1222346 },
+    { "lat": -35.2847944, "lon": 149.1222533 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "secondary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 76046968,
+  "bounds": {
+    "minlat": -35.2830818,
+    "minlon": 149.1258714,
+    "maxlat": -35.2830408,
+    "maxlon": 149.1259785
+  },
+  "nodes": [
+    897341046,
+    7821524862
+  ],
+  "geometry": [
+    { "lat": -35.2830818, "lon": 149.1258714 },
+    { "lat": -35.2830408, "lon": 149.1259785 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10"
+  }
+},
+{
+  "type": "way",
+  "id": 183079037,
+  "bounds": {
+    "minlat": -35.2830781,
+    "minlon": 149.1261067,
+    "maxlat": -35.2825788,
+    "maxlon": 149.1275666
+  },
+  "nodes": [
+    1520984815,
+    10221102623,
+    8670558245,
+    10221102622,
+    10221102621,
+    10221102620,
+    12151270311,
+    8699835413
+  ],
+  "geometry": [
+    { "lat": -35.2826163, "lon": 149.1275666 },
+    { "lat": -35.2825934, "lon": 149.1274998 },
+    { "lat": -35.2825808, "lon": 149.1274448 },
+    { "lat": -35.2825788, "lon": 149.1274253 },
+    { "lat": -35.2825792, "lon": 149.1274059 },
+    { "lat": -35.2825875, "lon": 149.1273711 },
+    { "lat": -35.2827864, "lon": 149.1268585 },
+    { "lat": -35.2830781, "lon": 149.1261067 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 209744211,
+  "bounds": {
+    "minlat": -35.2712933,
+    "minlon": 149.1123225,
+    "maxlat": -35.2683448,
+    "maxlon": 149.1152239
+  },
+  "nodes": [
+    5298847231,
+    14166876,
+    14166877,
+    14166878,
+    14166879,
+    14166880,
+    14166881
+  ],
+  "geometry": [
+    { "lat": -35.2683448, "lon": 149.1123225 },
+    { "lat": -35.2697150, "lon": 149.1132200 },
+    { "lat": -35.2702010, "lon": 149.1136480 },
+    { "lat": -35.2704947, "lon": 149.1139533 },
+    { "lat": -35.2707770, "lon": 149.1143144 },
+    { "lat": -35.2710227, "lon": 149.1147041 },
+    { "lat": -35.2712933, "lon": 149.1152239 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "shoulder": "no",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 262535338,
+  "bounds": {
+    "minlat": -35.2751493,
+    "minlon": 149.1242867,
+    "maxlat": -35.2747674,
+    "maxlon": 149.1250657
+  },
+  "nodes": [
+    320192916,
+    10288847932,
+    7954453660,
+    7954453626,
+    4815217307,
+    10288847930,
+    4815217308,
+    7954453680,
+    10288847931,
+    7954453663,
+    7954453658,
+    7954453655,
+    2681986774,
+    7954453654,
+    10288847917,
+    10288845104,
+    10288847918,
+    6704339312,
+    7954453606,
+    10288847919,
+    10288845105,
+    10288847920,
+    6227135303
+  ],
+  "geometry": [
+    { "lat": -35.2747674, "lon": 149.1242867 },
+    { "lat": -35.2747855, "lon": 149.1243472 },
+    { "lat": -35.2747993, "lon": 149.1243869 },
+    { "lat": -35.2748075, "lon": 149.1244086 },
+    { "lat": -35.2748156, "lon": 149.1244247 },
+    { "lat": -35.2748738, "lon": 149.1245254 },
+    { "lat": -35.2749144, "lon": 149.1246044 },
+    { "lat": -35.2749496, "lon": 149.1246792 },
+    { "lat": -35.2749801, "lon": 149.1247525 },
+    { "lat": -35.2750053, "lon": 149.1248195 },
+    { "lat": -35.2750238, "lon": 149.1248776 },
+    { "lat": -35.2750381, "lon": 149.1249230 },
+    { "lat": -35.2750465, "lon": 149.1249463 },
+    { "lat": -35.2750532, "lon": 149.1249622 },
+    { "lat": -35.2750604, "lon": 149.1249774 },
+    { "lat": -35.2750681, "lon": 149.1249922 },
+    { "lat": -35.2750772, "lon": 149.1250069 },
+    { "lat": -35.2750862, "lon": 149.1250199 },
+    { "lat": -35.2750995, "lon": 149.1250355 },
+    { "lat": -35.2751104, "lon": 149.1250446 },
+    { "lat": -35.2751221, "lon": 149.1250520 },
+    { "lat": -35.2751328, "lon": 149.1250579 },
+    { "lat": -35.2751493, "lon": 149.1250657 }
+  ],
+  "tags": {
+    "access": "no",
+    "bus": "yes",
+    "highway": "primary_link",
+    "lanes": "1",
+    "maxspeed": "40",
+    "motorcycle": "yes",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "psv": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "taxi": "yes",
+    "turn:lanes": "right",
+    "vehicle": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 305112531,
+  "bounds": {
+    "minlat": -35.2758012,
+    "minlon": 149.1288727,
+    "maxlat": -35.2757400,
+    "maxlon": 149.1294679
+  },
+  "nodes": [
+    26706312,
+    7176166307,
+    7332544031
+  ],
+  "geometry": [
+    { "lat": -35.2758012, "lon": 149.1294679 },
+    { "lat": -35.2757901, "lon": 149.1293600 },
+    { "lat": -35.2757400, "lon": 149.1288727 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 307292357,
+  "bounds": {
+    "minlat": -35.2753290,
+    "minlon": 149.1255435,
+    "maxlat": -35.2752451,
+    "maxlon": 149.1261888
+  },
+  "nodes": [
+    7954453647,
+    14166891,
+    7954453603,
+    6259718236
+  ],
+  "geometry": [
+    { "lat": -35.2752451, "lon": 149.1255435 },
+    { "lat": -35.2752676, "lon": 149.1256999 },
+    { "lat": -35.2752919, "lon": 149.1258673 },
+    { "lat": -35.2753290, "lon": 149.1261888 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 307292363,
+  "bounds": {
+    "minlat": -35.2749145,
+    "minlon": 149.1241987,
+    "maxlat": -35.2748725,
+    "maxlon": 149.1242655
+  },
+  "nodes": [
+    2681986868,
+    320192915
+  ],
+  "geometry": [
+    { "lat": -35.2749145, "lon": 149.1242655 },
+    { "lat": -35.2748725, "lon": 149.1241987 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 307292366,
+  "bounds": {
+    "minlat": -35.2737223,
+    "minlon": 149.1222167,
+    "maxlat": -35.2734952,
+    "maxlon": 149.1225837
+  },
+  "nodes": [
+    654050134,
+    10289375480,
+    10289375481,
+    6259715190
+  ],
+  "geometry": [
+    { "lat": -35.2734952, "lon": 149.1222167 },
+    { "lat": -35.2735869, "lon": 149.1223699 },
+    { "lat": -35.2736520, "lon": 149.1224726 },
+    { "lat": -35.2737223, "lon": 149.1225837 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 307292370,
+  "bounds": {
+    "minlat": -35.2734605,
+    "minlon": 149.1207733,
+    "maxlat": -35.2731253,
+    "maxlon": 149.1218531
+  },
+  "nodes": [
+    26706315,
+    6585510242,
+    2857334709,
+    26706316,
+    10289375498,
+    10289375497,
+    26706317,
+    10289375496,
+    6259752260
+  ],
+  "geometry": [
+    { "lat": -35.2734605, "lon": 149.1218531 },
+    { "lat": -35.2734106, "lon": 149.1217344 },
+    { "lat": -35.2733379, "lon": 149.1215651 },
+    { "lat": -35.2733182, "lon": 149.1215137 },
+    { "lat": -35.2732749, "lon": 149.1213860 },
+    { "lat": -35.2732350, "lon": 149.1212614 },
+    { "lat": -35.2731930, "lon": 149.1211035 },
+    { "lat": -35.2731618, "lon": 149.1209609 },
+    { "lat": -35.2731253, "lon": 149.1207733 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 332465010,
+  "bounds": {
+    "minlat": -35.2732675,
+    "minlon": 149.1165500,
+    "maxlat": -35.2727825,
+    "maxlon": 149.1169777
+  },
+  "nodes": [
+    6218068662,
+    4242144962,
+    5188281117
+  ],
+  "geometry": [
+    { "lat": -35.2727825, "lon": 149.1169777 },
+    { "lat": -35.2732638, "lon": 149.1165532 },
+    { "lat": -35.2732675, "lon": 149.1165500 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 333933989,
+  "bounds": {
+    "minlat": -35.2835593,
+    "minlon": 149.1246232,
+    "maxlat": -35.2833192,
+    "maxlon": 149.1252610
+  },
+  "nodes": [
+    6304832079,
+    897346585,
+    897339924
+  ],
+  "geometry": [
+    { "lat": -35.2835593, "lon": 149.1246232 },
+    { "lat": -35.2835305, "lon": 149.1247097 },
+    { "lat": -35.2833192, "lon": 149.1252610 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10",
+    "source:lanes": "ACTmapi Imagery 2018"
+  }
+},
+{
+  "type": "way",
+  "id": 333935357,
+  "bounds": {
+    "minlat": -35.2730279,
+    "minlon": 149.1182759,
+    "maxlat": -35.2727375,
+    "maxlon": 149.1201175
+  },
+  "nodes": [
+    7384458591,
+    26706319,
+    6330554849
+  ],
+  "geometry": [
+    { "lat": -35.2730279, "lon": 149.1201175 },
+    { "lat": -35.2728303, "lon": 149.1187667 },
+    { "lat": -35.2727375, "lon": 149.1182759 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 333935358,
+  "bounds": {
+    "minlat": -35.2733505,
+    "minlon": 149.1216184,
+    "maxlat": -35.2732049,
+    "maxlon": 149.1219586
+  },
+  "nodes": [
+    14166887,
+    10289375482,
+    12633133420,
+    6585495634,
+    456718581,
+    14166888
+  ],
+  "geometry": [
+    { "lat": -35.2732049, "lon": 149.1216184 },
+    { "lat": -35.2732407, "lon": 149.1217114 },
+    { "lat": -35.2732670, "lon": 149.1217747 },
+    { "lat": -35.2732810, "lon": 149.1218083 },
+    { "lat": -35.2733157, "lon": 149.1218849 },
+    { "lat": -35.2733505, "lon": 149.1219586 }
+  ],
+  "tags": {
+    "bus:lanes": "|designated|||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "5",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||||right"
+  }
+},
+{
+  "type": "way",
+  "id": 489201021,
+  "bounds": {
+    "minlat": -35.2727987,
+    "minlon": 149.1184953,
+    "maxlat": -35.2726893,
+    "maxlon": 149.1192557
+  },
+  "nodes": [
+    14166884,
+    6259715192
+  ],
+  "geometry": [
+    { "lat": -35.2726893, "lon": 149.1184953 },
+    { "lat": -35.2727987, "lon": 149.1192557 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 489456098,
+  "bounds": {
+    "minlat": -35.2847944,
+    "minlon": 149.1222533,
+    "maxlat": -35.2842726,
+    "maxlon": 149.1228095
+  },
+  "nodes": [
+    26641766,
+    6226546251,
+    10283925140,
+    10283925143,
+    10283925141,
+    10283925142,
+    2184682870,
+    1520916718,
+    2296795768
+  ],
+  "geometry": [
+    { "lat": -35.2847944, "lon": 149.1222533 },
+    { "lat": -35.2845984, "lon": 149.1223991 },
+    { "lat": -35.2845078, "lon": 149.1224827 },
+    { "lat": -35.2844555, "lon": 149.1225361 },
+    { "lat": -35.2844121, "lon": 149.1225896 },
+    { "lat": -35.2843616, "lon": 149.1226577 },
+    { "lat": -35.2843220, "lon": 149.1227177 },
+    { "lat": -35.2842981, "lon": 149.1227589 },
+    { "lat": -35.2842726, "lon": 149.1228095 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left|||right"
+  }
+},
+{
+  "type": "way",
+  "id": 489456100,
+  "bounds": {
+    "minlat": -35.2851036,
+    "minlon": 149.1222369,
+    "maxlat": -35.2847325,
+    "maxlon": 149.1224415
+  },
+  "nodes": [
+    1520916755,
+    26641774,
+    26641773,
+    26641772,
+    10286806920,
+    1520916697,
+    32929129
+  ],
+  "geometry": [
+    { "lat": -35.2847325, "lon": 149.1224415 },
+    { "lat": -35.2848106, "lon": 149.1223810 },
+    { "lat": -35.2848823, "lon": 149.1223307 },
+    { "lat": -35.2849546, "lon": 149.1222925 },
+    { "lat": -35.2850387, "lon": 149.1222612 },
+    { "lat": -35.2850838, "lon": 149.1222444 },
+    { "lat": -35.2851036, "lon": 149.1222369 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 489456101,
+  "bounds": {
+    "minlat": -35.2858312,
+    "minlon": 149.1220394,
+    "maxlat": -35.2857457,
+    "maxlon": 149.1220731
+  },
+  "nodes": [
+    896709920,
+    10281980417,
+    10281951201
+  ],
+  "geometry": [
+    { "lat": -35.2857457, "lon": 149.1220731 },
+    { "lat": -35.2857487, "lon": 149.1220716 },
+    { "lat": -35.2858312, "lon": 149.1220394 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 493340124,
+  "bounds": {
+    "minlat": -35.2752394,
+    "minlon": 149.1242655,
+    "maxlat": -35.2749145,
+    "maxlon": 149.1248681
+  },
+  "nodes": [
+    4852632145,
+    10289401348,
+    493882142,
+    7954453621,
+    10289401343,
+    2681986868
+  ],
+  "geometry": [
+    { "lat": -35.2752394, "lon": 149.1248681 },
+    { "lat": -35.2752118, "lon": 149.1248019 },
+    { "lat": -35.2751864, "lon": 149.1247469 },
+    { "lat": -35.2751474, "lon": 149.1246690 },
+    { "lat": -35.2750942, "lon": 149.1245758 },
+    { "lat": -35.2749145, "lon": 149.1242655 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 493340132,
+  "bounds": {
+    "minlat": -35.2747562,
+    "minlon": 149.1236701,
+    "maxlat": -35.2745462,
+    "maxlon": 149.1240046
+  },
+  "nodes": [
+    320192910,
+    4852632146
+  ],
+  "geometry": [
+    { "lat": -35.2747562, "lon": 149.1240046 },
+    { "lat": -35.2745462, "lon": 149.1236701 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 493340136,
+  "bounds": {
+    "minlat": -35.2729254,
+    "minlon": 149.1200578,
+    "maxlat": -35.2728943,
+    "maxlon": 149.1203514
+  },
+  "nodes": [
+    2681975964,
+    6218058045,
+    26706308
+  ],
+  "geometry": [
+    { "lat": -35.2728943, "lon": 149.1200578 },
+    { "lat": -35.2729161, "lon": 149.1202537 },
+    { "lat": -35.2729254, "lon": 149.1203514 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||"
+  }
+},
+{
+  "type": "way",
+  "id": 493340139,
+  "bounds": {
+    "minlat": -35.2746615,
+    "minlon": 149.1237524,
+    "maxlat": -35.2744519,
+    "maxlon": 149.1241099
+  },
+  "nodes": [
+    2681958601,
+    320192917
+  ],
+  "geometry": [
+    { "lat": -35.2744519, "lon": 149.1237524 },
+    { "lat": -35.2746615, "lon": 149.1241099 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 546708582,
+  "bounds": {
+    "minlat": -35.2827187,
+    "minlon": 149.1080603,
+    "maxlat": -35.2817032,
+    "maxlon": 149.1090739
+  },
+  "nodes": [
+    6225180105,
+    6225180111,
+    6225180112,
+    6225180113,
+    6225180104,
+    6225180123
+  ],
+  "geometry": [
+    { "lat": -35.2827187, "lon": 149.1080603 },
+    { "lat": -35.2824633, "lon": 149.1083095 },
+    { "lat": -35.2822384, "lon": 149.1085245 },
+    { "lat": -35.2819745, "lon": 149.1087895 },
+    { "lat": -35.2818484, "lon": 149.1089125 },
+    { "lat": -35.2817032, "lon": 149.1090739 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:maxspeed": "Mapillary",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 546708803,
+  "bounds": {
+    "minlat": -35.2722746,
+    "minlon": 149.1162800,
+    "maxlat": -35.2717780,
+    "maxlon": 149.1173656
+  },
+  "nodes": [
+    6259538320,
+    12859826385,
+    880405078,
+    26706309
+  ],
+  "geometry": [
+    { "lat": -35.2717780, "lon": 149.1162800 },
+    { "lat": -35.2722233, "lon": 149.1172530 },
+    { "lat": -35.2722353, "lon": 149.1172790 },
+    { "lat": -35.2722746, "lon": 149.1173656 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "5",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "shoulder": "no",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "|||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 546709085,
+  "bounds": {
+    "minlat": -35.2749932,
+    "minlon": 149.1242867,
+    "maxlat": -35.2747674,
+    "maxlon": 149.1246631
+  },
+  "nodes": [
+    320192916,
+    10288847936,
+    10288847929,
+    10288847928,
+    7954453683,
+    10288847927,
+    14166889
+  ],
+  "geometry": [
+    { "lat": -35.2747674, "lon": 149.1242867 },
+    { "lat": -35.2748323, "lon": 149.1243761 },
+    { "lat": -35.2748642, "lon": 149.1244205 },
+    { "lat": -35.2748886, "lon": 149.1244598 },
+    { "lat": -35.2749201, "lon": 149.1245170 },
+    { "lat": -35.2749590, "lon": 149.1245940 },
+    { "lat": -35.2749932, "lon": 149.1246631 }
+  ],
+  "tags": {
+    "cycleway:left": "no",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right"
+  }
+},
+{
+  "type": "way",
+  "id": 571092928,
+  "bounds": {
+    "minlat": -35.2752893,
+    "minlon": 149.1248681,
+    "maxlat": -35.2752394,
+    "maxlon": 149.1250132
+  },
+  "nodes": [
+    6227135302,
+    6704339314,
+    1773210235,
+    4852632145
+  ],
+  "geometry": [
+    { "lat": -35.2752893, "lon": 149.1250132 },
+    { "lat": -35.2752661, "lon": 149.1249441 },
+    { "lat": -35.2752501, "lon": 149.1248971 },
+    { "lat": -35.2752394, "lon": 149.1248681 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 571093126,
+  "bounds": {
+    "minlat": -35.2854666,
+    "minlon": 149.1221618,
+    "maxlat": -35.2854281,
+    "maxlon": 149.1221681
+  },
+  "nodes": [
+    896710253,
+    896709626
+  ],
+  "geometry": [
+    { "lat": -35.2854281, "lon": 149.1221681 },
+    { "lat": -35.2854666, "lon": 149.1221618 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 664343762,
+  "bounds": {
+    "minlat": -35.2726012,
+    "minlon": 149.1172148,
+    "maxlat": -35.2724144,
+    "maxlon": 149.1173586
+  },
+  "nodes": [
+    6218068658,
+    6218068659,
+    6218068656
+  ],
+  "geometry": [
+    { "lat": -35.2724144, "lon": 149.1173586 },
+    { "lat": -35.2724927, "lon": 149.1173016 },
+    { "lat": -35.2726012, "lon": 149.1172148 }
+  ],
+  "tags": {
+    "cycleway:left": "no",
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 665083271,
+  "bounds": {
+    "minlat": -35.2802051,
+    "minlon": 149.1103917,
+    "maxlat": -35.2798266,
+    "maxlon": 149.1107246
+  },
+  "nodes": [
+    102163985,
+    11955589506,
+    6259517190
+  ],
+  "geometry": [
+    { "lat": -35.2798266, "lon": 149.1107246 },
+    { "lat": -35.2799422, "lon": 149.1106241 },
+    { "lat": -35.2802051, "lon": 149.1103917 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes:forward": "|right"
+  }
+},
+{
+  "type": "way",
+  "id": 665302877,
+  "bounds": {
+    "minlat": -35.2751891,
+    "minlon": 149.1251237,
+    "maxlat": -35.2751667,
+    "maxlon": 149.1252128
+  },
+  "nodes": [
+    11310790931,
+    493882141
+  ],
+  "geometry": [
+    { "lat": -35.2751667, "lon": 149.1251237 },
+    { "lat": -35.2751891, "lon": 149.1252128 }
+  ],
+  "tags": {
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 665302878,
+  "bounds": {
+    "minlat": -35.2753076,
+    "minlon": 149.1250132,
+    "maxlat": -35.2752893,
+    "maxlon": 149.1250775
+  },
+  "nodes": [
+    26706313,
+    6227135302
+  ],
+  "geometry": [
+    { "lat": -35.2753076, "lon": 149.1250775 },
+    { "lat": -35.2752893, "lon": 149.1250132 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 665302880,
+  "bounds": {
+    "minlat": -35.2752893,
+    "minlon": 149.1250132,
+    "maxlat": -35.2752454,
+    "maxlon": 149.1250748
+  },
+  "nodes": [
+    6227135302,
+    7954453661,
+    7954453673,
+    10288847945,
+    10288847946,
+    7954453657
+  ],
+  "geometry": [
+    { "lat": -35.2752893, "lon": 149.1250132 },
+    { "lat": -35.2752801, "lon": 149.1250203 },
+    { "lat": -35.2752678, "lon": 149.1250329 },
+    { "lat": -35.2752575, "lon": 149.1250483 },
+    { "lat": -35.2752504, "lon": 149.1250625 },
+    { "lat": -35.2752454, "lon": 149.1250748 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427016,
+  "bounds": {
+    "minlat": -35.2742075,
+    "minlon": 149.1157179,
+    "maxlat": -35.2732675,
+    "maxlon": 149.1165500
+  },
+  "nodes": [
+    5188281117,
+    8822615830,
+    6259516880
+  ],
+  "geometry": [
+    { "lat": -35.2732675, "lon": 149.1165500 },
+    { "lat": -35.2733784, "lon": 149.1164518 },
+    { "lat": -35.2742075, "lon": 149.1157179 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427017,
+  "bounds": {
+    "minlat": -35.2744055,
+    "minlon": 149.1154699,
+    "maxlat": -35.2742075,
+    "maxlon": 149.1157179
+  },
+  "nodes": [
+    34312742,
+    6259516879,
+    6259516880
+  ],
+  "geometry": [
+    { "lat": -35.2744055, "lon": 149.1154699 },
+    { "lat": -35.2743239, "lon": 149.1155800 },
+    { "lat": -35.2742075, "lon": 149.1157179 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "Esri World Imagery",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427018,
+  "bounds": {
+    "minlat": -35.2744727,
+    "minlon": 149.1155462,
+    "maxlat": -35.2742075,
+    "maxlon": 149.1157179
+  },
+  "nodes": [
+    6259516880,
+    1441075880
+  ],
+  "geometry": [
+    { "lat": -35.2742075, "lon": 149.1157179 },
+    { "lat": -35.2744727, "lon": 149.1155462 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "Esri World Imagery",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427019,
+  "bounds": {
+    "minlat": -35.2748119,
+    "minlon": 149.1151807,
+    "maxlat": -35.2745777,
+    "maxlon": 149.1153072
+  },
+  "nodes": [
+    6259516881,
+    1441075876
+  ],
+  "geometry": [
+    { "lat": -35.2748119, "lon": 149.1151807 },
+    { "lat": -35.2745777, "lon": 149.1153072 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "Esri World Imagery",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427020,
+  "bounds": {
+    "minlat": -35.2748119,
+    "minlon": 149.1151807,
+    "maxlat": -35.2746341,
+    "maxlon": 149.1153920
+  },
+  "nodes": [
+    1441075872,
+    6259516881
+  ],
+  "geometry": [
+    { "lat": -35.2746341, "lon": 149.1153920 },
+    { "lat": -35.2748119, "lon": 149.1151807 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "Esri World Imagery",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427022,
+  "bounds": {
+    "minlat": -35.2786524,
+    "minlon": 149.1117880,
+    "maxlat": -35.2774612,
+    "maxlon": 149.1128543
+  },
+  "nodes": [
+    27313500,
+    11955589505,
+    6259517188
+  ],
+  "geometry": [
+    { "lat": -35.2774612, "lon": 149.1128543 },
+    { "lat": -35.2775582, "lon": 149.1127674 },
+    { "lat": -35.2786524, "lon": 149.1117880 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "2",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes:backward": "|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668427030,
+  "bounds": {
+    "minlat": -35.2789477,
+    "minlon": 149.1115226,
+    "maxlat": -35.2788103,
+    "maxlon": 149.1115951
+  },
+  "nodes": [
+    833935267,
+    6259517186,
+    6259517185
+  ],
+  "geometry": [
+    { "lat": -35.2789477, "lon": 149.1115226 },
+    { "lat": -35.2788517, "lon": 149.1115597 },
+    { "lat": -35.2788103, "lon": 149.1115951 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427033,
+  "bounds": {
+    "minlat": -35.2789477,
+    "minlon": 149.1115226,
+    "maxlat": -35.2786524,
+    "maxlon": 149.1117880
+  },
+  "nodes": [
+    6259517188,
+    6259517187,
+    4242183900,
+    833935267
+  ],
+  "geometry": [
+    { "lat": -35.2786524, "lon": 149.1117880 },
+    { "lat": -35.2787423, "lon": 149.1117480 },
+    { "lat": -35.2789009, "lon": 149.1116077 },
+    { "lat": -35.2789477, "lon": 149.1115226 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left|"
+  }
+},
+{
+  "type": "way",
+  "id": 668427039,
+  "bounds": {
+    "minlat": -35.2795614,
+    "minlon": 149.1109579,
+    "maxlat": -35.2789477,
+    "maxlon": 149.1115226
+  },
+  "nodes": [
+    833935267,
+    6591077579,
+    6259517189
+  ],
+  "geometry": [
+    { "lat": -35.2789477, "lon": 149.1115226 },
+    { "lat": -35.2794320, "lon": 149.1110770 },
+    { "lat": -35.2795614, "lon": 149.1109579 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668427042,
+  "bounds": {
+    "minlat": -35.2798266,
+    "minlon": 149.1107246,
+    "maxlat": -35.2795614,
+    "maxlon": 149.1109579
+  },
+  "nodes": [
+    6259517189,
+    11849187446,
+    102163985
+  ],
+  "geometry": [
+    { "lat": -35.2795614, "lon": 149.1109579 },
+    { "lat": -35.2797217, "lon": 149.1108169 },
+    { "lat": -35.2798266, "lon": 149.1107246 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes:forward": "|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668427045,
+  "bounds": {
+    "minlat": -35.2805237,
+    "minlon": 149.1101115,
+    "maxlat": -35.2802774,
+    "maxlon": 149.1103281
+  },
+  "nodes": [
+    6259517196,
+    34711590
+  ],
+  "geometry": [
+    { "lat": -35.2805237, "lon": 149.1101115 },
+    { "lat": -35.2802774, "lon": 149.1103281 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "no",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668428353,
+  "bounds": {
+    "minlat": -35.2717780,
+    "minlon": 149.1152239,
+    "maxlat": -35.2712933,
+    "maxlon": 149.1162800
+  },
+  "nodes": [
+    14166881,
+    6259538320
+  ],
+  "geometry": [
+    { "lat": -35.2712933, "lon": 149.1152239 },
+    { "lat": -35.2717780, "lon": 149.1162800 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "shoulder": "no",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668442705,
+  "bounds": {
+    "minlat": -35.2756969,
+    "minlon": 149.1290549,
+    "maxlat": -35.2756545,
+    "maxlon": 149.1294851
+  },
+  "nodes": [
+    6227137641,
+    12608770812,
+    7176166308,
+    14166898
+  ],
+  "geometry": [
+    { "lat": -35.2756545, "lon": 149.1290549 },
+    { "lat": -35.2756822, "lon": 149.1293359 },
+    { "lat": -35.2756861, "lon": 149.1293754 },
+    { "lat": -35.2756969, "lon": 149.1294851 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668442706,
+  "bounds": {
+    "minlat": -35.2751493,
+    "minlon": 149.1246631,
+    "maxlat": -35.2749932,
+    "maxlon": 149.1250657
+  },
+  "nodes": [
+    14166889,
+    7954453676,
+    7954453595,
+    6704339313,
+    6227135303
+  ],
+  "geometry": [
+    { "lat": -35.2749932, "lon": 149.1246631 },
+    { "lat": -35.2750354, "lon": 149.1247604 },
+    { "lat": -35.2750905, "lon": 149.1249059 },
+    { "lat": -35.2751276, "lon": 149.1250021 },
+    { "lat": -35.2751493, "lon": 149.1250657 }
+  ],
+  "tags": {
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668442708,
+  "bounds": {
+    "minlat": -35.2744519,
+    "minlon": 149.1225837,
+    "maxlat": -35.2737223,
+    "maxlon": 149.1237524
+  },
+  "nodes": [
+    6259715190,
+    2681958601
+  ],
+  "geometry": [
+    { "lat": -35.2737223, "lon": 149.1225837 },
+    { "lat": -35.2744519, "lon": 149.1237524 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668442709,
+  "bounds": {
+    "minlat": -35.2732049,
+    "minlon": 149.1211481,
+    "maxlat": -35.2730608,
+    "maxlon": 149.1216184
+  },
+  "nodes": [
+    14166886,
+    10289375491,
+    10289375490,
+    14166887
+  ],
+  "geometry": [
+    { "lat": -35.2730608, "lon": 149.1211481 },
+    { "lat": -35.2730982, "lon": 149.1212933 },
+    { "lat": -35.2731431, "lon": 149.1214449 },
+    { "lat": -35.2732049, "lon": 149.1216184 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left|||right"
+  }
+},
+{
+  "type": "way",
+  "id": 668442710,
+  "bounds": {
+    "minlat": -35.2730608,
+    "minlon": 149.1203514,
+    "maxlat": -35.2729254,
+    "maxlon": 149.1211481
+  },
+  "nodes": [
+    26706308,
+    10289375494,
+    6259715191,
+    10289375493,
+    10289375492,
+    14166886
+  ],
+  "geometry": [
+    { "lat": -35.2729254, "lon": 149.1203514 },
+    { "lat": -35.2729596, "lon": 149.1205951 },
+    { "lat": -35.2729787, "lon": 149.1207511 },
+    { "lat": -35.2729951, "lon": 149.1208498 },
+    { "lat": -35.2730202, "lon": 149.1209743 },
+    { "lat": -35.2730608, "lon": 149.1211481 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||"
+  }
+},
+{
+  "type": "way",
+  "id": 668442711,
+  "bounds": {
+    "minlat": -35.2734952,
+    "minlon": 149.1219586,
+    "maxlat": -35.2733505,
+    "maxlon": 149.1222167
+  },
+  "nodes": [
+    14166888,
+    654048887,
+    654050134
+  ],
+  "geometry": [
+    { "lat": -35.2733505, "lon": 149.1219586 },
+    { "lat": -35.2733953, "lon": 149.1220438 },
+    { "lat": -35.2734952, "lon": 149.1222167 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "busway": "left",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668442713,
+  "bounds": {
+    "minlat": -35.2728943,
+    "minlon": 149.1192557,
+    "maxlat": -35.2727987,
+    "maxlon": 149.1200578
+  },
+  "nodes": [
+    6259715192,
+    2681975964
+  ],
+  "geometry": [
+    { "lat": -35.2727987, "lon": 149.1192557 },
+    { "lat": -35.2728943, "lon": 149.1200578 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||"
+  }
+},
+{
+  "type": "way",
+  "id": 668442714,
+  "bounds": {
+    "minlat": -35.2723082,
+    "minlon": 149.1173656,
+    "maxlat": -35.2722746,
+    "maxlon": 149.1174408
+  },
+  "nodes": [
+    26706309,
+    6218068657
+  ],
+  "geometry": [
+    { "lat": -35.2722746, "lon": 149.1173656 },
+    { "lat": -35.2723082, "lon": 149.1174408 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "5",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "|||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668443142,
+  "bounds": {
+    "minlat": -35.2753935,
+    "minlon": 149.1261888,
+    "maxlat": -35.2753290,
+    "maxlon": 149.1267992
+  },
+  "nodes": [
+    6259718236,
+    12709387759,
+    616964147,
+    26641829
+  ],
+  "geometry": [
+    { "lat": -35.2753290, "lon": 149.1261888 },
+    { "lat": -35.2753786, "lon": 149.1266484 },
+    { "lat": -35.2753833, "lon": 149.1266917 },
+    { "lat": -35.2753935, "lon": 149.1267992 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668447765,
+  "bounds": {
+    "minlat": -35.2720875,
+    "minlon": 149.1151522,
+    "maxlat": -35.2713841,
+    "maxlon": 149.1166222
+  },
+  "nodes": [
+    6259752259,
+    26706324
+  ],
+  "geometry": [
+    { "lat": -35.2720875, "lon": 149.1166222 },
+    { "lat": -35.2713841, "lon": 149.1151522 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668447767,
+  "bounds": {
+    "minlat": -35.2730516,
+    "minlon": 149.1202839,
+    "maxlat": -35.2730500,
+    "maxlon": 149.1202932
+  },
+  "nodes": [
+    26706318,
+    6218058044
+  ],
+  "geometry": [
+    { "lat": -35.2730516, "lon": 149.1202932 },
+    { "lat": -35.2730500, "lon": 149.1202839 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "|||right"
+  }
+},
+{
+  "type": "way",
+  "id": 668447768,
+  "bounds": {
+    "minlat": -35.2731253,
+    "minlon": 149.1202932,
+    "maxlat": -35.2730516,
+    "maxlon": 149.1207733
+  },
+  "nodes": [
+    6259752260,
+    26706318
+  ],
+  "geometry": [
+    { "lat": -35.2731253, "lon": 149.1207733 },
+    { "lat": -35.2730516, "lon": 149.1202932 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "5",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||||right"
+  }
+},
+{
+  "type": "way",
+  "id": 668447769,
+  "bounds": {
+    "minlat": -35.2739707,
+    "minlon": 149.1222079,
+    "maxlat": -35.2736560,
+    "maxlon": 149.1227258
+  },
+  "nodes": [
+    6259752261,
+    2681958587
+  ],
+  "geometry": [
+    { "lat": -35.2739707, "lon": 149.1227258 },
+    { "lat": -35.2736560, "lon": 149.1222079 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||||",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "5",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||||right"
+  }
+},
+{
+  "type": "way",
+  "id": 668447770,
+  "bounds": {
+    "minlat": -35.2741435,
+    "minlon": 149.1227258,
+    "maxlat": -35.2739707,
+    "maxlon": 149.1230214
+  },
+  "nodes": [
+    6259752262,
+    6259752261
+  ],
+  "geometry": [
+    { "lat": -35.2741435, "lon": 149.1230214 },
+    { "lat": -35.2739707, "lon": 149.1227258 }
+  ],
+  "tags": {
+    "bus:lanes": "designated|||",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668447771,
+  "bounds": {
+    "minlat": -35.2745462,
+    "minlon": 149.1230214,
+    "maxlat": -35.2741435,
+    "maxlon": 149.1236701
+  },
+  "nodes": [
+    4852632146,
+    6259752262
+  ],
+  "geometry": [
+    { "lat": -35.2745462, "lon": 149.1236701 },
+    { "lat": -35.2741435, "lon": 149.1230214 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668459136,
+  "bounds": {
+    "minlat": -35.2822589,
+    "minlon": 149.1086194,
+    "maxlat": -35.2820560,
+    "maxlon": 149.1087990
+  },
+  "nodes": [
+    6259844471,
+    6225180103
+  ],
+  "geometry": [
+    { "lat": -35.2820560, "lon": 149.1087990 },
+    { "lat": -35.2822589, "lon": 149.1086194 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left|"
+  }
+},
+{
+  "type": "way",
+  "id": 668459140,
+  "bounds": {
+    "minlat": -35.2829961,
+    "minlon": 149.1078091,
+    "maxlat": -35.2827187,
+    "maxlon": 149.1080603
+  },
+  "nodes": [
+    6225180109,
+    6225180110,
+    6225180105
+  ],
+  "geometry": [
+    { "lat": -35.2829961, "lon": 149.1078091 },
+    { "lat": -35.2827497, "lon": 149.1080301 },
+    { "lat": -35.2827187, "lon": 149.1080603 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:maxspeed": "Mapillary",
+    "surface": "asphalt",
+    "turn:lanes": "|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668459141,
+  "bounds": {
+    "minlat": -35.2820560,
+    "minlon": 149.1087990,
+    "maxlat": -35.2817032,
+    "maxlon": 149.1090739
+  },
+  "nodes": [
+    6225180123,
+    6225180122,
+    6259844471
+  ],
+  "geometry": [
+    { "lat": -35.2817032, "lon": 149.1090739 },
+    { "lat": -35.2818775, "lon": 149.1089594 },
+    { "lat": -35.2820560, "lon": 149.1087990 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668459142,
+  "bounds": {
+    "minlat": -35.2834425,
+    "minlon": 149.1073694,
+    "maxlat": -35.2829961,
+    "maxlon": 149.1078091
+  },
+  "nodes": [
+    6225180114,
+    6225180108,
+    6225180109
+  ],
+  "geometry": [
+    { "lat": -35.2834425, "lon": 149.1073694 },
+    { "lat": -35.2833424, "lon": 149.1074775 },
+    { "lat": -35.2829961, "lon": 149.1078091 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:maxspeed": "Mapillary",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668459143,
+  "bounds": {
+    "minlat": -35.2826777,
+    "minlon": 149.1082280,
+    "maxlat": -35.2822589,
+    "maxlon": 149.1086194
+  },
+  "nodes": [
+    6225180103,
+    3187970990,
+    27313499
+  ],
+  "geometry": [
+    { "lat": -35.2822589, "lon": 149.1086194 },
+    { "lat": -35.2824942, "lon": 149.1083900 },
+    { "lat": -35.2826777, "lon": 149.1082280 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668470046,
+  "bounds": {
+    "minlat": -35.2843661,
+    "minlon": 149.1228677,
+    "maxlat": -35.2843116,
+    "maxlon": 149.1229751
+  },
+  "nodes": [
+    2184665613,
+    2184682880
+  ],
+  "geometry": [
+    { "lat": -35.2843116, "lon": 149.1229751 },
+    { "lat": -35.2843661, "lon": 149.1228677 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 668470047,
+  "bounds": {
+    "minlat": -35.2857457,
+    "minlon": 149.1220731,
+    "maxlat": -35.2856193,
+    "maxlon": 149.1221232
+  },
+  "nodes": [
+    896709629,
+    6197805096,
+    10281951194,
+    10286756184,
+    896709920
+  ],
+  "geometry": [
+    { "lat": -35.2856193, "lon": 149.1221232 },
+    { "lat": -35.2856690, "lon": 149.1221055 },
+    { "lat": -35.2856982, "lon": 149.1220942 },
+    { "lat": -35.2857256, "lon": 149.1220828 },
+    { "lat": -35.2857457, "lon": 149.1220731 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668470048,
+  "bounds": {
+    "minlat": -35.2857037,
+    "minlon": 149.1219869,
+    "maxlat": -35.2854822,
+    "maxlon": 149.1220472
+  },
+  "nodes": [
+    896709914,
+    896710149,
+    30290987
+  ],
+  "geometry": [
+    { "lat": -35.2857037, "lon": 149.1219869 },
+    { "lat": -35.2855366, "lon": 149.1220337 },
+    { "lat": -35.2854822, "lon": 149.1220472 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668470049,
+  "bounds": {
+    "minlat": -35.2854822,
+    "minlon": 149.1220472,
+    "maxlat": -35.2854180,
+    "maxlon": 149.1220614
+  },
+  "nodes": [
+    30290987,
+    896710241
+  ],
+  "geometry": [
+    { "lat": -35.2854822, "lon": 149.1220472 },
+    { "lat": -35.2854180, "lon": 149.1220614 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668482825,
+  "bounds": {
+    "minlat": -35.2836775,
+    "minlon": 149.1246060,
+    "maxlat": -35.2836477,
+    "maxlon": 149.1246848
+  },
+  "nodes": [
+    6226606201,
+    26641778
+  ],
+  "geometry": [
+    { "lat": -35.2836477, "lon": 149.1246848 },
+    { "lat": -35.2836775, "lon": 149.1246060 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668482826,
+  "bounds": {
+    "minlat": -35.2832008,
+    "minlon": 149.1258168,
+    "maxlat": -35.2831571,
+    "maxlon": 149.1259203
+  },
+  "nodes": [
+    15069271,
+    6304823892
+  ],
+  "geometry": [
+    { "lat": -35.2831571, "lon": 149.1259203 },
+    { "lat": -35.2832008, "lon": 149.1258168 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left;through|through"
+  }
+},
+{
+  "type": "way",
+  "id": 668482827,
+  "bounds": {
+    "minlat": -35.2833192,
+    "minlon": 149.1252610,
+    "maxlat": -35.2831198,
+    "maxlon": 149.1257721
+  },
+  "nodes": [
+    897339924,
+    6304823891
+  ],
+  "geometry": [
+    { "lat": -35.2833192, "lon": 149.1252610 },
+    { "lat": -35.2831198, "lon": 149.1257721 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "turn:lanes": "left|right"
+  }
+},
+{
+  "type": "way",
+  "id": 668482828,
+  "bounds": {
+    "minlat": -35.2837491,
+    "minlon": 149.1241108,
+    "maxlat": -35.2835593,
+    "maxlon": 149.1246232
+  },
+  "nodes": [
+    6260073819,
+    12658347773,
+    10026657974,
+    6304801758,
+    6304832081,
+    6304832079
+  ],
+  "geometry": [
+    { "lat": -35.2837491, "lon": 149.1241108 },
+    { "lat": -35.2836396, "lon": 149.1244008 },
+    { "lat": -35.2836292, "lon": 149.1244285 },
+    { "lat": -35.2835987, "lon": 149.1245108 },
+    { "lat": -35.2835875, "lon": 149.1245434 },
+    { "lat": -35.2835593, "lon": 149.1246232 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left|||right"
+  }
+},
+{
+  "type": "way",
+  "id": 668482829,
+  "bounds": {
+    "minlat": -35.2842234,
+    "minlon": 149.1229133,
+    "maxlat": -35.2837491,
+    "maxlon": 149.1241108
+  },
+  "nodes": [
+    2296795767,
+    6304801779,
+    897346575,
+    6260073819
+  ],
+  "geometry": [
+    { "lat": -35.2842234, "lon": 149.1229133 },
+    { "lat": -35.2841837, "lon": 149.1230009 },
+    { "lat": -35.2841659, "lon": 149.1230453 },
+    { "lat": -35.2837491, "lon": 149.1241108 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "left||"
+  }
+},
+{
+  "type": "way",
+  "id": 668482830,
+  "bounds": {
+    "minlat": -35.2854180,
+    "minlon": 149.1220614,
+    "maxlat": -35.2852463,
+    "maxlon": 149.1221082
+  },
+  "nodes": [
+    896710241,
+    9206527107,
+    12690261524,
+    12690261523,
+    1520916788
+  ],
+  "geometry": [
+    { "lat": -35.2854180, "lon": 149.1220614 },
+    { "lat": -35.2853674, "lon": 149.1220723 },
+    { "lat": -35.2853512, "lon": 149.1220763 },
+    { "lat": -35.2853162, "lon": 149.1220864 },
+    { "lat": -35.2852463, "lon": 149.1221082 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 675964286,
+  "bounds": {
+    "minlat": -35.2753908,
+    "minlon": 149.1250775,
+    "maxlat": -35.2753076,
+    "maxlon": 149.1257598
+  },
+  "nodes": [
+    1692851346,
+    6704339309,
+    10289401346,
+    10289401347,
+    26706313
+  ],
+  "geometry": [
+    { "lat": -35.2753908, "lon": 149.1257598 },
+    { "lat": -35.2753321, "lon": 149.1252114 },
+    { "lat": -35.2753258, "lon": 149.1251667 },
+    { "lat": -35.2753178, "lon": 149.1251237 },
+    { "lat": -35.2753076, "lon": 149.1250775 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 675974969,
+  "bounds": {
+    "minlat": -35.2726309,
+    "minlon": 149.1170802,
+    "maxlat": -35.2723833,
+    "maxlon": 149.1172915
+  },
+  "nodes": [
+    160992429,
+    12859826382,
+    2681965819,
+    26706322
+  ],
+  "geometry": [
+    { "lat": -35.2726309, "lon": 149.1170802 },
+    { "lat": -35.2724817, "lon": 149.1172149 },
+    { "lat": -35.2724627, "lon": 149.1172320 },
+    { "lat": -35.2723833, "lon": 149.1172915 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 675974970,
+  "bounds": {
+    "minlat": -35.2727825,
+    "minlon": 149.1169777,
+    "maxlat": -35.2727028,
+    "maxlon": 149.1171164
+  },
+  "nodes": [
+    6218068660,
+    6218068662
+  ],
+  "geometry": [
+    { "lat": -35.2727028, "lon": 149.1171164 },
+    { "lat": -35.2727825, "lon": 149.1169777 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 675974977,
+  "bounds": {
+    "minlat": -35.2727375,
+    "minlon": 149.1173586,
+    "maxlat": -35.2724144,
+    "maxlon": 149.1182759
+  },
+  "nodes": [
+    6330554849,
+    6591077537,
+    6330554848,
+    11955589518,
+    6218068658
+  ],
+  "geometry": [
+    { "lat": -35.2727375, "lon": 149.1182759 },
+    { "lat": -35.2727005, "lon": 149.1181141 },
+    { "lat": -35.2725554, "lon": 149.1176778 },
+    { "lat": -35.2724552, "lon": 149.1174510 },
+    { "lat": -35.2724144, "lon": 149.1173586 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 723190335,
+  "bounds": {
+    "minlat": -35.2854281,
+    "minlon": 149.1221681,
+    "maxlat": -35.2852340,
+    "maxlon": 149.1222027
+  },
+  "nodes": [
+    26641771,
+    10281980441,
+    897325507,
+    896710253
+  ],
+  "geometry": [
+    { "lat": -35.2852340, "lon": 149.1222027 },
+    { "lat": -35.2853564, "lon": 149.1221800 },
+    { "lat": -35.2853845, "lon": 149.1221752 },
+    { "lat": -35.2854281, "lon": 149.1221681 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 731739752,
+  "bounds": {
+    "minlat": -35.2756797,
+    "minlon": 149.1272115,
+    "maxlat": -35.2755554,
+    "maxlon": 149.1282861
+  },
+  "nodes": [
+    26706311,
+    9769500648,
+    6330414608
+  ],
+  "geometry": [
+    { "lat": -35.2756797, "lon": 149.1282861 },
+    { "lat": -35.2755636, "lon": 149.1272725 },
+    { "lat": -35.2755554, "lon": 149.1272115 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 731739753,
+  "bounds": {
+    "minlat": -35.2755554,
+    "minlon": 149.1268527,
+    "maxlat": -35.2755099,
+    "maxlon": 149.1272115
+  },
+  "nodes": [
+    6330414608,
+    11955589516,
+    1938014016
+  ],
+  "geometry": [
+    { "lat": -35.2755554, "lon": 149.1272115 },
+    { "lat": -35.2755219, "lon": 149.1269202 },
+    { "lat": -35.2755099, "lon": 149.1268527 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 736286464,
+  "bounds": {
+    "minlat": -35.2726614,
+    "minlon": 149.1170554,
+    "maxlat": -35.2726309,
+    "maxlon": 149.1170802
+  },
+  "nodes": [
+    6218068661,
+    160992429
+  ],
+  "geometry": [
+    { "lat": -35.2726614, "lon": 149.1170554 },
+    { "lat": -35.2726309, "lon": 149.1170802 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 784853486,
+  "bounds": {
+    "minlat": -35.2757400,
+    "minlon": 149.1282861,
+    "maxlat": -35.2756797,
+    "maxlon": 149.1288727
+  },
+  "nodes": [
+    7332544031,
+    4688003389,
+    26706311
+  ],
+  "geometry": [
+    { "lat": -35.2757400, "lon": 149.1288727 },
+    { "lat": -35.2756914, "lon": 149.1283995 },
+    { "lat": -35.2756797, "lon": 149.1282861 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 784853487,
+  "bounds": {
+    "minlat": -35.2756545,
+    "minlon": 149.1283020,
+    "maxlat": -35.2755803,
+    "maxlon": 149.1290549
+  },
+  "nodes": [
+    26641744,
+    6330414607,
+    6227137641
+  ],
+  "geometry": [
+    { "lat": -35.2755803, "lon": 149.1283020 },
+    { "lat": -35.2755914, "lon": 149.1284146 },
+    { "lat": -35.2756545, "lon": 149.1290549 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 784853488,
+  "bounds": {
+    "minlat": -35.2755803,
+    "minlon": 149.1268762,
+    "maxlat": -35.2754016,
+    "maxlon": 149.1283020
+  },
+  "nodes": [
+    1681506840,
+    10288759148,
+    10288759149,
+    10288759150,
+    10288759147,
+    26641744
+  ],
+  "geometry": [
+    { "lat": -35.2754016, "lon": 149.1268762 },
+    { "lat": -35.2754165, "lon": 149.1270346 },
+    { "lat": -35.2754328, "lon": 149.1271428 },
+    { "lat": -35.2754862, "lon": 149.1274936 },
+    { "lat": -35.2754975, "lon": 149.1275697 },
+    { "lat": -35.2755803, "lon": 149.1283020 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 786247361,
+  "bounds": {
+    "minlat": -35.2842726,
+    "minlon": 149.1228095,
+    "maxlat": -35.2842234,
+    "maxlon": 149.1229133
+  },
+  "nodes": [
+    2296795768,
+    2296795767
+  ],
+  "geometry": [
+    { "lat": -35.2842726, "lon": 149.1228095 },
+    { "lat": -35.2842234, "lon": 149.1229133 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left|||right"
+  }
+},
+{
+  "type": "way",
+  "id": 789807237,
+  "bounds": {
+    "minlat": -35.2727028,
+    "minlon": 149.1171164,
+    "maxlat": -35.2726012,
+    "maxlon": 149.1172148
+  },
+  "nodes": [
+    6218068656,
+    6218068660
+  ],
+  "geometry": [
+    { "lat": -35.2726012, "lon": 149.1172148 },
+    { "lat": -35.2727028, "lon": 149.1171164 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 789807238,
+  "bounds": {
+    "minlat": -35.2730500,
+    "minlon": 149.1201175,
+    "maxlat": -35.2730279,
+    "maxlon": 149.1202839
+  },
+  "nodes": [
+    6218058044,
+    7384458591
+  ],
+  "geometry": [
+    { "lat": -35.2730500, "lon": 149.1202839 },
+    { "lat": -35.2730279, "lon": 149.1201175 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 789807441,
+  "bounds": {
+    "minlat": -35.2726893,
+    "minlon": 149.1179508,
+    "maxlat": -35.2725247,
+    "maxlon": 149.1184953
+  },
+  "nodes": [
+    14166882,
+    5188278001,
+    14166884
+  ],
+  "geometry": [
+    { "lat": -35.2725247, "lon": 149.1179508 },
+    { "lat": -35.2725886, "lon": 149.1181475 },
+    { "lat": -35.2726893, "lon": 149.1184953 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "busway": "left",
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 789807442,
+  "bounds": {
+    "minlat": -35.2722680,
+    "minlon": 149.1166222,
+    "maxlat": -35.2720875,
+    "maxlon": 149.1170294
+  },
+  "nodes": [
+    654052842,
+    6259752259
+  ],
+  "geometry": [
+    { "lat": -35.2722680, "lon": 149.1170294 },
+    { "lat": -35.2720875, "lon": 149.1166222 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "cycleway:left:lane": "exclusive",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 838023770,
+  "bounds": {
+    "minlat": -35.2830072,
+    "minlon": 149.1260661,
+    "maxlat": -35.2827119,
+    "maxlon": 149.1268153
+  },
+  "nodes": [
+    8699835412,
+    12151270312
+  ],
+  "geometry": [
+    { "lat": -35.2830072, "lon": 149.1260661 },
+    { "lat": -35.2827119, "lon": 149.1268153 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10"
+  }
+},
+{
+  "type": "way",
+  "id": 838023771,
+  "bounds": {
+    "minlat": -35.2831571,
+    "minlon": 149.1259203,
+    "maxlat": -35.2831147,
+    "maxlon": 149.1260205
+  },
+  "nodes": [
+    7821524861,
+    15069271
+  ],
+  "geometry": [
+    { "lat": -35.2831147, "lon": 149.1260205 },
+    { "lat": -35.2831571, "lon": 149.1259203 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 852706859,
+  "bounds": {
+    "minlat": -35.2752026,
+    "minlon": 149.1242867,
+    "maxlat": -35.2747674,
+    "maxlon": 149.1250457
+  },
+  "nodes": [
+    320192916,
+    10288847935,
+    10288847934,
+    7954453642,
+    10288847933,
+    7954453585,
+    7954453681,
+    10288847937,
+    7954386275,
+    7954453675,
+    7954453674,
+    7954453640,
+    7954453641,
+    7954453602,
+    7954453636,
+    10288845106,
+    11310790933
+  ],
+  "geometry": [
+    { "lat": -35.2747674, "lon": 149.1242867 },
+    { "lat": -35.2748603, "lon": 149.1243934 },
+    { "lat": -35.2749086, "lon": 149.1244524 },
+    { "lat": -35.2749429, "lon": 149.1244988 },
+    { "lat": -35.2749795, "lon": 149.1245500 },
+    { "lat": -35.2750099, "lon": 149.1245954 },
+    { "lat": -35.2750343, "lon": 149.1246365 },
+    { "lat": -35.2750503, "lon": 149.1246667 },
+    { "lat": -35.2750689, "lon": 149.1247047 },
+    { "lat": -35.2751003, "lon": 149.1247792 },
+    { "lat": -35.2751413, "lon": 149.1248834 },
+    { "lat": -35.2751752, "lon": 149.1249827 },
+    { "lat": -35.2751803, "lon": 149.1249975 },
+    { "lat": -35.2751856, "lon": 149.1250114 },
+    { "lat": -35.2751914, "lon": 149.1250254 },
+    { "lat": -35.2751973, "lon": 149.1250377 },
+    { "lat": -35.2752026, "lon": 149.1250457 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 907631673,
+  "bounds": {
+    "minlat": -35.2752451,
+    "minlon": 149.1253862,
+    "maxlat": -35.2752219,
+    "maxlon": 149.1255435
+  },
+  "nodes": [
+    7954453611,
+    7954453647
+  ],
+  "geometry": [
+    { "lat": -35.2752219, "lon": 149.1253862 },
+    { "lat": -35.2752451, "lon": 149.1255435 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 907631674,
+  "bounds": {
+    "minlat": -35.2752219,
+    "minlon": 149.1252128,
+    "maxlat": -35.2751891,
+    "maxlon": 149.1253862
+  },
+  "nodes": [
+    493882141,
+    6704339310,
+    10288847947,
+    7954453611
+  ],
+  "geometry": [
+    { "lat": -35.2751891, "lon": 149.1252128 },
+    { "lat": -35.2752014, "lon": 149.1252610 },
+    { "lat": -35.2752141, "lon": 149.1253321 },
+    { "lat": -35.2752219, "lon": 149.1253862 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 979435613,
+  "bounds": {
+    "minlat": -35.2836191,
+    "minlon": 149.1247597,
+    "maxlat": -35.2832008,
+    "maxlon": 149.1258168
+  },
+  "nodes": [
+    6304823892,
+    551133661,
+    9913281267
+  ],
+  "geometry": [
+    { "lat": -35.2832008, "lon": 149.1258168 },
+    { "lat": -35.2836049, "lon": 149.1247925 },
+    { "lat": -35.2836191, "lon": 149.1247597 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1094761584,
+  "bounds": {
+    "minlat": -35.2752401,
+    "minlon": 149.1250657,
+    "maxlat": -35.2751493,
+    "maxlon": 149.1250913
+  },
+  "nodes": [
+    6227135303,
+    10288847953,
+    7954453600,
+    10288847951,
+    10288847944,
+    10288847952,
+    7954386284
+  ],
+  "geometry": [
+    { "lat": -35.2751493, "lon": 149.1250657 },
+    { "lat": -35.2751618, "lon": 149.1250714 },
+    { "lat": -35.2751753, "lon": 149.1250767 },
+    { "lat": -35.2751925, "lon": 149.1250824 },
+    { "lat": -35.2752050, "lon": 149.1250856 },
+    { "lat": -35.2752233, "lon": 149.1250895 },
+    { "lat": -35.2752401, "lon": 149.1250913 }
+  ],
+  "tags": {
+    "access": "no",
+    "bus": "yes",
+    "highway": "primary",
+    "lanes": "1",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "right"
+  }
+},
+{
+  "type": "way",
+  "id": 1094761585,
+  "bounds": {
+    "minlat": -35.2753076,
+    "minlon": 149.1250748,
+    "maxlat": -35.2752454,
+    "maxlon": 149.1250798
+  },
+  "nodes": [
+    7954453657,
+    7954453607,
+    10288847915,
+    10288847916,
+    10288847941,
+    26706313
+  ],
+  "geometry": [
+    { "lat": -35.2752454, "lon": 149.1250748 },
+    { "lat": -35.2752593, "lon": 149.1250779 },
+    { "lat": -35.2752727, "lon": 149.1250798 },
+    { "lat": -35.2752900, "lon": 149.1250794 },
+    { "lat": -35.2753022, "lon": 149.1250779 },
+    { "lat": -35.2753076, "lon": 149.1250775 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1094761586,
+  "bounds": {
+    "minlat": -35.2752454,
+    "minlon": 149.1250748,
+    "maxlat": -35.2752401,
+    "maxlon": 149.1250913
+  },
+  "nodes": [
+    7954453657,
+    7954386284
+  ],
+  "geometry": [
+    { "lat": -35.2752454, "lon": 149.1250748 },
+    { "lat": -35.2752401, "lon": 149.1250913 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1094761587,
+  "bounds": {
+    "minlat": -35.2753076,
+    "minlon": 149.1250775,
+    "maxlat": -35.2752401,
+    "maxlon": 149.1250913
+  },
+  "nodes": [
+    7954386284,
+    10288847923,
+    10288847922,
+    10288847921,
+    10288847924,
+    7954453610,
+    26706313
+  ],
+  "geometry": [
+    { "lat": -35.2752401, "lon": 149.1250913 },
+    { "lat": -35.2752534, "lon": 149.1250909 },
+    { "lat": -35.2752620, "lon": 149.1250904 },
+    { "lat": -35.2752714, "lon": 149.1250891 },
+    { "lat": -35.2752845, "lon": 149.1250858 },
+    { "lat": -35.2752925, "lon": 149.1250834 },
+    { "lat": -35.2753076, "lon": 149.1250775 }
+  ],
+  "tags": {
+    "access": "no",
+    "bus": "yes",
+    "highway": "primary",
+    "lanes": "1",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "right"
+  }
+},
+{
+  "type": "way",
+  "id": 1094761588,
+  "bounds": {
+    "minlat": -35.2752376,
+    "minlon": 149.1251003,
+    "maxlat": -35.2752167,
+    "maxlon": 149.1253862
+  },
+  "nodes": [
+    11310790930,
+    10288847950,
+    7954453664,
+    7954453589,
+    7954453627,
+    10288847949,
+    8493429136,
+    10288847948,
+    7954453611
+  ],
+  "geometry": [
+    { "lat": -35.2752376, "lon": 149.1251003 },
+    { "lat": -35.2752355, "lon": 149.1251077 },
+    { "lat": -35.2752305, "lon": 149.1251286 },
+    { "lat": -35.2752263, "lon": 149.1251555 },
+    { "lat": -35.2752212, "lon": 149.1251898 },
+    { "lat": -35.2752184, "lon": 149.1252187 },
+    { "lat": -35.2752168, "lon": 149.1252557 },
+    { "lat": -35.2752167, "lon": 149.1253007 },
+    { "lat": -35.2752219, "lon": 149.1253862 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1095293492,
+  "bounds": {
+    "minlat": -35.2817032,
+    "minlon": 149.1090739,
+    "maxlat": -35.2805237,
+    "maxlon": 149.1101115
+  },
+  "nodes": [
+    6225180123,
+    6259517196
+  ],
+  "geometry": [
+    { "lat": -35.2817032, "lon": 149.1090739 },
+    { "lat": -35.2805237, "lon": 149.1101115 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "no",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1095293493,
+  "bounds": {
+    "minlat": -35.2802774,
+    "minlon": 149.1103281,
+    "maxlat": -35.2802051,
+    "maxlon": 149.1103917
+  },
+  "nodes": [
+    6259517190,
+    34711590
+  ],
+  "geometry": [
+    { "lat": -35.2802051, "lon": 149.1103917 },
+    { "lat": -35.2802774, "lon": 149.1103281 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes:forward": "|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1095293495,
+  "bounds": {
+    "minlat": -35.2835655,
+    "minlon": 149.1073603,
+    "maxlat": -35.2826777,
+    "maxlon": 149.1082280
+  },
+  "nodes": [
+    27313499,
+    6225180121,
+    12020098204,
+    34298801
+  ],
+  "geometry": [
+    { "lat": -35.2826777, "lon": 149.1082280 },
+    { "lat": -35.2833482, "lon": 149.1075833 },
+    { "lat": -35.2834895, "lon": 149.1074383 },
+    { "lat": -35.2835655, "lon": 149.1073603 }
+  ],
+  "tags": {
+    "construction": "tertiary",
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1095293642,
+  "bounds": {
+    "minlat": -35.2757361,
+    "minlon": 149.1294851,
+    "maxlat": -35.2756969,
+    "maxlon": 149.1298830
+  },
+  "nodes": [
+    14166898,
+    6947428263,
+    6947428264,
+    14868173
+  ],
+  "geometry": [
+    { "lat": -35.2756969, "lon": 149.1294851 },
+    { "lat": -35.2757146, "lon": 149.1296650 },
+    { "lat": -35.2757187, "lon": 149.1297059 },
+    { "lat": -35.2757361, "lon": 149.1298830 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "|through|right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1124381249,
+  "bounds": {
+    "minlat": -35.2858433,
+    "minlon": 149.1220342,
+    "maxlat": -35.2858312,
+    "maxlon": 149.1220394
+  },
+  "nodes": [
+    10281951201,
+    896709630
+  ],
+  "geometry": [
+    { "lat": -35.2858312, "lon": 149.1220394 },
+    { "lat": -35.2858433, "lon": 149.1220342 }
+  ],
+  "tags": {
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1125173932,
+  "bounds": {
+    "minlat": -35.2724144,
+    "minlon": 149.1173586,
+    "maxlat": -35.2723082,
+    "maxlon": 149.1174408
+  },
+  "nodes": [
+    6218068657,
+    6218068658
+  ],
+  "geometry": [
+    { "lat": -35.2723082, "lon": 149.1174408 },
+    { "lat": -35.2724144, "lon": 149.1173586 }
+  ],
+  "tags": {
+    "cycleway:left": "no",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1125173933,
+  "bounds": {
+    "minlat": -35.2723833,
+    "minlon": 149.1172915,
+    "maxlat": -35.2722746,
+    "maxlon": 149.1173656
+  },
+  "nodes": [
+    26706322,
+    26706309
+  ],
+  "geometry": [
+    { "lat": -35.2723833, "lon": 149.1172915 },
+    { "lat": -35.2722746, "lon": 149.1173656 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "1",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1125825233,
+  "bounds": {
+    "minlat": -35.2788103,
+    "minlon": 149.1115951,
+    "maxlat": -35.2786524,
+    "maxlon": 149.1117880
+  },
+  "nodes": [
+    6259517185,
+    6259516884,
+    6259517188
+  ],
+  "geometry": [
+    { "lat": -35.2788103, "lon": 149.1115951 },
+    { "lat": -35.2787081, "lon": 149.1116809 },
+    { "lat": -35.2786524, "lon": 149.1117880 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "oneway": "yes",
+    "source:geometry": "ACT mapi Imagery 2018",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "source:oneway": "ACT mapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1139190657,
+  "bounds": {
+    "minlat": -35.2831147,
+    "minlon": 149.1260205,
+    "maxlat": -35.2830781,
+    "maxlon": 149.1261067
+  },
+  "nodes": [
+    8699835413,
+    7821524861
+  ],
+  "geometry": [
+    { "lat": -35.2830781, "lon": 149.1261067 },
+    { "lat": -35.2831147, "lon": 149.1260205 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1139190659,
+  "bounds": {
+    "minlat": -35.2831198,
+    "minlon": 149.1257721,
+    "maxlat": -35.2830818,
+    "maxlon": 149.1258714
+  },
+  "nodes": [
+    6304823891,
+    897341046
+  ],
+  "geometry": [
+    { "lat": -35.2831198, "lon": 149.1257721 },
+    { "lat": -35.2830818, "lon": 149.1258714 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "maxspeed:type": "sign",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "turn:lanes": "left|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1139190661,
+  "bounds": {
+    "minlat": -35.2830408,
+    "minlon": 149.1259785,
+    "maxlat": -35.2830072,
+    "maxlon": 149.1260661
+  },
+  "nodes": [
+    7821524862,
+    8699835412
+  ],
+  "geometry": [
+    { "lat": -35.2830408, "lon": 149.1259785 },
+    { "lat": -35.2830072, "lon": 149.1260661 }
+  ],
+  "tags": {
+    "check_date": "2026-07-11",
+    "highway": "construction",
+    "name": "Edinburgh Avenue",
+    "note": "traffic on Edinburgh Avenue will be one-way westbound between Knowles Place and Marcus Clarke Street until 5 am on Monday, 10 August 2026.",
+    "oneway": "yes",
+    "opening_date": "2026-08-10"
+  }
+},
+{
+  "type": "way",
+  "id": 1220634696,
+  "bounds": {
+    "minlat": -35.2752401,
+    "minlon": 149.1250913,
+    "maxlat": -35.2752376,
+    "maxlon": 149.1251003
+  },
+  "nodes": [
+    7954386284,
+    11310790930
+  ],
+  "geometry": [
+    { "lat": -35.2752401, "lon": 149.1250913 },
+    { "lat": -35.2752376, "lon": 149.1251003 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1220634698,
+  "bounds": {
+    "minlat": -35.2751667,
+    "minlon": 149.1250657,
+    "maxlat": -35.2751493,
+    "maxlon": 149.1251237
+  },
+  "nodes": [
+    6227135303,
+    11310790931
+  ],
+  "geometry": [
+    { "lat": -35.2751493, "lon": 149.1250657 },
+    { "lat": -35.2751667, "lon": 149.1251237 }
+  ],
+  "tags": {
+    "cycleway:left": "separate",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1220634700,
+  "bounds": {
+    "minlat": -35.2752454,
+    "minlon": 149.1250457,
+    "maxlat": -35.2752026,
+    "maxlon": 149.1250748
+  },
+  "nodes": [
+    11310790933,
+    10288847938,
+    10288847939,
+    10288847940,
+    10288847942,
+    10288845107,
+    7954453657
+  ],
+  "geometry": [
+    { "lat": -35.2752026, "lon": 149.1250457 },
+    { "lat": -35.2752047, "lon": 149.1250490 },
+    { "lat": -35.2752133, "lon": 149.1250584 },
+    { "lat": -35.2752222, "lon": 149.1250648 },
+    { "lat": -35.2752291, "lon": 149.1250687 },
+    { "lat": -35.2752367, "lon": 149.1250720 },
+    { "lat": -35.2752454, "lon": 149.1250748 }
+  ],
+  "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326359,
+  "bounds": {
+    "minlat": -35.2754976,
+    "minlon": 149.1263665,
+    "maxlat": -35.2754467,
+    "maxlon": 149.1267745
+  },
+  "nodes": [
+    1938014014,
+    616964146,
+    6330450295
+  ],
+  "geometry": [
+    { "lat": -35.2754976, "lon": 149.1267745 },
+    { "lat": -35.2754839, "lon": 149.1266804 },
+    { "lat": -35.2754467, "lon": 149.1263665 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326360,
+  "bounds": {
+    "minlat": -35.2755099,
+    "minlon": 149.1267745,
+    "maxlat": -35.2754976,
+    "maxlon": 149.1268527
+  },
+  "nodes": [
+    1938014016,
+    1938014014
+  ],
+  "geometry": [
+    { "lat": -35.2755099, "lon": 149.1268527 },
+    { "lat": -35.2754976, "lon": 149.1267745 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326361,
+  "bounds": {
+    "minlat": -35.2754016,
+    "minlon": 149.1267992,
+    "maxlat": -35.2753935,
+    "maxlon": 149.1268762
+  },
+  "nodes": [
+    26641829,
+    1681506840
+  ],
+  "geometry": [
+    { "lat": -35.2753935, "lon": 149.1267992 },
+    { "lat": -35.2754016, "lon": 149.1268762 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "4",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "||right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326362,
+  "bounds": {
+    "minlat": -35.2723833,
+    "minlon": 149.1170294,
+    "maxlat": -35.2722680,
+    "maxlon": 149.1172915
+  },
+  "nodes": [
+    26706322,
+    880405079,
+    654052842
+  ],
+  "geometry": [
+    { "lat": -35.2723833, "lon": 149.1172915 },
+    { "lat": -35.2723477, "lon": 149.1172104 },
+    { "lat": -35.2722680, "lon": 149.1170294 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "expressway": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326363,
+  "bounds": {
+    "minlat": -35.2724144,
+    "minlon": 149.1172915,
+    "maxlat": -35.2723833,
+    "maxlon": 149.1173586
+  },
+  "nodes": [
+    6218068658,
+    26706322
+  ],
+  "geometry": [
+    { "lat": -35.2724144, "lon": 149.1173586 },
+    { "lat": -35.2723833, "lon": 149.1172915 }
+  ],
+  "tags": {
+    "bus:lanes": "designated||",
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326369,
+  "bounds": {
+    "minlat": -35.2847325,
+    "minlon": 149.1224415,
+    "maxlat": -35.2843661,
+    "maxlon": 149.1228677
+  },
+  "nodes": [
+    2184682880,
+    6197805092,
+    26641775,
+    10287003666,
+    1520916598,
+    10286806927,
+    10287003668,
+    10287003667,
+    1520916755
+  ],
+  "geometry": [
+    { "lat": -35.2843661, "lon": 149.1228677 },
+    { "lat": -35.2844028, "lon": 149.1228062 },
+    { "lat": -35.2844780, "lon": 149.1227008 },
+    { "lat": -35.2845458, "lon": 149.1226215 },
+    { "lat": -35.2845974, "lon": 149.1225665 },
+    { "lat": -35.2846271, "lon": 149.1225371 },
+    { "lat": -35.2846543, "lon": 149.1225098 },
+    { "lat": -35.2846882, "lon": 149.1224790 },
+    { "lat": -35.2847325, "lon": 149.1224415 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1289326370,
+  "bounds": {
+    "minlat": -35.2843116,
+    "minlon": 149.1229751,
+    "maxlat": -35.2836775,
+    "maxlon": 149.1246060
+  },
+  "nodes": [
+    26641778,
+    6304801759,
+    10026657975,
+    6197805091,
+    6304801778,
+    2184665613
+  ],
+  "geometry": [
+    { "lat": -35.2836775, "lon": 149.1246060 },
+    { "lat": -35.2836869, "lon": 149.1245786 },
+    { "lat": -35.2837236, "lon": 149.1244807 },
+    { "lat": -35.2842575, "lon": 149.1230941 },
+    { "lat": -35.2842744, "lon": 149.1230561 },
+    { "lat": -35.2843116, "lon": 149.1229751 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1301982885,
+  "bounds": {
+    "minlat": -35.2852463,
+    "minlon": 149.1221082,
+    "maxlat": -35.2850645,
+    "maxlon": 149.1221401
+  },
+  "nodes": [
+    1520916788,
+    10281980431,
+    10281980437,
+    10281980433,
+    10281980436,
+    26641764
+  ],
+  "geometry": [
+    { "lat": -35.2852463, "lon": 149.1221082 },
+    { "lat": -35.2852057, "lon": 149.1221188 },
+    { "lat": -35.2851840, "lon": 149.1221228 },
+    { "lat": -35.2851268, "lon": 149.1221295 },
+    { "lat": -35.2850984, "lon": 149.1221332 },
+    { "lat": -35.2850645, "lon": 149.1221401 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1301982886,
+  "bounds": {
+    "minlat": -35.2852340,
+    "minlon": 149.1222027,
+    "maxlat": -35.2851036,
+    "maxlon": 149.1222369
+  },
+  "nodes": [
+    32929129,
+    26641771
+  ],
+  "geometry": [
+    { "lat": -35.2851036, "lon": 149.1222369 },
+    { "lat": -35.2852340, "lon": 149.1222027 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt",
+    "turn:lanes": "through;slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1301982887,
+  "bounds": {
+    "minlat": -35.2856193,
+    "minlon": 149.1221232,
+    "maxlat": -35.2855480,
+    "maxlon": 149.1221431
+  },
+  "nodes": [
+    1520916669,
+    897325780,
+    896709629
+  ],
+  "geometry": [
+    { "lat": -35.2855480, "lon": 149.1221431 },
+    { "lat": -35.2855690, "lon": 149.1221379 },
+    { "lat": -35.2856193, "lon": 149.1221232 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge_number": "2058",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1387886719,
+  "bounds": {
+    "minlat": -35.2774612,
+    "minlon": 149.1128543,
+    "maxlat": -35.2768815,
+    "maxlon": 149.1133423
+  },
+  "nodes": [
+    7135204291,
+    7135204301,
+    27313500
+  ],
+  "geometry": [
+    { "lat": -35.2768815, "lon": 149.1133423 },
+    { "lat": -35.2773555, "lon": 149.1129471 },
+    { "lat": -35.2774612, "lon": 149.1128543 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "maxspeed": "60",
+    "name": "Clunies Ross Street",
+    "source:lanes": "ACTmapi Imagery 2018",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1537455487,
+  "bounds": {
+    "minlat": -35.2827119,
+    "minlon": 149.1268153,
+    "maxlat": -35.2823766,
+    "maxlon": 149.1274216
+  },
+  "nodes": [
+    12151270312,
+    10221084213,
+    10221084214,
+    9153519828,
+    10221102619,
+    8670558244,
+    10221102618,
+    10221084216,
+    10221102617,
+    1520984960
+  ],
+  "geometry": [
+    { "lat": -35.2827119, "lon": 149.1268153 },
+    { "lat": -35.2826563, "lon": 149.1269563 },
+    { "lat": -35.2825810, "lon": 149.1271501 },
+    { "lat": -35.2825082, "lon": 149.1273459 },
+    { "lat": -35.2824936, "lon": 149.1273659 },
+    { "lat": -35.2824791, "lon": 149.1273829 },
+    { "lat": -35.2824539, "lon": 149.1273972 },
+    { "lat": -35.2824288, "lon": 149.1274085 },
+    { "lat": -35.2824028, "lon": 149.1274156 },
+    { "lat": -35.2823766, "lon": 149.1274216 }
+  ],
+  "tags": {
+    "highway": "secondary",
+    "maxspeed": "60",
+    "name": "Edinburgh Avenue",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1547712815,
+  "bounds": {
+    "minlat": -35.2754467,
+    "minlon": 149.1257598,
+    "maxlat": -35.2753908,
+    "maxlon": 149.1263665
+  },
+  "nodes": [
+    6330450295,
+    1692817949,
+    1692851346
+  ],
+  "geometry": [
+    { "lat": -35.2754467, "lon": 149.1263665 },
+    { "lat": -35.2754153, "lon": 149.1261089 },
+    { "lat": -35.2753908, "lon": 149.1257598 }
+  ],
+  "tags": {
+    "cycleway:left": "lane",
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Barry Drive",
+    "oneway": "yes",
+    "oneway:bicycle": "yes",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

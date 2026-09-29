@@ -219,6 +219,57 @@ h2.section {
   color: var(--muted);
 }
 
+/* The favourites-only toggle sits with the other filters but reads as a
+   checkbox row, so it lines its label up beside the box rather than above. */
+.filter-field-check {
+  flex: 0 1 auto;
+  justify-content: flex-end;
+}
+
+.filter-field-check label {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-field-check input {
+  width: auto;
+  padding: 0;
+  accent-color: var(--anu-gold);
+}
+
+/* The favourite toggle inside a map marker's popup: a compact echo of the
+   card's star, styled so it doesn't inherit Leaflet's default link look. */
+.popup-fav {
+  margin-top: 0.35rem;
+}
+
+.popup-fav button {
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.popup-fav button[aria-pressed="true"] {
+  border-color: var(--anu-gold);
+  background: #fffbe9;
+}
+
+.popup-fav-signin {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+
 /* ---- Parking cards ----------------------------------------------------- */
 
 ul.parks {
@@ -263,6 +314,72 @@ ul.parks {
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
   white-space: nowrap;
+}
+
+/* The favourite toggle on each card: a quiet star that fills in gold once set,
+   so the state reads at a glance without shouting over the card. */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.fav-btn:hover,
+.fav-btn:focus {
+  background: var(--anu-gold-tint);
+  border-color: var(--anu-gold);
+}
+
+.fav-star {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Once starred, the button carries the gold so it stands apart from an unset
+   one at a glance. */
+.fav-btn[aria-pressed="true"] {
+  background: var(--anu-gold-tint);
+  border-color: var(--anu-gold);
+}
+
+.fav-btn[aria-pressed="true"] .fav-star {
+  color: var(--anu-gold);
+}
+
+.fav-signin {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* The favourites list on the account page. */
+ul.fav-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.fav-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
 }
 
 .avail {

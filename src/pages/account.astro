@@ -4,7 +4,11 @@
 // server-rendered from the database, so a reload always shows the true state.
 import Layout from "../components/Layout.astro";
 import { currentUser } from "../lib/auth";
-import { listCars, listUserTickets } from "../lib/accounts";
+import {
+  listCars,
+  listFavouriteParks,
+  listUserTickets,
+} from "../lib/accounts";
 import { formatMoney } from "../lib/pricing";
 
 const user = currentUser(Astro.cookies);
@@ -12,6 +16,7 @@ if (!user) return Astro.redirect("/login/?error=auth");
 
 const cars = listCars(user.id);
 const tickets = listUserTickets(user.id);
+const favourites = listFavouriteParks(user.id);
 
 const error = Astro.url.searchParams.get("error");
 const MESSAGES: Record<string, string> = {
@@ -64,6 +69,29 @@ const STATUS_TEXT: Record<string, string> = {
               <a class="btn-link" href={`/tickets/${t.id}/`}>
                 {t.status === "reserved" ? "Pay" : "View"}
               </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+
+  <section aria-labelledby="favourites-heading">
+    <h2 id="favourites-heading" class="section">Your favourite car parks</h2>
+    {
+      favourites.length === 0 ? (
+        <p class="empty">
+          No favourites yet. Star a car park on the{" "}
+          <a href="/">parking directory</a> to keep it here.
+        </p>
+      ) : (
+        <ul class="fav-list">
+          {favourites.map((p) => (
+            <li class="fav-item">
+              <a class="btn-link" href={`/#park-${p.id}`}>
+                {p.name}
+              </a>
+              <span class="category">{p.category}</span>
             </li>
           ))}
         </ul>

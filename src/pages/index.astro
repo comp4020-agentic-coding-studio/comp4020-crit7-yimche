@@ -1,10 +1,18 @@
 ---
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import { currentUser } from "../lib/auth";
+import { listFavouriteIds } from "../lib/accounts";
 import { type CarParkWithLatest, listCarParks } from "../lib/db";
 import "../styles.css";
 
 const parks = listCarParks();
+
+// Who's viewing, and which parks they've starred. Signed out, the set is empty
+// and each card offers a sign-in link in place of the toggle. Favourites are
+// private, so this is read per request rather than baked into the page.
+const user = currentUser(Astro.cookies);
+const favouriteIds = user ? listFavouriteIds(user.id) : new Set<number>();
 
 // One place decides how a report reads, so the server render and the live
 // client update agree. `null` is a real state — nobody has reported yet.
@@ -28,6 +36,7 @@ const mapData = parks.map((p) => ({
   lat: p.lat,
   lng: p.lng,
   level: p.latest?.level ?? null,
+  fav: favouriteIds.has(p.id),
 }));
 ---
 
@@ -66,12 +75,6 @@ const mapData = parks.map((p) => ({
     <SiteHeader />
     <main>
       <h1>ANU campus parking</h1>
-      <p class="lede">
-        Every parking area on the Acton campus in one place: where it is, when
-        it's enforced, what it costs, and which permit it wants. Can't tell
-        which car park still has room? Anyone can report how full one is, and
-        the map and the list update live for everyone.
-      </p>
 
       <div
         id="map"
@@ -99,11 +102,38 @@ const mapData = parks.map((p) => ({
               id={`park-${park.id}`}
               data-park-id={park.id}
               data-category={park.category}
+              data-fav={favouriteIds.has(park.id) ? "1" : "0"}
               data-search={`${park.name} ${park.category} ${park.hours} ${park.rate} ${park.permit} ${park.fees} ${park.notes ?? ""}`.toLowerCase()}
             >
               <div class="park-head">
                 <h3>{park.name}</h3>
                 <span class="category">{park.category}</span>
+                {
+                  user ? (
+                    <form class="fav" method="post" action="/api/favourites">
+                      <input type="hidden" name="carParkId" value={park.id} />
+                      <input
+                        type="hidden"
+                        name="on"
+                        value={favouriteIds.has(park.id) ? "0" : "1"}
+                      />
+                      <button
+                        type="submit"
+                        class="fav-btn"
+                        aria-pressed={favouriteIds.has(park.id) ? "true" : "false"}
+                      >
+                        <span class="fav-star" aria-hidden="true">
+                          {favouriteIds.has(park.id) ? "★" : "☆"}
+                        </span>
+                        {favouriteIds.has(park.id) ? "Favourited" : "Favourite"}
+                      </button>
+                    </form>
+                  ) : (
+                    <a class="fav-signin" href="/login/">
+                      <span aria-hidden="true">☆</span> Sign in to favourite
+                    </a>
+                  )
+                }
               </div>
               <p
                 class={availClass(park)}
@@ -153,9 +183,10 @@ const mapData = parks.map((p) => ({
         Rates follow ANU's published 2026 parking fees; every map position, and
         any capacity shown, comes from OpenStreetMap. The set is clipped to the
         campus by Clunies Ross Street, Barry Drive and Edinburgh Avenue, so lots
-        across those roads are left out. Which permit each lot wants is
-        interpreted from OSM access tags for this prototype; see the note below
-        before relying on any of it.
+        across those roads are left out. Enforcement hours and permit types
+        follow ANU's published parking guidance, but which permit type applies to
+        a given lot is interpreted from OSM access tags for this prototype; see
+        the note below before relying on any of it.
       </p>
     </main>
     <SiteFooter />
@@ -164,6 +195,7 @@ const mapData = parks.map((p) => ({
       type="application/json"
       id="parks-data"
       is:inline
+      data-signed-in={user ? "1" : "0"}
       set:html={JSON.stringify(mapData)}></script>
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -193,6 +225,7 @@ const mapData = parks.map((p) => ({
         lat: number;
         lng: number;
         level: string | null;
+        fav: boolean;
       };
 
       // Leaflet is loaded from the CDN, so it's a runtime global rather than a
@@ -201,11 +234,37 @@ const mapData = parks.map((p) => ({
       const L = (window as unknown as { L?: any }).L;
       const dataEl = document.getElementById("parks-data");
       const parks: ParkData[] = dataEl ? JSON.parse(dataEl.textContent ?? "[]") : [];
+      // Whether someone is signed in, so the popup can offer the star to them and
+      // a sign-in link to everyone else, matching the card in the list below.
+      const signedIn = dataEl?.dataset.signedIn === "1";
       const markers = new Map<number, any>();
+
+      // The favourite toggle inside a marker popup: for a signed-in visitor, a
+      // plain POST form (same endpoint and redirect as the card's star, so it
+      // works without any popup-specific scripting); for everyone else, a link
+      // to sign in. The escaped quotes keep the star's state honest on reload.
+      function favControl(park: ParkData): string {
+        if (!signedIn) {
+          return `<a class="popup-fav-signin" href="/login/">&#9734; Sign in to favourite</a>`;
+        }
+        const on = park.fav ? "0" : "1";
+        const label = park.fav ? "&#9733; Favourited" : "&#9734; Favourite";
+        return (
+          `<form class="popup-fav" method="post" action="/api/favourites">` +
+          `<input type="hidden" name="carParkId" value="${park.id}">` +
+          `<input type="hidden" name="on" value="${on}">` +
+          `<button type="submit" aria-pressed="${park.fav ? "true" : "false"}">${label}</button>` +
+          `</form>`
+        );
+      }
 
       function popupHtml(park: ParkData): string {
         const avail = park.level ? LEVEL_TEXT[park.level] : "No reports yet";
-        return `<strong>${park.name}</strong><br>${park.category}<br>${avail}<br><a href="#park-${park.id}">Details &amp; report</a>`;
+        return (
+          `<strong>${park.name}</strong><br>${park.category}<br>${avail}<br>` +
+          `<a href="#park-${park.id}">Details &amp; report</a><br>` +
+          favControl(park)
+        );
       }
 
       // deno-lint-ignore no-explicit-any
@@ -245,6 +304,23 @@ const mapData = parks.map((p) => ({
         });
       }
 
+      // The map frames the campus by fitting all the markers. We nudge that
+      // first fit one zoom level tighter so the page opens a little closer in
+      // than a bare fit; this flag keeps the nudge to the initial paint, so
+      // re-framing after a filter change still fits the filtered set exactly.
+      let framedOnce = false;
+      // deno-lint-ignore no-explicit-any
+      function frame(bounds: any): void {
+        if (!map || !bounds || !bounds.isValid()) return;
+        if (framedOnce) {
+          map.fitBounds(bounds, { padding: [30, 30], maxZoom: 18 });
+          return;
+        }
+        const z = map.getBoundsZoom(bounds, false, L.point(30, 30));
+        map.setView(bounds.getCenter(), Math.min(z + 1, 18));
+        framedOnce = true;
+      }
+
       // ---- Search & filter -------------------------------------------------
       // A progressive enhancement over the server-rendered directory: hide the
       // cards that don't match, and drop their markers from the map to match, so
@@ -261,6 +337,18 @@ const mapData = parks.map((p) => ({
           .filter(Boolean)
           .sort();
 
+        // The favourites-only toggle is offered only to signed-in visitors:
+        // signed out, every card's data-fav is "0", so the control would filter
+        // to nothing. signedIn is read from the same data element as the map.
+        const favField = signedIn
+          ? `
+          <div class="filter-field filter-field-check">
+            <label for="filter-fav">
+              <input id="filter-fav" type="checkbox" /> Favourites only
+            </label>
+          </div>`
+          : "";
+
         filters.innerHTML = `
           <div class="filter-field">
             <label for="filter-search">Search parking</label>
@@ -275,7 +363,7 @@ const mapData = parks.map((p) => ({
                 .map((c) => `<option value="${c}">${c}</option>`)
                 .join("")}
             </select>
-          </div>
+          </div>${favField}
           <p id="filter-count" class="filter-count" aria-live="polite"></p>`;
         filters.hidden = false;
 
@@ -285,11 +373,16 @@ const mapData = parks.map((p) => ({
         const categoryEl = document.getElementById(
           "filter-category",
         ) as HTMLSelectElement;
+        // Null when signed out, since the control isn't rendered then.
+        const favEl = document.getElementById(
+          "filter-fav",
+        ) as HTMLInputElement | null;
         const countEl = document.getElementById("filter-count") as HTMLElement;
 
         function applyFilter(): void {
           const q = searchEl.value.trim().toLowerCase();
           const cat = categoryEl.value;
+          const favOnly = favEl?.checked ?? false;
           let shown = 0;
           // deno-lint-ignore no-explicit-any
           const visibleBounds = L ? L.latLngBounds([]) : null;
@@ -297,7 +390,8 @@ const mapData = parks.map((p) => ({
           for (const card of cards) {
             const okCat = !cat || card.dataset.category === cat;
             const okText = !q || (card.dataset.search ?? "").includes(q);
-            const visible = okCat && okText;
+            const okFav = !favOnly || card.dataset.fav === "1";
+            const visible = okCat && okText && okFav;
             card.hidden = !visible;
 
             const id = Number(card.dataset.parkId);
@@ -313,9 +407,7 @@ const mapData = parks.map((p) => ({
             if (visible) shown++;
           }
 
-          if (map && visibleBounds && visibleBounds.isValid()) {
-            map.fitBounds(visibleBounds, { padding: [30, 30], maxZoom: 18 });
-          }
+          frame(visibleBounds);
           countEl.textContent =
             shown === cards.length
               ? `Showing all ${cards.length} parking areas`
@@ -324,11 +416,11 @@ const mapData = parks.map((p) => ({
 
         searchEl.addEventListener("input", applyFilter);
         categoryEl.addEventListener("change", applyFilter);
+        favEl?.addEventListener("change", applyFilter);
         applyFilter();
       } else if (map) {
         // No filter bar (e.g. no cards found): still frame all markers.
-        const bounds = L.latLngBounds(parks.map((p) => [p.lat, p.lng]));
-        if (bounds.isValid()) map.fitBounds(bounds, { padding: [30, 30] });
+        frame(L.latLngBounds(parks.map((p) => [p.lat, p.lng])));
       }
 
       // The live channel: a report from any tab lands here and updates the

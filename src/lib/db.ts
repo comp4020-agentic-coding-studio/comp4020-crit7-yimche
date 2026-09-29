@@ -5,7 +5,13 @@ import { desc, eq, inArray, notInArray, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/better-sqlite3";
 import { migrate } from "drizzle-orm/better-sqlite3/migrator";
 import { CAR_PARKS } from "./parking-data";
-import { type CarPark, carParks, type Report, reports } from "./schema";
+import {
+  type CarPark,
+  carParks,
+  favourites,
+  type Report,
+  reports,
+} from "./schema";
 
 // One SQLite file is the app's whole persistent state. In production
 // fly.toml points DATABASE_PATH at the machine's volume (/data), which is
@@ -38,8 +44,8 @@ migrate(db, { migrationsFolder: "./drizzle" });
 // to a lot the app still shows.
 function seed(): void {
   const slugs = CAR_PARKS.map((p) => p.slug);
-  // Remove any car park no longer in the seed. Its reports reference its id, so
-  // they go first; then the park itself.
+  // Remove any car park no longer in the seed. Its reports and any favourites
+  // reference its id, so they go first; then the park itself.
   const stale = db
     .select({ id: carParks.id })
     .from(carParks)
@@ -48,6 +54,7 @@ function seed(): void {
     .map((row) => row.id);
   if (stale.length > 0) {
     db.delete(reports).where(inArray(reports.carParkId, stale)).run();
+    db.delete(favourites).where(inArray(favourites.carParkId, stale)).run();
     db.delete(carParks).where(inArray(carParks.id, stale)).run();
   }
 

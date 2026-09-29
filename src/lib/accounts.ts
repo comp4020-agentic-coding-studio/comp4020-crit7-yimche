@@ -3,10 +3,12 @@ import { hashPassword } from "./auth";
 import { db, getCarPark } from "./db";
 import {
   type Car,
+  type CarPark,
   type Ticket,
   type User,
   carParks,
   cars,
+  favourites,
   payments,
   tickets,
   users,
@@ -178,6 +180,55 @@ function ticketColumns() {
     expiresAt: tickets.expiresAt,
     createdAt: tickets.createdAt,
   };
+}
+
+// ---- Favourites ---------------------------------------------------------
+// A user can star car parks to find them again fast. Favourites are private and
+// scoped to the user, the same way cars and tickets are.
+
+// The ids of the car parks a user has starred, as a Set, so a page rendering
+// the whole directory can ask "is this one favourited?" in O(1) per card.
+export function listFavouriteIds(userId: number): Set<number> {
+  const rows = db
+    .select({ carParkId: favourites.carParkId })
+    .from(favourites)
+    .where(eq(favourites.userId, userId))
+    .all();
+  return new Set(rows.map((r) => r.carParkId));
+}
+
+// The favourited car parks themselves, with their facts, newest star first, for
+// the account page. Scoped to the owner.
+export function listFavouriteParks(userId: number): CarPark[] {
+  return db
+    .select({ park: carParks })
+    .from(favourites)
+    .innerJoin(carParks, eq(favourites.carParkId, carParks.id))
+    .where(eq(favourites.userId, userId))
+    .orderBy(desc(favourites.id))
+    .all()
+    .map((r) => r.park);
+}
+
+// Star a car park for a user. Idempotent: the unique (user, park) index means a
+// double submit or a stale tab can't create a duplicate, so a repeat is a no-op
+// rather than an error. Returns false only if the car park doesn't exist.
+export function addFavourite(userId: number, carParkId: number): boolean {
+  if (!getCarPark(carParkId)) return false;
+  db.insert(favourites)
+    .values({ userId, carParkId })
+    .onConflictDoNothing()
+    .run();
+  return true;
+}
+
+// Unstar a car park. A no-op if it wasn't favourited.
+export function removeFavourite(userId: number, carParkId: number): void {
+  db.delete(favourites)
+    .where(
+      and(eq(favourites.userId, userId), eq(favourites.carParkId, carParkId)),
+    )
+    .run();
 }
 
 // ---- Payments -----------------------------------------------------------

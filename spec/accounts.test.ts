@@ -66,6 +66,20 @@ const ticketIdFrom = (res: Response): string => {
   return id;
 };
 
+// The slice of the directory HTML for one park's card, so we can read the state
+// of that card's favourite toggle without a stray match from another card.
+const cardSlice = (html: string, id: string): string => {
+  const start = html.indexOf(`id="park-${id}"`);
+  if (start === -1) throw new Error(`no card for park ${id}`);
+  const next = html.indexOf('class="park"', start + 1);
+  return html.slice(start, next === -1 ? html.length : next);
+};
+
+// Whether the signed-in directory shows this park as favourited: the toggle's
+// button carries aria-pressed="true" exactly when it's starred.
+const isFavourited = (html: string, id: string): boolean =>
+  /aria-pressed="true"/.test(cardSlice(html, id));
+
 describe("account system", () => {
   it("registers a user, signs them in, and greets them", async () => {
     const cookie = await register(uniqueEmail(), "Ada Lovelace");
@@ -162,6 +176,82 @@ describe("cars, tickets and payment", () => {
     const after = await get(`/tickets/${ticketId}/`, cookie).then((r) => r.text());
     expect(after).toContain("Paid");
     expect(after).not.toContain("Awaiting payment");
+  });
+
+  it("stars a car park, lists it on the account, and unstars it", async () => {
+    const cookie = await register(uniqueEmail());
+    const parkId = await aParkId();
+
+    // Star it.
+    const on = await post(
+      "/api/favourites",
+      new URLSearchParams({ carParkId: parkId, on: "1" }),
+      cookie,
+    );
+    expect(on.status).toBe(303);
+
+    // The directory now shows this card favourited for this user...
+    const dir = await get("/", cookie).then((r) => r.text());
+    expect(isFavourited(dir, parkId)).toBe(true);
+    // ...and the account page lists it, linking back to its card.
+    const account = await get("/account/", cookie).then((r) => r.text());
+    expect(account).toContain("Your favourite car parks");
+    expect(account).toContain(`/#park-${parkId}`);
+
+    // Unstar it: the card goes back to un-favourited.
+    const off = await post(
+      "/api/favourites",
+      new URLSearchParams({ carParkId: parkId, on: "0" }),
+      cookie,
+    );
+    expect(off.status).toBe(303);
+    const dir2 = await get("/", cookie).then((r) => r.text());
+    expect(isFavourited(dir2, parkId)).toBe(false);
+  });
+
+  it("exposes favourite state so the map popup and filter can read it", async () => {
+    // The popup star and the favourites-only filter are client enhancements, so
+    // they can't run under fetch. What we can hold is the contract they stand on:
+    // signed in, the page announces it and tags the starred card, so the script
+    // has the truth to filter and pre-fill the popup toggle from.
+    const cookie = await register(uniqueEmail());
+    const parkId = await aParkId();
+    await post(
+      "/api/favourites",
+      new URLSearchParams({ carParkId: parkId, on: "1" }),
+      cookie,
+    );
+
+    const dir = await get("/", cookie).then((r) => r.text());
+    expect(dir).toContain('data-signed-in="1"');
+    expect(cardSlice(dir, parkId)).toContain('data-fav="1"');
+
+    // Signed out, the page says so, and no card is pre-marked as a favourite.
+    const anon = await get("/").then((r) => r.text());
+    expect(anon).toContain('data-signed-in="0"');
+    expect(anon).not.toContain('data-fav="1"');
+  });
+
+  it("keeps favourites private and behind sign-in", async () => {
+    const parkId = await aParkId();
+
+    // A signed-out write is refused and sent to the login page.
+    const refused = await post(
+      "/api/favourites",
+      new URLSearchParams({ carParkId: parkId, on: "1" }),
+    );
+    expect(refused.headers.get("location")).toContain("/login/");
+
+    // One user's favourite doesn't show on another user's directory.
+    const a = await register(uniqueEmail());
+    await post(
+      "/api/favourites",
+      new URLSearchParams({ carParkId: parkId, on: "1" }),
+      a,
+    );
+    const b = await register(uniqueEmail());
+    const bDir = await get("/", b).then((r) => r.text());
+    expect(isFavourited(bDir, parkId)).toBe(false);
   });
 
   it("won't let one user see or pay another's ticket", async () => {

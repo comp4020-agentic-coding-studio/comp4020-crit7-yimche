@@ -1,5 +1,11 @@
 import { sql } from "drizzle-orm";
-import { int, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import {
+  int,
+  real,
+  sqliteTable,
+  text,
+  uniqueIndex,
+} from "drizzle-orm/sqlite-core";
 
 // The schema is the ground truth for the database. To change it: edit here,
 // run `pnpm db:generate` to turn the diff into a migration under drizzle/,
@@ -144,6 +150,27 @@ export const payments = sqliteTable("payments", {
     .default(sql`(datetime('now'))`),
 });
 
+// A user's starred car parks: the ones they want to find again fast. Just a
+// join row between a user and a car park, unique per pair so starring the same
+// lot twice is a no-op. Unlike a report, a favourite is private — it says
+// nothing to anyone but the user who set it.
+export const favourites = sqliteTable(
+  "favourites",
+  {
+    id: int().primaryKey({ autoIncrement: true }),
+    userId: int("user_id")
+      .notNull()
+      .references(() => users.id),
+    carParkId: int("car_park_id")
+      .notNull()
+      .references(() => carParks.id),
+    createdAt: text("created_at")
+      .notNull()
+      .default(sql`(datetime('now'))`),
+  },
+  (t) => [uniqueIndex("favourites_user_park_unique").on(t.userId, t.carParkId)],
+);
+
 export type CarPark = typeof carParks.$inferSelect;
 export type Report = typeof reports.$inferSelect;
 export type User = typeof users.$inferSelect;
@@ -151,3 +178,4 @@ export type Session = typeof sessions.$inferSelect;
 export type Car = typeof cars.$inferSelect;
 export type Ticket = typeof tickets.$inferSelect;
 export type Payment = typeof payments.$inferSelect;
+export type Favourite = typeof favourites.$inferSelect;

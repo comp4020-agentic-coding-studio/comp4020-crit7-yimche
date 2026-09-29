@@ -282,6 +282,7 @@ const mapData = parks.map((p) => ({
           `<dt>Rate</dt><dd>${esc(park.rate)}</dd>` +
           `<dt>Hours</dt><dd>${esc(park.hours)}</dd>` +
           `</dl>` +
+          `<a class="popup-book" href="/book/?park=${park.id}">Book parking here</a><br>` +
           `<a href="#park-${park.id}">Details &amp; report</a><br>` +
           favControl(park)
         );
@@ -457,7 +458,10 @@ const mapData = parks.map((p) => ({
         ) as HTMLInputElement | null;
         const countEl = document.getElementById("filter-count") as HTMLElement;
 
-        function applyFilter(): void {
+        // reframe fits the map to the visible set. It's what we want when the
+        // search or a filter changes the set, but not when a star is toggled:
+        // favouriting shouldn't move or zoom the map out from under you.
+        function applyFilter(reframe = true): void {
           const q = searchEl.value.trim().toLowerCase();
           const cat = categoryEl.value;
           const favOnly = favEl?.checked ?? false;
@@ -485,19 +489,19 @@ const mapData = parks.map((p) => ({
             if (visible) shown++;
           }
 
-          frame(visibleBounds);
+          if (reframe) frame(visibleBounds);
           countEl.textContent =
             shown === cards.length
               ? `Showing all ${cards.length} parking areas`
               : `Showing ${shown} of ${cards.length} parking areas`;
         }
 
-        searchEl.addEventListener("input", applyFilter);
-        categoryEl.addEventListener("change", applyFilter);
-        favEl?.addEventListener("change", applyFilter);
-        // A star toggled in place (card or popup) re-runs the filter, so the
-        // favourites-only view stays in step without a reload.
-        window.addEventListener("favourites-changed", applyFilter);
+        searchEl.addEventListener("input", () => applyFilter());
+        categoryEl.addEventListener("change", () => applyFilter());
+        favEl?.addEventListener("change", () => applyFilter());
+        // A star toggled in place (card or popup) re-runs the filter so the
+        // favourites-only view stays in step, but without reframing the map.
+        window.addEventListener("favourites-changed", () => applyFilter(false));
         applyFilter();
       } else if (map) {
         // No filter bar (e.g. no cards found): still frame all markers.

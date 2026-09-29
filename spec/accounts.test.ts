@@ -273,6 +273,22 @@ describe("cars, tickets and payment", () => {
     expect(isFavourited(bDir, parkId)).toBe(false);
   });
 
+  it("pre-selects a car park on the booking form from the query", async () => {
+    // The map marker's "Book parking here" link carries ?park=<id>, so the
+    // booking form should open with that car park already chosen.
+    const cookie = await register(uniqueEmail());
+    await post(
+      "/api/cars",
+      new URLSearchParams({ plate: "book01", make: "Kia", model: "Rio" }),
+      cookie,
+    );
+    const parkId = await aParkId();
+    const html = await get(`/book/?park=${parkId}`, cookie).then((r) => r.text());
+    expect(html).toMatch(
+      new RegExp(`<option value="${parkId}"[^>]*\\bselected\\b`),
+    );
+  });
+
   it("won't let one user see or pay another's ticket", async () => {
     const owner = await register(uniqueEmail());
     await post(

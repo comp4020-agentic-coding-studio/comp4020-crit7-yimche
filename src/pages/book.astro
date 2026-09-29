@@ -20,6 +20,10 @@ if (!user) return Astro.redirect("/login/?error=auth");
 const cars = listCars(user.id);
 const parks = listCarParks();
 
+// A car park can be pre-chosen from the query, e.g. a "Book parking" link on a
+// map marker. It only sets the dropdown's default; /api/tickets re-checks it.
+const preselectId = Number(Astro.url.searchParams.get("park"));
+
 const error = Astro.url.searchParams.get("error");
 const MESSAGES: Record<string, string> = {
   car: "Please choose one of your registered cars.",
@@ -52,7 +56,9 @@ const message = error ? (MESSAGES[error] ?? null) : null;
           <label for="book-park">Car park</label>
           <select id="book-park" name="carParkId" required>
             {parks.map((p) => (
-              <option value={p.id}>{p.name}</option>
+              <option value={p.id} selected={p.id === preselectId}>
+                {p.name}
+              </option>
             ))}
           </select>
         </div>

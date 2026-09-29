@@ -260,6 +260,24 @@ h2.section {
   margin: 0;
 }
 
+/* The primary action in a popup: book a session at this car park straight from
+   the pin. Styled as a small button so it stands out from the plain links. */
+.popup-book {
+  display: inline-block;
+  margin: 0.1rem 0 0.35rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--anu-gold);
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.popup-book:hover,
+.popup-book:focus {
+  filter: brightness(0.95);
+}
+
 /* The favourite toggle inside a map marker's popup: a compact echo of the
    card's star, styled so it doesn't inherit Leaflet's default link look. */
 .popup-fav {

@@ -1,0 +1,66 @@
+---
+// Sign in or create an account. Already signed in? Straight to the account.
+// Both forms are plain POSTs to /api/*, so the page needs no JavaScript. An
+// ?error= code from a failed submit becomes a message above the forms.
+import Layout from "../components/Layout.astro";
+import { currentUser } from "../lib/auth";
+
+if (currentUser(Astro.cookies)) return Astro.redirect("/account/");
+
+const error = Astro.url.searchParams.get("error");
+const MESSAGES: Record<string, string> = {
+  register:
+    "Please enter your name, a valid email, and a password of at least 8 characters.",
+  "email-taken": "An account with that email already exists. Try signing in.",
+  login: "That email and password don't match an account.",
+  auth: "Please sign in to continue.",
+};
+const message = error ? (MESSAGES[error] ?? null) : null;
+---
+
+<Layout title="Sign in — ANU Campus Parking">
+  <h1>Your account</h1>
+  <p class="lede">
+    Sign in to register your car and book a parking session, or create an
+    account if this is your first visit.
+  </p>
+
+  {message && <p class="form-error" role="alert">{message}</p>}
+
+  <div class="account-grid">
+    <section class="panel" aria-labelledby="signin-heading">
+      <h2 id="signin-heading">Sign in</h2>
+      <form class="stack" method="post" action="/api/login">
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit">Sign in</button>
+      </form>
+    </section>
+
+    <section class="panel" id="register" aria-labelledby="register-heading">
+      <h2 id="register-heading">Create an account</h2>
+      <form class="stack" method="post" action="/api/register">
+        <div class="field">
+          <label for="reg-name">Name</label>
+          <input id="reg-name" name="displayName" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="reg-email">Email</label>
+          <input id="reg-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="reg-password">Password</label>
+          <input id="reg-password" name="password" type="password" autocomplete="new-password" minlength="8" required />
+          <p class="hint">At least 8 characters.</p>
+        </div>
+        <button type="submit">Create account</button>
+      </form>
+    </section>
+  </div>
+</Layout>

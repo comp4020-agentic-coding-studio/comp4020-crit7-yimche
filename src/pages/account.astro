@@ -1,0 +1,117 @@
+---
+// The signed-in dashboard: your cars, your tickets, and the forms to add a car
+// or start a booking. Not signed in? Off to the login page. Everything is
+// server-rendered from the database, so a reload always shows the true state.
+import Layout from "../components/Layout.astro";
+import { currentUser } from "../lib/auth";
+import { listCars, listUserTickets } from "../lib/accounts";
+import { formatMoney } from "../lib/pricing";
+
+const user = currentUser(Astro.cookies);
+if (!user) return Astro.redirect("/login/?error=auth");
+
+const cars = listCars(user.id);
+const tickets = listUserTickets(user.id);
+
+const error = Astro.url.searchParams.get("error");
+const MESSAGES: Record<string, string> = {
+  car: "Please give the car's plate, make and model.",
+  pay: "That ticket couldn't be paid. It may already be paid, or isn't yours.",
+};
+const message = error ? (MESSAGES[error] ?? null) : null;
+
+const STATUS_TEXT: Record<string, string> = {
+  reserved: "Awaiting payment",
+  paid: "Paid",
+};
+---
+
+<Layout title="Your account — ANU Campus Parking">
+  <div class="page-head">
+    <h1>Hello, {user.displayName}</h1>
+    <form method="post" action="/api/logout">
+      <button type="submit" class="btn-quiet">Sign out</button>
+    </form>
+  </div>
+
+  {message && <p class="form-error" role="alert">{message}</p>}
+
+  <section aria-labelledby="tickets-heading">
+    <div class="section-head">
+      <h2 id="tickets-heading" class="section">Your parking tickets</h2>
+      <a class="btn-link" href="/book/">Book parking</a>
+    </div>
+    {
+      tickets.length === 0 ? (
+        <p class="empty">
+          No tickets yet. <a href="/book/">Book a parking session</a> to get
+          one.
+        </p>
+      ) : (
+        <ul class="tickets">
+          {tickets.map((t) => (
+            <li class="ticket-row">
+              <div>
+                <p class="ticket-park">{t.parkName}</p>
+                <p class="ticket-meta">
+                  {t.carPlate} · {t.hours} hour{t.hours === 1 ? "" : "s"} ·{" "}
+                  {formatMoney(t.priceCents)}
+                </p>
+              </div>
+              <span class={`pill pill-${t.status}`}>
+                {STATUS_TEXT[t.status] ?? t.status}
+              </span>
+              <a class="btn-link" href={`/tickets/${t.id}/`}>
+                {t.status === "reserved" ? "Pay" : "View"}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+
+  <section id="cars" aria-labelledby="cars-heading">
+    <h2 id="cars-heading" class="section">Your cars</h2>
+    {
+      cars.length === 0 ? (
+        <p class="empty">No cars registered yet. Add one below.</p>
+      ) : (
+        <ul class="cars">
+          {cars.map((car) => (
+            <li class="car-row">
+              <span class="plate">{car.plate}</span>
+              <span>
+                {car.make} {car.model}
+                {car.colour ? ` · ${car.colour}` : ""}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <form class="stack inline-card" id="add-car" method="post" action="/api/cars">
+      <h3>Register a car</h3>
+      <div class="field-row">
+        <div class="field">
+          <label for="car-plate">Number plate</label>
+          <input id="car-plate" name="plate" type="text" required />
+        </div>
+        <div class="field">
+          <label for="car-make">Make</label>
+          <input id="car-make" name="make" type="text" required />
+        </div>
+        <div class="field">
+          <label for="car-model">Model</label>
+          <input id="car-model" name="model" type="text" required />
+        </div>
+        <div class="field">
+          <label for="car-colour">Colour (optional)</label>
+          <input id="car-colour" name="colour" type="text" />
+        </div>
+      </div>
+      <button type="submit">Add car</button>
+    </form>
+  </section>
+</Layout>

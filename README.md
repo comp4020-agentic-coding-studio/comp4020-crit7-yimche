@@ -59,12 +59,37 @@ over SSE. What a person still judges at the crit: whether the data is *right*,
 whether the map reads well, and whether the live flow feels useful rather than
 gimmicky.
 
+### Accounts, cars, tickets and payment
+
+On top of the public directory sits a signed-in flow: a driver registers an
+account, adds one or more of their cars, books a casual parking session (a
+"ticket") at a car park for one of those cars, and pays for it. Like the report
+flow, every step is a plain HTML form that ends in a 303 redirect, so it works
+with no JavaScript, and every step is state defined in `src/lib/schema.ts`
+(`users`, `sessions`, `cars`, `tickets`, `payments`) and reached only through
+the queries in `src/lib/accounts.ts`. Passwords are stored only as a scrypt hash
+with a per-user salt (`src/lib/auth.ts`); a session is an unguessable token in an
+httpOnly cookie, backed by a row so it can expire and be revoked on logout. Each
+user's data is scoped to their id, so one account can never read or pay
+another's tickets; `spec/accounts.test.ts` holds that, along with the register →
+add car → book → pay chain.
+
+Two honesty notes carry over from the rest of the app. **Ticket prices are
+grounded**: a ticket is priced on ANU's published 2026 PayStay pay-as-you-go
+rates (staff/student $2.36/hour or $16.92 all day; visitor $3.07/hour or $27.63
+all day), which is the parking a driver actually buys on the spot with no permit;
+the permit day-rates are shown for comparison but not sold here, and free parking
+(accessible bays, motorbikes, honorary staff) is never charged for. **Payment is
+simulated**: confirming a ticket takes no card details and moves no money, it
+only records that a charge of the ticket's price was made and marks the ticket
+paid. The footer and the payment screen say so.
+
 ### What I chose not to build
 
-No accounts, no permit purchase or payment, no per-user favourites, no routing
-or space-level (bay-by-bay) tracking. The slice is deliberately "read the facts,
-report the state," which is the part that actually frustrates a driver and the
-part that exercises schemas, SQLite and migrations.
+No per-user favourites, no routing, no space-level (bay-by-bay) tracking, and no
+real payment gateway or actual ANU permit issuance. The account flow models the
+shape of booking and paying for parking; it does not connect to ANU's systems and
+does not take real money.
 
 ## Running it
 

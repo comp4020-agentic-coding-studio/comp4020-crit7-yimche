@@ -1,0 +1,87 @@
+---
+// One parking ticket. A reserved ticket shows what it will cost and a button to
+// pay (a simulated charge). A paid ticket shows the issued session and its
+// validity window. A ticket that isn't the signed-in user's, or doesn't exist,
+// is a 404 — getUserTicket only returns the caller's own tickets, so this can't
+// be used to read someone else's booking.
+import Layout from "../../components/Layout.astro";
+import { currentUser } from "../../lib/auth";
+import { getUserTicket } from "../../lib/accounts";
+import { formatMoney, rateClass } from "../../lib/pricing";
+
+const user = currentUser(Astro.cookies);
+if (!user) return Astro.redirect("/login/?error=auth");
+
+const id = Number(Astro.params.id);
+const ticket = Number.isInteger(id) ? getUserTicket(user.id, id) : undefined;
+
+if (!ticket) {
+  Astro.response.status = 404;
+}
+
+const rate = ticket ? rateClass(ticket.rateClass) : undefined;
+const durationText = ticket
+  ? ticket.mode === "all-day"
+    ? "All day"
+    : `${ticket.hours} hour${ticket.hours === 1 ? "" : "s"}`
+  : "";
+---
+
+<Layout title="Parking ticket — ANU Campus Parking">
+  {
+    !ticket ? (
+      <>
+        <h1>Ticket not found</h1>
+        <p class="lede">
+          We couldn't find that ticket on your account.{" "}
+          <a href="/account/">Back to your account</a>.
+        </p>
+      </>
+    ) : (
+      <>
+        <h1>Parking ticket #{ticket.id}</h1>
+
+        <p class={`pill pill-${ticket.status}`}>
+          {ticket.status === "paid" ? "Paid — valid" : "Awaiting payment"}
+        </p>
+
+        <dl class="facts">
+          <dt>Car park</dt>
+          <dd>{ticket.parkName}</dd>
+          <dt>Car</dt>
+          <dd>{ticket.carPlate}</dd>
+          <dt>Rate class</dt>
+          <dd>{rate?.label ?? ticket.rateClass}</dd>
+          <dt>Duration</dt>
+          <dd>{durationText}</dd>
+          <dt>Valid from</dt>
+          <dd>{ticket.startsAt} UTC</dd>
+          <dt>Valid until</dt>
+          <dd>{ticket.expiresAt} UTC</dd>
+          <dt>Price</dt>
+          <dd>{formatMoney(ticket.priceCents)}</dd>
+        </dl>
+
+        {ticket.status === "reserved" ? (
+          <section class="pay-box" aria-labelledby="pay-heading">
+            <h2 id="pay-heading">Pay {formatMoney(ticket.priceCents)}</h2>
+            <p class="sim-note">
+              This is a <strong>simulated</strong> payment for the prototype. No
+              card details are taken and no money changes hands. Confirming just
+              marks the ticket paid.
+            </p>
+            <form method="post" action="/api/pay">
+              <input type="hidden" name="ticketId" value={ticket.id} />
+              <button type="submit">Confirm simulated payment</button>
+            </form>
+          </section>
+        ) : (
+          <p class="paid-note">
+            Payment recorded (simulated). Show this ticket's plate and validity
+            window if asked. <a href="/account/">Back to your account</a>.
+          </p>
+        )}
+      </>
+    )
+  }
+</Layout>

@@ -1,0 +1,134 @@
+---
+// Book a casual (PayStay) parking session: a car park, one of your cars, a
+// rate class and a duration. The form POSTs to /api/tickets, which re-checks
+// everything and creates a reserved ticket to pay for. No permit is needed for
+// this kind of parking; the permit day-rates are shown only for comparison.
+import Layout from "../components/Layout.astro";
+import { currentUser } from "../lib/auth";
+import { listCars } from "../lib/accounts";
+import { listCarParks } from "../lib/db";
+import {
+  MAX_HOURS,
+  PERMIT_REFERENCE,
+  RATE_CLASSES,
+  formatMoney,
+} from "../lib/pricing";
+
+const user = currentUser(Astro.cookies);
+if (!user) return Astro.redirect("/login/?error=auth");
+
+const cars = listCars(user.id);
+const parks = listCarParks();
+
+const error = Astro.url.searchParams.get("error");
+const MESSAGES: Record<string, string> = {
+  car: "Please choose one of your registered cars.",
+  park: "Please choose a car park.",
+  rate: "Please choose a rate class.",
+  mode: "Please choose hourly or all-day.",
+  hours: `For an hourly session, choose between 1 and ${MAX_HOURS} hours.`,
+};
+const message = error ? (MESSAGES[error] ?? null) : null;
+---
+
+<Layout title="Book parking — ANU Campus Parking">
+  <h1>Book a parking session</h1>
+  <p class="lede">
+    Pay-as-you-go parking on ANU's published PayStay rates. No permit is
+    required for a casual session; you pay only for the time you book.
+  </p>
+
+  {message && <p class="form-error" role="alert">{message}</p>}
+
+  {
+    cars.length === 0 ? (
+      <p class="notice">
+        You'll need a car on file first.{" "}
+        <a href="/account/#add-car">Register a car</a>, then come back to book.
+      </p>
+    ) : (
+      <form class="stack booking" method="post" action="/api/tickets">
+        <div class="field">
+          <label for="book-park">Car park</label>
+          <select id="book-park" name="carParkId" required>
+            {parks.map((p) => (
+              <option value={p.id}>{p.name}</option>
+            ))}
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="book-car">Car</label>
+          <select id="book-car" name="carId" required>
+            {cars.map((car) => (
+              <option value={car.id}>
+                {car.plate} — {car.make} {car.model}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="book-rate">Rate class</label>
+          <select id="book-rate" name="rateClass" required>
+            {RATE_CLASSES.map((r) => (
+              <option value={r.id}>
+                {r.label} — {formatMoney(r.hourlyCents)}/hour,{" "}
+                {formatMoney(r.allDayCents)} all day
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="book-mode">Duration</label>
+            <select id="book-mode" name="mode" required>
+              <option value="hourly">By the hour</option>
+              <option value="all-day">All day</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="book-hours">Hours (for an hourly session)</label>
+            <input
+              id="book-hours"
+              name="hours"
+              type="number"
+              min="1"
+              max={MAX_HOURS}
+              value="2"
+            />
+          </div>
+        </div>
+
+        <button type="submit">Review and pay</button>
+      </form>
+    )
+  }
+
+  <section class="reference" aria-labelledby="ref-heading">
+    <h2 id="ref-heading" class="section">For comparison: 2026 permit fees</h2>
+    <p>
+      Permit holders park under their permit rather than paying per session, and
+      some parking is free. These figures are ANU's published 2026 fees and are
+      shown here only for comparison; a permit is arranged through ANU, not this
+      prototype.
+    </p>
+    <dl class="ref-list">
+      {
+        PERMIT_REFERENCE.map((r) => (
+          <>
+            <dt>{r.label}</dt>
+            <dd>{r.detail}</dd>
+          </>
+        ))
+      }
+    </dl>
+    <p class="footnote">
+      Rates follow ANU's <a
+        href="https://services.anu.edu.au/campus-environment/transport-parking/parking-fees"
+        >published 2026 parking fees</a
+      >. Payment in this prototype is simulated.
+    </p>
+  </section>
+</Layout>

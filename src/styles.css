@@ -362,6 +362,243 @@ button:focus {
   color: var(--muted);
 }
 
+/* ---- Account, booking and ticket pages --------------------------------- */
+
+.page-head,
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.account-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin-top: 1.5rem;
+}
+
+.panel,
+.inline-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--black);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+/* Vertical form layout shared by every account form. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--anu-gold);
+  outline-offset: 1px;
+  border-color: var(--anu-gold);
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+  width: 100%;
+}
+
+.field-row .field {
+  flex: 1 1 10rem;
+  width: auto;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.booking {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+}
+
+/* A message above a form when a submit bounced back. */
+.form-error {
+  margin: 1rem 0 0;
+  padding: 0.6rem 0.9rem;
+  background: var(--full-bg);
+  color: var(--full);
+  border-left: 4px solid var(--full);
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+/* A quiet button (sign out) that reads as an action without shouting. */
+.btn-quiet {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn-quiet:hover,
+.btn-quiet:focus {
+  background: var(--anu-gold-tint);
+  border-color: var(--anu-gold);
+}
+
+.btn-link {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+ul.cars,
+ul.tickets {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.car-row,
+.ticket-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.ticket-row > div:first-child {
+  flex: 1 1 12rem;
+}
+
+.plate {
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: var(--anu-gold-tint);
+  border: 1px solid var(--anu-gold);
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+}
+
+.ticket-park {
+  margin: 0;
+  font-weight: 700;
+}
+
+.ticket-meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Status pills, reusing the availability colour language. */
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.pill-paid {
+  color: var(--plenty);
+  background: var(--plenty-bg);
+}
+
+.pill-reserved {
+  color: var(--some);
+  background: var(--some-bg);
+}
+
+.pay-box {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--anu-gold);
+  border-radius: 4px;
+}
+
+.pay-box h2 {
+  margin-top: 0;
+}
+
+.sim-note {
+  padding: 0.6rem 0.9rem;
+  background: var(--anu-gold-tint);
+  border-left: 4px solid var(--anu-gold);
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+
+.paid-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+.reference {
+  margin-top: 2.5rem;
+}
+
+dl.ref-list {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 0.3rem 1rem;
+  max-width: 34rem;
+}
+
+dl.ref-list dt {
+  color: var(--ink);
+}
+
+dl.ref-list dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
 /* ---- Prose (the /readme/ page) ---------------------------------------- */
 
 .prose {

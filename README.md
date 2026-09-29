@@ -34,9 +34,12 @@ rests on three decisions:
    [published 2026 parking fees](https://services.anu.edu.au/campus-environment/transport-parking/parking-fees):
    staff surface permits at $7.78/day, staff parking stations at $9.59/day,
    non-resident student surface at $3.88/day, resident student at $4.90/day, and
-   free parking for accessible-permit and motorbike users, with pay and
-   time-limited zones enforced 8am–5pm Mon–Fri and free after 5pm and on
-   weekends. The whole directory is **generated from OpenStreetMap** (©
+   free parking for accessible-permit and motorbike users. The enforcement hours
+   and permit-type names follow ANU's
+   [parking options on Acton campus](https://services.anu.edu.au/campus-environment/transport-parking/parking-options-on-acton-campus):
+   pay, permit and time-limited zones are enforced 8am–5pm Mon–Fri, public
+   holidays excepted, with no pay or permit required outside those hours, though
+   signed bay limits still apply 24/7. The whole directory is **generated from OpenStreetMap** (©
    OpenStreetMap contributors) by `scripts/gen-parking.mjs`: every entry is a
    distinct mapped parking feature, its coordinates are the feature's centre (the
    same data the map draws), and any capacity or accessible-bay count shown is

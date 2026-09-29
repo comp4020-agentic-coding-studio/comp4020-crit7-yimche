@@ -99,9 +99,9 @@ const RATES = {
   customer: "For patrons of the adjacent facility; check the on-site signage.",
 };
 const HOURS = {
-  enforced: "Enforced 8:00am–5:00pm Mon–Fri. Free after 5pm and on weekends.",
-  always: "Available at all times.",
-  private: "Private access; permit required at all times.",
+  enforced: "Permit and PayStay enforced 8am–5pm Mon–Fri, public holidays excepted; no pay or permit needed outside those hours. Signed bay limits (reserved, disability, loading, time-limited) still apply 24/7.",
+  always: "Open at all times; no pay or permit required. Any signed bay restrictions still apply.",
+  private: "Private or reserved access; a permit is required, enforced 24 hours a day.",
   customer: "While attending the adjacent facility.",
 };
 
@@ -110,23 +110,23 @@ function classify(t) {
   const type = t.parking;
   const access = t.access;
   if (t.amenity === "motorcycle_parking")
-    return { category: "Motorbike parking", rate: RATES.motorbike, permit: "None required for motorbikes and scooters.", hours: HOURS.always };
+    return { category: "Motorbike parking", rate: RATES.motorbike, permit: "Free in designated motorcycle bays; a motorcycle permit is needed in parking stations.", hours: HOURS.always };
   if (access === "private")
-    return { category: "Resident / private", rate: RATES.private, permit: "Private or resident permit.", hours: HOURS.private };
+    return { category: "Resident / private", rate: RATES.private, permit: "Residential ePermit, or private/reserved authorisation.", hours: HOURS.private };
   if (access === "customers")
     return { category: "Customer parking", rate: RATES.customer, permit: "Customers of the adjacent facility.", hours: HOURS.customer };
   if (access === "permit")
-    return { category: "Permit parking", rate: RATES.permit, permit: "A valid ANU permit for this zone.", hours: HOURS.enforced };
+    return { category: "Permit parking", rate: RATES.permit, permit: "A valid ANU ePermit for this zone, or casual PayStay where signed.", hours: HOURS.enforced };
   // access yes / permissive / unmarked
   if (fee === "yes") {
     if (type === "multi-storey" || type === "underground")
-      return { category: "Staff parking station", rate: RATES.station, permit: "Staff parking-station permit, or casual pay where signed.", hours: HOURS.enforced };
-    return { category: "Visitor pay parking", rate: RATES.visitor, permit: "None — anyone may pay and park.", hours: HOURS.enforced };
+      return { category: "Staff parking station", rate: RATES.station, permit: "Staff parking-station permit, or casual PayStay where signed.", hours: HOURS.enforced };
+    return { category: "Visitor pay parking", rate: RATES.visitor, permit: "No permit needed; pay-as-you-go via PayStay.", hours: HOURS.enforced };
   }
   if (fee === "no")
     return { category: "Free parking", rate: RATES.free, permit: "None.", hours: HOURS.always };
   // unmarked: default to the campus staff/student surface interpretation
-  return { category: "Staff / student surface", rate: RATES.surface, permit: "Staff or student surface permit.", hours: HOURS.enforced };
+  return { category: "Staff / student surface", rate: RATES.surface, permit: "Staff surface ePermit or (non-resident) student surface permit, or casual PayStay.", hours: HOURS.enforced };
 }
 
 function slugify(s) {
@@ -216,15 +216,21 @@ const header = `// Seed data: the parking areas on the ANU Acton campus.
 //
 // RATES are ANU's published 2026 parking fees — staff surface $7.78/day,
 // staff parking stations $9.59/day, non-resident student $3.88/day, resident
-// student $4.90/day, free for accessible-permit and motorbike users, pay/permit
-// zones enforced 8am–5pm Mon–Fri and free after 5pm and on weekends.
-// Source: https://services.anu.edu.au/campus-environment/transport-parking/parking-fees
+// student $4.90/day, free for accessible-permit and motorbike users. Pay and
+// permit zones are enforced 8am–5pm Mon–Fri, public holidays excepted, with no
+// pay or permit required outside those hours; signed bay limits still apply
+// 24/7. The enforcement hours and the permit-type names come from ANU's
+// parking-options guidance, the rates from the parking-fees page.
+//   https://services.anu.edu.au/campus-environment/transport-parking/parking-fees
+//   https://services.anu.edu.au/campus-environment/transport-parking/parking-options-on-acton-campus
 //
 // THE INTERPRETIVE LAYER, not surveyed: the CATEGORY, RATE and PERMIT of each
 // lot are derived from its OSM access/fee/type tags mapped onto the ANU scheme
 // above (e.g. access=private → resident/private; access=permit → permit zone;
 // public + fee → visitor pay; otherwise the campus staff/student surface
-// default). Lot NAMES without an OSM name are labelled by the nearest mapped
+// default). The permit-type NAMES are ANU's own, but which type applies to a
+// given lot is inferred from OSM, not read off that lot's signage. Lot NAMES
+// without an OSM name are labelled by the nearest mapped
 // landmark. This is a reasonable reading of open data, not a lot-by-lot check of
 // the signage; the README and the app's footnote say so.
 //

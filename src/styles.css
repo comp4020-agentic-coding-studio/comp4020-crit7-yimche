@@ -261,8 +261,10 @@ h2.section {
 }
 
 /* The primary action in a popup: book a session at this car park straight from
-   the pin. Styled as a small button so it stands out from the plain links. */
-.popup-book {
+   the pin. Styled as a small button so it stands out from the plain links. The
+   selector is scoped through .leaflet-popup-content so it outweighs Leaflet's
+   own `.leaflet-container a` link colour, which otherwise leaves the text blue. */
+.leaflet-popup-content a.popup-book {
   display: inline-block;
   margin: 0.1rem 0 0.35rem;
   padding: 0.3rem 0.6rem;
@@ -273,8 +275,8 @@ h2.section {
   text-decoration: none;
 }
 
-.popup-book:hover,
-.popup-book:focus {
+.leaflet-popup-content a.popup-book:hover,
+.leaflet-popup-content a.popup-book:focus {
   filter: brightness(0.95);
 }
 

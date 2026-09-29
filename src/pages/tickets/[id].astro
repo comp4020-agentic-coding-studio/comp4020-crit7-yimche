@@ -8,6 +8,7 @@ import Layout from "../../components/Layout.astro";
 import { currentUser } from "../../lib/auth";
 import { getUserTicket } from "../../lib/accounts";
 import { formatMoney, rateClass } from "../../lib/pricing";
+import { formatCanberra } from "../../lib/time";
 
 const user = currentUser(Astro.cookies);
 if (!user) return Astro.redirect("/login/?error=auth");
@@ -55,9 +56,9 @@ const durationText = ticket
           <dt>Duration</dt>
           <dd>{durationText}</dd>
           <dt>Valid from</dt>
-          <dd>{ticket.startsAt} UTC</dd>
+          <dd>{formatCanberra(ticket.startsAt)}</dd>
           <dt>Valid until</dt>
-          <dd>{ticket.expiresAt} UTC</dd>
+          <dd>{formatCanberra(ticket.expiresAt)}</dd>
           <dt>Price</dt>
           <dd>{formatMoney(ticket.priceCents)}</dd>
         </dl>
